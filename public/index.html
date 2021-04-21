@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Arch Linux GUI</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- Libraries CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom2.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png">
+
+
+</head>
+
+<body>
+
+    <!--==========================
+    Header
+  ============================-->
+    <header id="header">
+        <div class="container-fluid">
+
+            <div id="logo" class="pull-left">
+                <h1><a href="#intro" class="scrollto">Arch Linux GUI</a></h1>
+            </div>
+
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="#intro"></a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#objective">Objective</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- #nav-menu-container -->
+        </div>
+    </header>
+    <!-- #header -->
+
+    <!--==========================
+    Intro Section
+  ============================-->
+    <section id="intro">
+        <div class="intro-container">
+            <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="carousel-item active">
+                        <div class="carousel-background"><img src="img/bg.jpg?v=2" alt=""></div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <img src="img/logo.png" class="img-fluid photo">
+                                <p>Welcome to Arch Linux GUI. Install Vanilla Arch Linux with just a few clicks.</p><br>
+                                <a class="btn" href="download.html">Download Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #intro -->
+
+    <main id="main">
+
+        <!--==========================
+      Download Section
+    ============================-->
+        <section id="download">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Download</h3>
+                    <p>ALG=Arch Linux GUI</p>
+                    <p>The ALG project, at the moment provides you with 3 editions, featuring the KDE Plasma Desktop Environment. All 3 editions use the same features as mainline Arch Linux, the only difference being in the way of installation. While mainline Arch provides a CLI installation, we at ALG provide a graphical installer, Calamares, to make the process easier.</p>
+                </header>
+
+                <div class="row download-cols">
+
+                    <div id="down-sect-1" class="col-md-4 wow fadeInUp">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="img/bg.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>Main Edition</h4>
+                                <a class="btn btn-primary" href="download.html">Learn More</a>
+                                <a class=" btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/latest/download">Download Now</a>
+                            </div>
+                            <p>
+                                The Flagship edition is a fully featured, ready to use Arch Linux version, with necessary software & settings to help users get started immediately.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="down-sect-1" class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="img/bg.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>Minimal Edition</h4>
+                                <a class="btn btn-primary" href="download.html#down-sect-2">Learn More</a>
+                                <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-minimal-2021.04-x86_64.iso/download">Download Now</a>
+                            </div>
+                            <p>
+                                The Minimal Edition features very little software. However, it contains certain settings which will help to get started quickly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="down-sect-1" class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="img/bg.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>Pure Edition</h4>
+                                <a class="btn btn-primary" href="download.html#down-sect-3">Learn More</a>
+                                <a class=" btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-pure-2021.04-x86_64.iso/download">Download Now</a>
+                            </div>
+                            <p>
+                                The Pure edition, also features very minimal software. It doesn't contain any setting & is what a users get after a traditional CLI installation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="down-sect-2" class="offset-md-2 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="img/bg.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>ALG GNOME</h4>
+                                <a class="btn btn-primary" href="download.html#down-sect-4">Learn More</a>
+                                <a class=" btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="down-sect-2" class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="img/bg.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>ALG GNOME-Pure</h4>
+                                <a class="btn btn-primary" href="download.html#down-sect-5">Learn More</a>
+                                <a class=" btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- #download -->
+
+        <!--==========================
+      objective Section
+    ============================-->
+        <section id="objective">
+            <div class="container">
+                <header class="section-header">
+                    <h3 style="color: white;">objective</h3>
+                </header>
+                <div class="row">
+                    <div class="col-md-4 box">
+                        <h4 class="title"><a href="javascript:void(0)">Pacman</a></h4>
+                        <p class="description">Pacman is Arch Linux's package management system. It is very powerful & it's most important feature is dependency tracking.</p>
+                    </div>
+
+                    <div class="col-md-4 box box-bg">
+                        <h4 class="title"><a href="javascript:void(0)">Weight</a></h4>
+                        <p class="description">Arch Linux is a lightweight distribution. It is suitable to run on both old as well new hardware. It consumes very less resources.</p>
+                    </div>
+
+                    <div class="col-md-4 box">
+                        <h4 class="title"><a href="javascript:void(0)">Rolling</a></h4>
+                        <p class="description">Arch Linux follows a rolling release cycle. It means that the software databases are always up-to-date, with the latest packages.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- #objective -->
+
+        <!-- ======= Features Section ======= -->
+        <section id="features" class="features">
+
+            <div class="container">
+
+                <header class="section-header">
+                    <h3 style="color: black;">Features</h3>
+                </header>
+
+                <div class="row">
+                    <div class="row align-self-center gy-4">
+
+                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.1s">
+                            <div class="feature-box d-flex align-items-center">
+                                <i class="fa fa-check"></i>
+                                <h3>Ready to use Graphical environment</h3>
+                            </div>
+                        </div>
+
+                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.2s">
+                            <div class="feature-box d-flex align-items-center">
+                                <i class="fa fa-check"></i>
+                                <h3>Fully Featured ready to use KDE plasma desktop</h3>
+                            </div>
+                        </div>
+
+                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.3s">
+                            <div class="feature-box d-flex align-items-center">
+                                <i class="fa fa-check"></i>
+                                <h3>For Intel/AMD computers</h3>
+                            </div>
+                        </div>
+
+                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.4s">
+                            <div class="feature-box d-flex align-items-center">
+                                <i class="fa fa-check"></i>
+                                <h3>Legacy/MBR & UEFI/GPT supported</h3>
+                            </div>
+                        </div>
+
+                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.5s">
+                            <div class="feature-box d-flex align-items-center">
+                                <i class="fa fa-check"></i>
+                                <h3>Monthly release, same day as mainline Arch</h3>
+                            </div>
+                        </div>
+
+                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.6s">
+                            <div class="feature-box d-flex align-items-center">
+                                <i class="fa fa-check"></i>
+                                <h3>User Friendly</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- / row -->
+        </section>
+    <!--==========================
+    About Section
+    ============================-->
+        <section id="about" class="services">
+            <div class="container">
+
+                <header class="section-header wow fadeInUp">
+                    <h3>About Us</h3>
+                    <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </header>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                        <h4 class="title"><a href="javascript:void(0)">DemonKiller</a></h4>
+                        <p class="description" style="align-items: center;">Lead Developer, responsible for development of monthly ISOs, and the ALG repository.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                        <h4 class="title"><a href="javascript:void(0)">Lovlesh Dagar</a></h4>
+                        <p class="description" style="align-items: center;">Web developer, responsible for the design, development & maintenance of the ALG website.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                        <h4 class="title"><a href="javascript:void(0)">Kulin Goyal</a></h4>
+                        <p class="description" style="align-items: center;">Graphic Desginer, responsible for the ALG artwork.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                        <h4 class="title"><a href="javascript:void(0)">Vikram Pathak</a></h4>
+                        <p class="description" style="align-items: center;">Maintainer & beta-tester, responsible for testing out the ISOs.</p>
+                    </div>
+                </div>
+
+        </section>
+        <!-- #about -->
+
+    </main>
+
+    <!--==========================
+    Footer- Contact
+  ============================-->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 footer-info">
+                        <h3>GET IN TOUCH</h3>
+                        <p>Thank you for downloading.</p>
+
+                        <div class="social-links">
+                            <a target="blank" href="javascript:void(0)" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                            <a target="blank" href="javascript:void(0)" class="github"><i class="fa fa-github"></i></a>
+                            <a target="blank" href="javascript:void(0)" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a target="blank" href="javascript:void(0)" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a target="blank" href="javascript:void(0)" class="twitter"><i class="fa fa-twitter"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>ALG Team</strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a style="color: cyan;">Lovlesh Dagar</a>
+            </div>
+        </div>
+    </footer>
+    <!-- #footer -->
+
+    <!-- Back to top -->
+    <a href="javascript:void(0)" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superfish/1.7.9/js/superfish.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js?v=1"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143375530-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143375530-1');
+    </script>
+
+</body>
+
+</html>
