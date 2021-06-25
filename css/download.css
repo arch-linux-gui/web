@@ -200,6 +200,42 @@ h6 {
     min-width: 180px;
 }
 
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown a span{
+    color: cyan;
+}
+
+.dropdown:hover .dropdown-menu {
+    transform: translate3d(0px, 0px, 0px);
+    visibility: visible;
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+.dropdown .dropdown-menu {
+    background-color: #111;
+    transform: translate3d(0px, -20px, 0px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: hidden;
+    display: block;
+    transition: all 0.5s cubic-bezier(0.3, 0.65, 0.355, 1) 0s, opacity 0.31s ease 0s, height 0s linear 0.36s;
+}
+
+
+.dropdown .dropdown-menu .dropdown-item {
+    display: block;
+    color: white;
+    transition: all 500ms ease;
+
+}
+
+.dropdown .dropdown-menu .dropdown-item:hover {
+    color: cyan;
+    background-color: rgb(49, 48, 48);
+}
 /* Nav Menu Arrows */
 
 .sf-arrows .sf-with-ul {
@@ -241,7 +277,8 @@ h6 {
 }
 
 .nav-menu li:hover>a,
-.nav-menu>.menu-active>a {
+.nav-menu>.menu-active>a,
+.nav-menu .dropdown .dropdown-menu .menu-active, .menu-active{
     color: cyan;
 }
 

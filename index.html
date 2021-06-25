@@ -20,6 +20,9 @@
     <link href="css/animate.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/logo.png">
 
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/venobox.css" rel="stylesheet">
+
 
 </head>
 
@@ -38,11 +41,11 @@
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="#intro"></a></li>
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="#objective">Objective</a></li>
+                    <li><a href="#download-content">Download</a></li>
+                    <li><a href="#testing">Testing</a></li>
                     <li><a href="#features">Features</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#footer">Contact</a></li>
                 </ul>
             </nav>
             <!-- #nav-menu-container -->
@@ -60,12 +63,12 @@
                 <div class="carousel-inner" role="listbox">
 
                     <div class="carousel-item active">
-                        <div class="carousel-background"><img src="img/bg.jpg?v=2" alt=""></div>
+                        <div class="carousel-background"><img src="img/img_1.png" alt=""></div>
                         <div class="carousel-container">
                             <div class="carousel-content">
                                 <img src="img/logo.png" class="img-fluid photo">
-                                <p>Welcome to Arch Linux GUI. Install Vanilla Arch Linux with just a few clicks.</p><br>
-                                <a class="btn" href="download.html">Download Now</a>
+                                <p>Welcome to Arch Linux GUI. Install Vanilla Arch Linux with just a few clicks.</p>
+                                <!-- <a class="btn" href="download.html">Download Now</a> -->
                             </div>
                         </div>
                     </div>
@@ -74,198 +77,451 @@
         </div>
     </section>
     <!-- #intro -->
+    <div class="modal fade" id="features-modal" role="dialog">
+        <div class="modal-dialog" role="alert">
+            <div class="modal-content">
+                <div>
+                    <button class="close mr-2 mt-2" type="button" data-dismiss="modal">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div style="color: black;" class="modal-body">
+                    <h4 align="center"><p></p>What's New??</p></h4>
+                    <hr>
+                    <h5>Changelog for the month of June 2021</h5>
+						<ul class="unordered-list">
+							<li>
+                                5 New Editions are released:
+                                <ol>
+                                    <li>ALG XFCE Themed Edition</li>
+                                    <li>ALG XFCE Pure Edition</li>
+                                    <li>ALG Cinnamon Themed Edition</li>
+                                    <li>ALG Cinnamon Pure Edition</li>
+                                    <li>ALG i3WM Edition</li>
+                                </ol>
+                            </li>
+                            <br>
+                            <li>Removed Chaotic AUR repository and replaced it with PARU AUR helper on all themed editions.</li>
+                            <li>Added base-devel and pacman-contrib on all themed editions.</li>
+                            <li>Installer now cleansup unwanted packages post install. These packages will never be used by the user</li>
+                            <li>Cinnamon edition now ships with Cinnamon version 5.</li>
+                            <li>All editions now ship with pacman 6. Parallel downloads is disabled by default but can be enabled by the user if bandwidth permits.</li>
+                            <li>Themed Editions have aliases to ease pacman operations.</li>
+                            <li>Themed Editions now ship the latest edition of firefox web browser.</li>
+						</ul>
+                    <br>    
+                    <h5>News:</h5>
+                    <p style="color: black;">ALG Plasma Minimal Edition will be phased out soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main id="main">
 
-        <!--==========================
-      Download Section
+    <!--==========================
+    Download Section
     ============================-->
         <section id="download">
+            
             <div class="container">
-
+                <div class="row flex-column mockup-container">
+                    <div class="imgs d-block img-fluid mx-auto col-md-8 col-12">
+                        <div class="owl-carousel desktop-carousel">
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <img src="img/img_1.png" class="feature-img" alt="">
+                                </div>
+                            </div>
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <img src="img/img_3.png" class="feature-img" alt="">
+                                </div>
+                            </div>
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <img src="img/img_5.png" class="feature-img" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="imgs"><img class="d-block img-fliud mx-auto" src="img/img_1.png"></div> -->
+                    <img style="height: 20%; width: 20%;" class="d-block img-fluid mx-auto" src="img/desktop.png">
+                </div>
+                <section id="download-content">
                 <header class="section-header">
                     <h3>Download</h3>
-                    <p>ALG=Arch Linux GUI</p>
-                    <p>The ALG project, at the moment provides you with 3 editions, featuring the KDE Plasma Desktop Environment. All 3 editions use the same features as mainline Arch Linux, the only difference being in the way of installation. While mainline Arch provides a CLI installation, we at ALG provide a graphical installer, Calamares, to make the process easier.</p>
+                    <p style="font-weight: bold;">ALG=Arch Linux GUI</p>
+                    <p>The ALG project provides you with 10 editions, featuring Plasma5, Gnome40, Xfce4, Cinnamon5 desktops and i3WM. All editions comes with a graphical installer. Below are the direct download links. We also recommend you to click on learn more to understand which edition is better for you.</p>
                 </header>
 
                 <div class="row download-cols">
 
-                    <div id="down-sect-1" class="col-md-4 wow fadeInUp">
+                    <div class="offset-md-2 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="download-col">
                             <div class="img">
-                                <img src="img/bg.jpg" alt="" class="img-fluid">
+                                <img src="https://raw.githubusercontent.com/arch-linux-gui/artwork/master/Desktop%20Screen%20Shots/With%20Apps%20SS/Themed%20Editions/XFCE/terminal.png" alt="" class="img-fluid">
                             </div>
                             <div class="buttons" align="center">
-                                <h4>Main Edition</h4>
+                                <h4>Flagship Edition</h4>
                                 <a class="btn btn-primary" href="download.html">Learn More</a>
-                                <a class=" btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/latest/download">Download Now</a>
-                            </div>
-                            <p>
-                                The Flagship edition is a fully featured, ready to use Arch Linux version, with necessary software & settings to help users get started immediately.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div id="down-sect-1" class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="download-col">
-                            <div class="img">
-                                <img src="img/bg.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="buttons" align="center">
-                                <h4>Minimal Edition</h4>
-                                <a class="btn btn-primary" href="download.html#down-sect-2">Learn More</a>
-                                <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-minimal-2021.04-x86_64.iso/download">Download Now</a>
-                            </div>
-                            <p>
-                                The Minimal Edition features very little software. However, it contains certain settings which will help to get started quickly.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div id="down-sect-1" class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="download-col">
-                            <div class="img">
-                                <img src="img/bg.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="buttons" align="center">
-                                <h4>Pure Edition</h4>
-                                <a class="btn btn-primary" href="download.html#down-sect-3">Learn More</a>
-                                <a class=" btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-pure-2021.04-x86_64.iso/download">Download Now</a>
-                            </div>
-                            <p>
-                                The Pure edition, also features very minimal software. It doesn't contain any setting & is what a users get after a traditional CLI installation.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div id="down-sect-2" class="offset-md-2 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="download-col">
-                            <div class="img">
-                                <img src="img/bg.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="buttons" align="center">
-                                <h4>ALG GNOME</h4>
-                                <a class="btn btn-primary" href="download.html#down-sect-4">Learn More</a>
                                 <a class=" btn btn-secondary" href="javascript:void(0)">Download Now</a>
                             </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            <p align="center">
+                                The Flagship Edition is a fully featured, ready to use Arch Linux version, with necessary software & settings to help users get started immediately.
                             </p>
                         </div>
                     </div>
 
-                    <div id="down-sect-2" class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="download-col">
                             <div class="img">
-                                <img src="img/bg.jpg" alt="" class="img-fluid">
+                                <img src="img/img_6.png" alt="" class="img-fluid">
                             </div>
                             <div class="buttons" align="center">
-                                <h4>ALG GNOME-Pure</h4>
-                                <a class="btn btn-primary" href="download.html#down-sect-5">Learn More</a>
+                                <h4>Gnome Edition</h4>
+                                <a class="btn btn-primary" href="download.html#edition-2">Learn More</a>
                                 <a class=" btn btn-secondary" href="javascript:void(0)">Download Now</a>
                             </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            <p align="center">
+                                The Gnome Edition is a fully featured, ready to use Arch Linux version, with necessary software & settings to help users get started immediately.
                             </p>
                         </div>
                     </div>
 
+                    <div class="col-md-4 wow fadeInUp">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="https://raw.githubusercontent.com/arch-linux-gui/artwork/master/Desktop%20Screen%20Shots/Blank%20SS/Themed%20Editions/plasma.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>Plasma Editions</h4>
+                                <a class="btn btn-primary" href="download.html">Learn More</a>
+                                <a class=" btn btn-secondary" href="download.html">Download Now</a>
+                            </div>
+                            <p align="center">
+                                This section contains 3 editions, the flagship, minimal & pure, all of which feature the KDE Plasma Desktop.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="https://raw.githubusercontent.com/arch-linux-gui/artwork/master/Desktop%20Screen%20Shots/Blank%20SS/Pure%20Editons/gnome.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>Gnome Editions</h4>
+                                <a class="btn btn-primary" href="download.html#edition-2">Learn More</a>
+                                <a class="btn btn-secondary" href="download.html#edition-2">Download Now</a>
+                            </div>
+                            <p align="center">
+                                This section contains 2 editions, the themed & pure, all of which feature the Gnome Desktop.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="img/img_7.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>Xfce Editions</h4>
+                                <a class="btn btn-primary" href="download.html#edition-3">Learn More</a>
+                                <a class=" btn btn-secondary" href="download.html#edition-3">Download Now</a>
+                            </div>
+                            <p align="center">
+                                This section contains 2 editions, the themed & pure, all of which feature the XFCE Desktop.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="offset-md-2 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="https://raw.githubusercontent.com/arch-linux-gui/artwork/master/Desktop%20Screen%20Shots/With%20Apps%20SS/Themed%20Editions/XFCE/terminal.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>Cinnamon Editions</h4>
+                                <a class="btn btn-primary" href="download.html#edition-4">Learn More</a>
+                                <a class=" btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                            </div>
+                            <p align="center">
+                                This section contains 2 editions, the themed & pure, all of which feature the Cinnamon Desktop.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="img/img_6.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>I3 Editions</h4>
+                                <a class="btn btn-primary" href="download.html#edition-5">Learn More</a>
+                                <a class=" btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                            </div>
+                            <p align="center">
+                                This section features i3 Window Manager edition.<br><br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
+                <hr>
+                
+            </div>
+        </section>
+        </section>
+        <section id="testing">
+            <div class="container">
+                <header id="testing" class="section-header">
+                    <h3>Testing</h3><br>
+                </header>
+                <div class="row download-cols">
 
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="img/img_6.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>Studio Edition</h4>
+                                <a class="btn btn-primary" href="testing.html">Learn More</a>
+                                <a class="btn btn-secondary" href="testing.html">Download Now</a>
+                            </div>
+                            <p align="center">
+                                Inspired by Ubuntu Studio, this edition comes with software needed for multi-media production and a low latency kernel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInUp">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="img/img_6.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>Zen Edition</h4>
+                                <a class="btn btn-primary" href="testing.html#edition-2">Learn More</a>
+                                <a class=" btn btn-secondary" href="testing.html#edition-2">Download Now</a>
+                            </div>
+                            <p align="center">
+                                Inspired by Garuda Linux, this edition comes with the Zen Kernel, ZSH Shell & BTRFS file system, by default.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInUp">
+                        <div class="download-col">
+                            <div class="img">
+                                <img src="img/img_6.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="buttons" align="center">
+                                <h4>BlackArch Edition</h4>
+                                <a class="btn btn-primary" href="testing.html#edition-3">Learn More</a>
+                                <a class=" btn btn-secondary" href="testing.html#edition-2">Download Now</a>
+                            </div>
+                            <p align="center">
+                                This edition comes with the hardened kernel, security patches, and the BlackArch repository.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-btn">
+                <a class="btn btn-primary" href="tutorials.html">Tutorials</a>
             </div>
         </section>
         <!-- #download -->
 
-        <!--==========================
-      objective Section
-    ============================-->
-        <section id="objective">
-            <div class="container">
-                <header class="section-header">
-                    <h3 style="color: white;">objective</h3>
-                </header>
-                <div class="row">
-                    <div class="col-md-4 box">
-                        <h4 class="title"><a href="javascript:void(0)">Pacman</a></h4>
-                        <p class="description">Pacman is Arch Linux's package management system. It is very powerful & it's most important feature is dependency tracking.</p>
-                    </div>
-
-                    <div class="col-md-4 box box-bg">
-                        <h4 class="title"><a href="javascript:void(0)">Weight</a></h4>
-                        <p class="description">Arch Linux is a lightweight distribution. It is suitable to run on both old as well new hardware. It consumes very less resources.</p>
-                    </div>
-
-                    <div class="col-md-4 box">
-                        <h4 class="title"><a href="javascript:void(0)">Rolling</a></h4>
-                        <p class="description">Arch Linux follows a rolling release cycle. It means that the software databases are always up-to-date, with the latest packages.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!-- #objective -->
-
         <!-- ======= Features Section ======= -->
-        <section id="features" class="features">
 
+        <!-- ======= features Section ======= -->
+        <section id="features" class="features">
             <div class="container">
 
                 <header class="section-header">
-                    <h3 style="color: black;">Features</h3>
+                    <h3 style="color: white;">Features</h3>
                 </header>
 
                 <div class="row">
-                    <div class="row align-self-center gy-4">
+                    <div class="col-12">
 
-                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.1s">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="fa fa-check"></i>
-                                <h3>Ready to use Graphical environment</h3>
+                        <div class="owl-carousel features-carousel">
+
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <h3>Easy to Install</h3>
+                                    <img src="img/img_6.png" class="feature-img" alt="">
+                                    <p>
+                                        Calamares installer makes it easier to install
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.2s">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="fa fa-check"></i>
-                                <h3>Fully Featured ready to use KDE plasma desktop</h3>
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <h3>Stock Desktop Environment</h3>
+                                    <img src="img/img_6.png" class="feature-img" alt="">
+                                    <p>
+                                        Users wanting to customize their OS from scratch can choose the pure editions which have stock desktop enviroments.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.3s">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="fa fa-check"></i>
-                                <h3>For Intel/AMD computers</h3>
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <h3>Themed Desktop Environment</h3>
+                                    <img src="img/img_6.png" class="feature-img" alt="">
+                                    <p>
+                                        Users wanting to get started immediatly can choose the themed editions which have themed desktop enviroments.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.4s">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="fa fa-check"></i>
-                                <h3>Legacy/MBR & UEFI/GPT supported</h3>
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <h3>Graphical environment</h3>
+                                    <img src="img/img_6.png" class="feature-img" alt="">
+                                    <p>
+                                        Ready to use graphical environments. Users can start using Arch Linux out of the box, with the themed editions which come with themes, settings and software.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.5s">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="fa fa-check"></i>
-                                <h3>Monthly release, same day as mainline Arch</h3>
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <h3>For Intel/AMD computers</h3>
+                                    <img src="img/img_6.png" class="feature-img" alt="">
+                                    <p>
+                                        Hardware tested on team blue, and team red hardware.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="box col-md-6 wow zoomIn" data-wow-duration="1.4s" data-wow-delay="0.6s">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="fa fa-check"></i>
-                                <h3>User Friendly</h3>
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <h3>Monthly release, same day as mainline Arch</h3>
+                                    <img src="img/img_6.png" class="feature-img" alt="">
+                                    <p>
+                                        Monthly rolling release schedule, just like mainline Arch Linux with new ISOs on first of every month.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <h3>Legacy/MBR & UEFI/GPT supported</h3>
+                                    <img src="img/img_6.png" class="feature-img" alt="">
+                                    <p>
+                                        Install in UEFI/GPT or Lgeacy/MBR setup.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <h3>Easy to multi-boot</h3>
+                                    <img src="img/img_6.png" class="feature-img" alt="">
+                                    <p>
+                                        Easily dual-boot/triple boot with Windows and/or other linux distributions.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <h3>Encryption using LUKS</h3>
+                                    <img src="img/img_6.png" class="feature-img" alt="">
+                                    <p>
+                                        All editions come with encryption using LUKS. USers can easily ecrypt drives during installtion.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="feature-wrap">
+                                <div class="feature-item">
+                                    <h3>Printing using CUPS</h3>
+                                    <img src="img/img_6.png" class="feature-img" alt="">
+                                    <p>
+                                        Themed editions come with CUPS enabled.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
             </div>
-            <!-- / row -->
         </section>
+        <!-- End features Section -->
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <header class="section-header">
+                    <h3 style="color: black;">Gallery</h3>
+                </header>
+                <p align="center" style="color: black;">ALG was created keeping new users in mind. Hence, we provide video tutorials along with the ISOs. They cover topics such as installation, multi-booting, various issues and other important miscallaneous topics.</p>
+                
+                <div class="owl-carousel tutorial-carousel owl-theme">
+                    <div class="item">
+                        <a href="img/img_1.png" class="venobox" data-gall="gallery-item">
+                            <img src="img/img_1.png" alt="" class="img-fluid">
+                        </a>
+                        <a href="img/img_2.png" class="venobox" data-gall="gallery-item">
+                            <img src="img/img_2.png" alt="" class="img-fluid">
+                        </a>
+                        <!-- <div class="videos" style="background-image: url(img/thumbnail.jpg)">
+                            <a class="venobox" data-autoplay="ture" data-gall="gallery-item" data-vbtype="video" href="https://www.youtube.com/F9ZgTCZnsLE"><i class="ytp-large-play-button ytp-button"><svg height="30%" version="1.1" width="30%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></i></a>
+                        </div> -->
+                    </div>
+
+                    <div class="item">
+                        <a href="img/img_3.png" class="venobox" data-gall="gallery-item">
+                            <img src="img/img_3.png" alt="" class="img-fluid">
+                        </a>
+                        <a href="img/img_4.png" class="venobox" data-gall="gallery-item">
+                            <img src="img/img_4.png" alt="" class="img-fluid">
+                        </a>
+                        <!-- <div class="videos" style="background-image: url(img/thumbnail.jpg)">
+                            <a class="venobox" data-autoplay="ture" data-gall="gallery-item" data-vbtype="video" href="https://www.youtube.com/F9ZgTCZnsLE"><i class="ytp-large-play-button ytp-button"><svg height="30%" version="1.1" width="30%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></i></a>
+                        </div> -->
+                    </div>
+
+                    <div class="item">
+                        <a href="img/img_5.png" class="venobox" data-gall="gallery-item">
+                            <img src="img/img_5.png" alt="" class="img-fluid">
+                        </a>
+                        <a href="img/img_6.png" class="venobox" data-gall="gallery-item">
+                            <img src="img/img_6.png" alt="" class="img-fluid">
+                        </a>
+                        <!-- <div class="videos" style="background-image: url(img/thumbnail.jpg)">
+                            <a class="venobox" data-autoplay="ture" data-gall="gallery-item" data-vbtype="video" href="https://www.youtube.com/F9ZgTCZnsLE"><i class="ytp-large-play-button ytp-button"><svg height="30%" version="1.1" width="30%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path class="ytp-small-play-button-bg" d="M 45,24 27,14 27,34" fill="#fff"></path></svg></i></a>
+                        </div> -->
+                    </div>
+
+                    <div class="item">
+                        <a href="img/bg.jpg" class="venobox" data-gall="gallery-item">
+                            <img src="img/bg.jpg" alt="" class="img-fluid">
+                        </a>
+                        <a href="img/test.png" class="venobox" data-gall="gallery-item">
+                            <img src="img/test.png" alt="" class="img-fluid">
+                        </a>
+                        <!-- <div class="videos" style="background-image: url(img/thumbnail.jpg)">
+                            <a class="venobox" data-autoplay="ture" data-gall="gallery-item" data-vbtype="video" href="https://www.youtube.com/F9ZgTCZnsLE"><i class="ytp-large-play-button ytp-button"><svg height="30%" version="1.1" width="30%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></i></a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
     <!--==========================
     About Section
     ============================-->
@@ -274,7 +530,7 @@
 
                 <header class="section-header wow fadeInUp">
                     <h3>About Us</h3>
-                    <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p style="color: white;">Team Responsible for the Arch Linux GUI Project.</p>
                 </header>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
@@ -294,7 +550,7 @@
                         <p class="description" style="align-items: center;">Maintainer & beta-tester, responsible for testing out the ISOs.</p>
                     </div>
                 </div>
-
+            </div>
         </section>
         <!-- #about -->
 
@@ -348,10 +604,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/superfish/1.7.9/js/superfish.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
 
 
     <!-- Template Main Javascript File -->
-    <script src="js/main.js?v=1"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/venobox.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Template Main JS File -->
+    
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143375530-1"></script>

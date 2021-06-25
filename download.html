@@ -39,173 +39,358 @@
 
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="menu-active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <a style="color: white; height: max-content;" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edition-<span class="show-sec">Plasma</span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="menu-active dropdown-item" href="#sec-1">Plasma</a>
+                            <a class="dropdown-item" href="#sec-2">GNOME</a>
+                            <a class="dropdown-item" href="#sec-3">XFCE</a>
+                            <a class="dropdown-item" href="#sec-4">Cin</a>
+                            <a class="dropdown-item" href="#sec-5">I3</a>
+                        </div>
+                        </div>
+                    </li>
+                    <li><a href="testing.html">Testing</a></li>
                     <li><a href="tutorials.html">Tutorials</a></li>
-                    <li><a href="javascript:void(0)">KDE</a></li>
-                    <li><a href="javascript:void(0)">GNOME</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="#footer">Contact</a></li>
                 </ul>
             </nav>
             <!-- #nav-menu-container -->
         </div>
     </header>
 
-    <header class="section-header">
-        <h3>CHOOSE EDITION</h3>
-    </header>
-
-    <section class="section wow fadeInUp" id="down-sect-1">
-        <div class="row download-col">
-            <div class="content col-md-4">
-                <h2 class="title">Main Edition</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-            <div class="img col-md-4">
-                <div class="frame-div">
-                    <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section id="sec-1">
+        <header class="section-header">
+            <h3>PLASMA EDITIONS</h3>
+        </header>
+        <div class="section wow fadeInUp">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">Flagship Edition</h2>
+                    <p>
+                        The Plasma Themed Edition (also known as the Flagship) of Arch Linux GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop Environment. It is pre-configured and ready to use. It comes with all the neccessary software and settings to help users get started quickly. 
+                    </p>  
+                    <p>
+                        Some of the features include:
+                        <ul>
+                            <li>System Wide Dark Theme, including Web Browser</li>
+                            <li>Office Suite with MS fonts</li>
+                            <li>Printing Services (CUPS)</li>
+                            <li>Media Player & Video Conferencing Application</li>
+                            <li>Simple Desktop Display Manager</li>
+                        </ul>
+                    </p>
                 </div>
-                <img src="img/pc.png" alt="" class="img-fluid">
-                <div class="buttons" align="center">
-                    <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/latest/download">Download Now</a>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-2021.05-x86_64.iso/download" target="_blank">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">Minimal Edition</h2>
+                    <p>
+                        The Plasma Minimal Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop Environment. It contains very little software. It however comes with certain settings to help users wanting a minimal Vanilla Arch system, get started quickly.
+                    </p>  
+                    <p>
+                        The Plasma Minimal Edition contains very little software. It does not even contain a browser, media player or any other application. The application you get with this edition are:
+                        <ul>
+                            <li>Konsole - Terminal</li>
+                            <li>Kate - Advanced Text Editor</li>
+                            <li>Dolphin - File Browser/Manager</li>
+                            <li>Spectacle - Screenshot Utility</li>
+                            <li>Discover - GUI Software Center</li>
+                            <li>Firefox - Web Browser</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-minimal-2021.05-x86_64.iso/download" target="_blank">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section wow fadeInUp" data-wow-delay="0.2s">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">Pure Edition</h2>
+                    <p>
+                        The Pure Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Stock Plasma Desktop Environment. 
+                        It contains all the software Plasma provides by default.  
+                        This is what users get after installing the Plasma Desktop Environment After a CLI installation.
+                    </p>
+                </div>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-pure-2021.05-x86_64.iso/download" target="_blank">Download Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section wow fadeInUp" id="down-sect-2" data-wow-delay="0.1s">
-        <div class="row download-col">
-            <div class="content col-md-4">
-                <h2 class="title">Minimal Edition</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-            <div class="img col-md-4">
-                <div class="frame-div">
-                    <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <hr id="edition-2">
+
+    <!-- GNOME -->
+    <section id="sec-2" >
+        <header class="section-header">
+            <h3>GNOME EDITIONS</h3>
+        </header>
+        <div class="section wow fadeInUp" data-wow-delay="0.3s">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">GNOME Edition</h2>
+                    <p>
+                        The GNOME Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the GNOME Desktop Environment. It is pre-configured and ready to use. It comes with all the neccessary software and settings to help users get started quickly. 
+                    </p>  
+                    <p>
+                        Some of the features include:
+                        <ul>
+                            <li>Beautiful System Wide Orchis Dark Theme, including Web Browser</li>
+                            <li>Media Player</li>
+                            <li>Printing Services (CUPS)</li>
+                            <li>Office Suite with MS fonts</li>
+                            <li>Customized Gnome Display Manager</li>
+                        </ul>
+                    </p>
                 </div>
-                <img src="img/pc.png" alt="" class="img-fluid">
-                <div class="buttons" align="center">
-                    <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-minimal-2021.04-x86_64.iso/download">Download Now</a>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-2021.05-x86_64.iso/download" target="_blank">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">GNOME Pure Edition</h2>
+                    <p>
+                        The Pure Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Stock GNOME Desktop Environment. 
+                        It contains all the software GNOME provides by default.  
+                        This is what users get after installing the GNOME Desktop Environment After a CLI installation.
+                    </p>
+                </div>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-pure-2021.05-x86_64.iso/download" target="_blank">Download Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section wow fadeInUp" id="down-sect-3" data-wow-delay="0.2s">
-        <div class="row download-col">
-            <div class="content col-md-4">
-                <h2 class="title">Pure Edition</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-            <div class="img col-md-4">
-                <div class="frame-div">
-                    <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <hr id="edition-3">
+
+    <!-- XFCE -->
+
+    <section id="sec-3" >
+        <header class="section-header">
+            <h3>XFCE EDITIONS</h3>
+        </header>
+        <div class="sec-3 section wow fadeInUp" data-wow-delay="0.4s">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">XFCE Edition</h2>
+                    <p>
+                        The XFCE Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the XFCE Desktop Environment. It is pre-configured and ready to use. It comes with all the neccessary software and settings to help users get started quickly. 
+                    </p>  
+                    <p>
+                        Some of the features include:
+                        <ul>
+                            <li>System Wide Dark Theme, including Web Browser</li>
+                            <li>Media Player</li>
+                            <li>Printing Services (CUPS)</li>
+                            <li>Office Suite with MS fonts</li>
+                            <li>LightDM</li>
+                        </ul>
+                    </p>
                 </div>
-                <img src="img/pc.png" alt="" class="img-fluid">
-                <div class="buttons" align="center">
-                    <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-pure-2021.04-x86_64.iso/download">Download Now</a>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">XFCE Pure</h2>
+                    <p>
+                        The XFCE Pure Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Stock XFCE Desktop Environment. 
+                        It contains all the software GNOME provides by default.  
+                        This is what users get after installing the XFCE Desktop Environment After a CLI installation. 
+                    </p>
+                </div>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-pure-beta.iso/download">Download Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section wow fadeInUp" id="down-sect-4" data-wow-delay="0.3s">
-        <div class="row download-col">
-            <div class="content col-md-4">
-                <h2 class="title">ALG GNOME</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-            <div class="img col-md-4">
-                <div class="frame-div">
-                    <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <hr  id="edition-4">
+    
+    <!-- Cin -->
+    <section id="sec-4" >
+        <header class="section-header">
+            <h3>Cin EDITIONS</h3>
+        </header>
+        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">Cinnamon Themed Edition</h2>
+                    <p>
+                        The Cinnamon Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Cinnamon Desktop Environment. It is pre-configured and ready to use. It comes with all the neccessary software and settings to help users get started quickly. 
+                    </p>  
+                    <p>
+                        Some of the features include:
+                        <ul>
+                            <li>System Wide Dark Theme, including Web Browser</li>
+                            <li>Media Player</li>
+                            <li>Printing Services (CUPS)</li>
+                            <li>Office Suite with MS fonts</li>
+                            <li>LightDM</li>
+                        </ul>
+                    </p>
                 </div>
-                <img src="img/pc.png" alt="" class="img-fluid">
-                <div class="buttons" align="center">
-                    <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">Cinnamon Pure Edition</h2>
+                    <p>
+                        The Pure Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Stock Cinnamon Desktop Environment. 
+                        This is what users get after installing the Cinnamon Desktop Environment After a CLI installation.
+                    </p>
+                </div>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section wow fadeInUp" id="down-sect-5" data-wow-delay="0.4s">
-        <div class="row download-col">
-            <div class="content col-md-4">
-                <h2 class="title">ALG GNOME-Pure</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-            <div class="img col-md-4">
-                <div class="frame-div">
-                    <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <hr id="edition-5">
+
+    <!-- I3 -->
+    <section id="sec-5">
+        <header class="section-header">
+            <h3>I3 EDITIONS</h3>
+        </header>
+        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">I3 Edition</h2>
+                    <p>
+                        The i3 Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the i3 Window Manager.   
+                    </p>
+                    <p>
+                        This edition comes with 
+                        <ul>
+                            <li>Gaps enabled by default</li>
+                            <li>Kitty - as the terminal emulator. It is transparent by default in this edition.</li>
+                            <li>Picom Compositor that enables kitty to have transparency</li>
+                            <li>Dmenu - Program Launcher</li>
+                            <li>Feh - that handles the background.</li>
+                            <li>Paru - An AUR Helper</li>
+                        </ul>
+                    </p>
                 </div>
-                <img src="img/pc.png" alt="" class="img-fluid">
-                <div class="buttons" align="center">
-                    <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+            <div class="row download-col">
+                <div class="content col-md-4">
+                    <h2 class="title">I3 Edition 2</h2>
+                    <p>
+                        Content?
+                        No content xD!!
+                    </p>
+                </div>
+                <div class="img col-md-4">
+                    <div class="frame-div">
+                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <div class="buttons" align="center">
+                        <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!--==========================
     Footer- Contact
   ============================-->
     <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-12 footer-info">
-                        <h3>GET IN TOUCH</h3>
-                        <p>Thank you for downloading.</p>
-
-                        <div class="social-links">
-                            <a target="blank" href="javascript:void(0)" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                            <a target="blank" href="javascript:void(0)" class="github"><i class="fa fa-github"></i></a>
-                            <a target="blank" href="javascript:void(0)" class="instagram"><i class="fa fa-instagram"></i></a>
-                            <a target="blank" href="javascript:void(0)" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a target="blank" href="javascript:void(0)" class="twitter"><i class="fa fa-twitter"></i></a>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
+        
         <div class="container">
             <div class="copyright">
                 &copy; Copyright <strong>ALG Team</strong>. All Rights Reserved
@@ -223,6 +408,9 @@
     <div id="preloader"></div>
 
     <!-- JavaScript Libraries -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/superfish/1.7.9/js/superfish.min.js"></script>
@@ -230,7 +418,7 @@
 
 
     <!-- Template Main Javascript File -->
-    <script src="js/main.js?v=1"></script>
+    <script src="js/main.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143375530-1"></script>
@@ -243,6 +431,8 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-143375530-1');
+
+
     </script>
 
 

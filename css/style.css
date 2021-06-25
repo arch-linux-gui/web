@@ -207,11 +207,12 @@ h6 {
 }
 
 #intro .carousel-background img {
-    max-width: 100%;
+    width: 100%;
 }
 
 #intro .carousel-content {
     text-align: center;
+    margin-top: -100px;
 }
 
 #intro .carousel-content .btn {
@@ -234,7 +235,7 @@ h6 {
 }
 
 #intro p {
-    width: 80%;
+    /* width: 80%; */
     margin: 0 auto 30px auto;
     color: #fff;
 }
@@ -638,10 +639,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #download {
-    background: url("img/experience.jpg") center top no-repeat fixed;
     background-size: cover;
     padding: 60px 0 40px 0;
     position: relative;
+}
+
+#testing {
+    padding-bottom: 40px;
 }
 
 #download::before {
@@ -655,28 +659,50 @@ body.mobile-nav-active #mobile-nav-toggle {
     z-index: 9;
 }
 
-#download .container {
+#download .container .mockup-container {
+    margin-top: -300px;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+#download .container .mockup-container .imgs .desktop-carousel {
+    margin-bottom: -30px;
+}
+
+#download .container .mockup-container .imgs .desktop-carousel .owl-stage-outer{
+    border: 15px solid #111;
+    border-radius: 15px;
+    background-color: #111;
+}
+
+@media (max-width: 768px) {
+    #download .container .mockup-container{
+        margin-top: -200px;
+    }
+}
+
+#download .container, #testing .container {
     position: relative;
     z-index: 10;
     max-width: fit-content;
 }
 
-#download .download-col {
+#download .download-col, #testing .download-col {
     background: #fff;
     border-radius: 0 0 4px 4px;
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
 }
 
-#download .download-col .img {
+#download .download-col .img, #testing .download-col .img {
     position: relative;
 }
 
-#download .download-col .img img {
+#download .download-col .img img, #testing .download-col .img img {
     border-radius: 4px 4px 0 0;
 }
 
-#download .download-col h2 {
+#download .download-col h2, #testing .download-col h2 {
     color: #000;
     text-align: center;
     font-weight: 700;
@@ -685,15 +711,15 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin: 10px 0 12px 0;
 }
 
-#download .download-col h2 a {
+#download .download-col h2 a, #testing .download-col h2 a {
     color: #000;
 }
 
-#download .download-col h2 a:hover {
+#download .download-col h2 a:hover, #testing .download-col h2 a:hover {
     color: cyan;
 }
 
-#download .download-col p {
+#download .download-col p, #testing .download-col p {
     font-size: 14px;
     line-height: 24px;
     color: #333;
@@ -701,30 +727,30 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 0 20px 20px 20px;
 }
 
-#download .btn:hover {
+#download .btn:hover, #testing .btn:hover {
     background: black;
     color: cyan;
 }
 
-#download .btn {
+#download .btn, #testing .btn {
     margin: 10px 0 5px 0;
     color: black;
     border: 1px solid black;
 }
 
-#download .btn-secondary {
+#download .btn-secondary, #testing .btn-secondary {
     background: cyan;
 }
 
-#download .btn-primary {
+#download .btn-primary, #testing .btn-primary {
     background: dimgrey;
 }
 
-#download .section-header h3 {
+#download .section-header h3, #testing .section-header h3 {
     color: #000;
 }
 
-#download .download-col .buttons h4{
+#download .download-col .buttons h4, #testing .download-col .buttons h4{
     margin: 8px 0 -2px 0;
 }
 
@@ -736,37 +762,71 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 60px 0 40px 0;
 }
 
-.features .feature-box {
-    padding: 24px 20px;
-    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
-    transition: 0.3s;
-    height: 100%;
+.features{
+    background: #000;
+}
+  
+.features .feature-item {
+    box-sizing: content-box;
+    padding: 0 30px 5px 30px;
+    margin: 30px 15px;
+    min-height: 200px;
+    /* box-shadow: 0px 2px 12px rgba(44, 73, 100, 0.08); */
+    position: relative;
+    background: #000;
 }
 
-.features .box {
-    margin-top: 24px;
-}
+.features .feature-item .feature-img {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    }
 
-.features .feature-box h3 {
+.features .feature-item h3 {
     font-size: 18px;
-    color: #012970;
-    font-weight: 700;
-    margin: 0;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+    color: white;
 }
 
-.features .feature-box i {
-    background: #ecf3ff;
-    padding: 4px;
-    margin-right: 10px;
-    font-size: 24px;
-    border-radius: 3px;
-    transition: 0.3s;
+
+.features .feature-item p {
+    font-style: italic;
+    margin: 15px auto 5px auto;
+    color: white;
 }
 
-.features .feature-box:hover i {
-    background: cyan;
-    color: #000;
+.features .owl-nav, .features .owl-dots {
+    text-align: center;
 }
+
+.features .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd !important;
+}
+
+.features .owl-dot.active {
+    background-color: #1977cc !important;
+}
+
+@media (max-width: 767px) {
+    .features .feature-wrap {
+    padding-left: 0;
+    }
+    .features .feature-item {
+    padding: 30px;
+    margin: 15px;
+    }
+    .features .feature-item .feature-img {
+    position: static;
+    left: auto;
+    }
+}
+
 
 /* Services Section
 --------------------------------*/
@@ -808,6 +868,66 @@ p {
     color: white;
 }
 
+/*--------------------------------------------------------------
+# gallerys
+--------------------------------------------------------------*/
+
+#gallery{
+    padding: 60px 0 40px 0;
+}
+
+.gallery .owl-carousel .img-fluid{
+    border: 4px solid white;
+}
+.gallery .owl-carousel .img-fluid:hover{
+    transform: scale(1.02);
+}
+.gallery .owl-carousel .videos{
+    border: 4px solid white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 160px;
+    width: 100%;
+    position: relative;
+}
+
+.gallery .owl-carousel .videos:hover{
+    transform: scale(1.02);
+}
+
+.gallery .owl-carousel .videos .ytp-button {
+    position: relative;
+    left: 40%;
+    top: 35%;
+}
+.ytp-large-play-button-bg{
+    fill: #000;
+    opacity: 0.7;
+}
+
+
+.gallery .owl-carousel .videos:hover .ytp-large-play-button-bg{
+    fill: #f00 !important;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#testing .tutorial-btn{
+    text-align: center;
+}
+
+#testing .tutorial-btn .btn{
+    background-color: cyan;
+    width: 300px;
+    height: auto;
+    border-color: black;
+    color: black;
+}
+
+#testing .tutorial-btn .btn:hover{
+    background-color: black;
+    color: cyan;
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -948,6 +1068,8 @@ p {
     color: #ddd;
 }
 
+
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
@@ -963,18 +1085,14 @@ p {
         border-right: 1px solid #ddd;
     }
 
+    #intro .carousel-background img{
+        height: 100vh;
+    }
+
 }
 
-@media (min-width: 992px) {
-    #testimonials .testimonial-item p {
-        width: 80%;
-    }
-}
 
 @media (min-width: 1024px) {
-    #intro p {
-        width: 60%;
-    }
     #intro .carousel-control-prev,
     #intro .carousel-control-next {
         width: 5%;

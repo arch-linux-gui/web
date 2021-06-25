@@ -1,6 +1,6 @@
-(function($) {
+!(function($) {
     "use strict";
-
+    
     // Preloader
     $(window).on('load', function() {
         if ($('#preloader').length) {
@@ -111,6 +111,8 @@
                 if ($(this).parents('.nav-menu').length) {
                     $('.nav-menu .menu-active').removeClass('menu-active');
                     $(this).closest('li').addClass('menu-active');
+                    $('.nav-menu .dropdown .dropdown-menu a').removeClass('menu-active');
+                    $(this).closest('a').addClass('menu-active');
                 }
 
                 if ($('body').hasClass('mobile-nav-active')) {
@@ -127,6 +129,8 @@
     // Navigation active state on scroll
     var nav_sections = $('section');
     var main_nav = $('.nav-menu, #mobile-nav');
+    var dropdown_nav = $('.dropdown-menu');
+    var show_sec = $('.dropdown .show-sec');
     var main_nav_height = $('#header').outerHeight();
 
     $(window).on('scroll', function() {
@@ -139,8 +143,80 @@
             if (cur_pos >= top && cur_pos <= bottom) {
                 main_nav.find('li').removeClass('menu-active menu-item-active');
                 main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('menu-active menu-item-active');
+                dropdown_nav.find('a').removeClass('menu-active');
+                dropdown_nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('menu-active');
+                var current_sec = dropdown_nav.find('a[href="#' + $(this).attr('id') + '"]').html();
+                show_sec.html(current_sec);
             }
         });
+    });
+
+  // Testimonials carousel (uses the Owl Carousel library)
+  $(".features-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1
+      },
+      900: {
+        items: 2
+      }
+    }
+  });
+
+  $(".desktop-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1
+      },
+      900: {
+        items: 1
+      }
+    }
+  });
+
+  $(".tutorial-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    autoplayHoverPause:true,
+    responsive: {
+      0: {
+        items: 2
+      },
+      768: {
+        items: 2
+      },
+      900: {
+        items: 3
+      }
+    }
+  });
+
+
+  $(document).ready(function() {
+    $('.venobox').venobox();
+  });
+
+  $(window).on('load',function() {
+      $('#features-modal').modal('show');
+  });
+
+  $('.dropdown').click(function(){
+
+    $('.dropdown-menu').toggleClass('show');
+
     });
 
 })(jQuery);
