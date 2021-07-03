@@ -221,9 +221,8 @@ h6 {
     filter: alpha(opacity=0);
     visibility: hidden;
     display: block;
-    transition: all 0.5s cubic-bezier(0.3, 0.65, 0.355, 1) 0s, opacity 0.31s ease 0s, height 0s linear 0.36s;
+    transition: all 0.5s cubic-bezier(0.3, 0.65, 0.355, 1) 0s, opacity 0.31s ease 0s, height 0s linear 0.2s;
 }
-
 
 .dropdown .dropdown-menu .dropdown-item {
     display: block;
@@ -437,7 +436,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 .section-header{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .section-header h3 {
@@ -475,17 +474,39 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* download Section
 --------------------------------*/
 
+#requirements {
+    margin: 30px 0 0 0;
+}
+
+#instructions .section {
+    padding-top: 0;
+}
+
+#requirements .row, #instructions .row {
+    border: 5px solid;
+    border-image: linear-gradient(0deg, black, cyan) 1;
+    border-radius: 6px 6px 6px 6px;
+}
+
+#requirements .section {
+    padding: 72px 50px 0px 50px;
+}
+
 .row {
     border-radius: 6px 6px 6px 6px;
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
     margin-bottom: 50px;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .section{
-    padding: 72px 50px 10px 50px;
+    padding: 0 50px 10px 50px;
 }
 
+#sec-1 {
+    margin-top: 100px;
+}
 
 .content p{
     text-align: justify;
@@ -704,7 +725,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 
     .download-col .img img {
-        margin-top: -14px;
+        /* margin-top: -14px; */
     }
     .download-col .img{
         padding: 0 70px 0 70px;
@@ -748,7 +769,7 @@ body.mobile-nav-active #mobile-nav-toggle {
         display: inline;
     }
     .download-col .img img {
-        margin-top: -24px;
+        /* margin-top: -24px; */
     }
     .frame {
         height: 230px;

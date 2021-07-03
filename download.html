@@ -36,14 +36,13 @@
             <div id="logo" class="pull-left">
                 <h1><a class="scrollto">ALG - Download</a></h1>
             </div>
-
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><div class="dropdown">
                         <a style="color: white; height: max-content;" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edition-<span class="show-sec">Plasma</span></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="menu-active dropdown-item" href="#sec-1">Plasma</a>
+                            <a class="dropdown-item" href="#dsec-1">Plasma</a>
                             <a class="dropdown-item" href="#sec-2">GNOME</a>
                             <a class="dropdown-item" href="#sec-3">XFCE</a>
                             <a class="dropdown-item" href="#sec-4">Cin</a>
@@ -58,8 +57,56 @@
             <!-- #nav-menu-container -->
         </div>
     </header>
+    <section id="requirements">
+        <div class="section">
+            <div class="row doanload-col">
+                <div class="content col-12">
+                    <h2 class="title">Requirements</h2>
+                    Mininum:-
+                    <ul>
+                        <li>64 bit x86_64 processor (Intel/AMD), with atleast 2 CPU cores. (32-bit not supported)</li>
+	                    <li>Any GPU/iGPU with OpenGl 3.3+ support.</li>
+                        <li>Atleast 2GB DDR3/DDR4 RAM.</li>
+                        <li>Atleast 10GB HDD/SSD storage. (Although installer will allow min 5.5GB)</li>
+                        <li>Basic WPA/WPA2 compatible wifi card or ethernet supported motherboard.</li>
+                    </ul>
+                    Recommeded (Themed Edition):-
+                    <ul>
+                        <li>64 bit x86_64 processor (Intel/AMD), with atleast 4 CPU cores. (32-bit not supported)</li>
+                        <li>Any GPU/iGPU with OpenGl 3.3+ support.</li>
+                        <li>4-8GB DDR4 RAM (more the better).</li>
+                        <li>50GB HDD/SSD Space (more the better) (practically you would use a 500GB/1TB HDD/SSD)</li>
+                        <li>WIFI and Ethernet Card.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section id="sec-1">
+    <section id="instructions">
+        <div class="section">
+            <div class="row doanload-col">
+                <div class="content col-12">
+                    <h2 class="title">General Instructions</h2>
+                    <ol>
+                        <li>Make Bootable USB:-
+                            <ul>
+                                <li>Linux: Watch this video (link to tut page) - use dd</li>
+                                <li>Windows: Watch this video (link to tut page) - don't use rufus</li>
+                                <li>MacOS: Watch this video (link to tut page) - kya pata</li>
+                            </ul>
+                        </li>
+                        <li>Watch tutorials on the tut page for installation guide.</li>
+                        <li>Dual/Multiboot: Watch this video on tut page</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr id="edition-1">
+
+    <section id="dsec-1">
         <header class="section-header">
             <h3>PLASMA EDITIONS</h3>
         </header>
@@ -83,48 +130,25 @@
                 </div>
                 <div class="img col-md-4">
                     <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/img_1.png" class="frame d-block img-fluid" alt="">
+                        <!-- <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <img src="img/pc.png" alt="" class="img-fluid d-block">
                     <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-2021.05-x86_64.iso/download" target="_blank">Download Now</a>
+                        <div class="btn btn-secondary dropdown">
+                            <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download Now</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a target="_blank" class="dropdown-item" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-plasma-2021.07-x86_64.iso/download">From Sourceforge</a>
+                                <a target="_blank" class="dropdown-item" href="https://osdn.net/projects/arch-linux-gui/downloads/75463/archlinux-gui-plasma-2021.07-x86_64.iso/">From OSDN</a>
+                                <a target="_blank" class="dropdown-item">Checksum</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="section wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row download-col">
-                <div class="content col-md-4">
-                    <h2 class="title">Minimal Edition</h2>
-                    <p>
-                        The Plasma Minimal Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop Environment. It contains very little software. It however comes with certain settings to help users wanting a minimal Vanilla Arch system, get started quickly.
-                    </p>  
-                    <p>
-                        The Plasma Minimal Edition contains very little software. It does not even contain a browser, media player or any other application. The application you get with this edition are:
-                        <ul>
-                            <li>Konsole - Terminal</li>
-                            <li>Kate - Advanced Text Editor</li>
-                            <li>Dolphin - File Browser/Manager</li>
-                            <li>Spectacle - Screenshot Utility</li>
-                            <li>Discover - GUI Software Center</li>
-                            <li>Firefox - Web Browser</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="img col-md-4">
-                    <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
-                    <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-minimal-2021.05-x86_64.iso/download" target="_blank">Download Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section wow fadeInUp" data-wow-delay="0.2s">
+        <div class="section wow fadeInUp">
             <div class="row download-col">
                 <div class="content col-md-4">
                     <h2 class="title">Pure Edition</h2>
@@ -136,11 +160,19 @@
                 </div>
                 <div class="img col-md-4">
                     <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/img_1.png" class="frame d-block img-fluid" alt="">
+                        <!-- <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <img src="img/pc.png" alt="" class="img-fluid d-block">
                     <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-pure-2021.05-x86_64.iso/download" target="_blank">Download Now</a>
+                        <div class="btn btn-secondary dropdown">
+                            <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download Now</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a target="_blank" class="dropdown-item" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-plasma-pure-2021.07-x86_64.iso/download">From Sourceforge</a>
+                                <a target="_blank" class="dropdown-item" href="https://osdn.net/projects/arch-linux-gui/downloads/75463/archlinux-gui-plasma-pure-2021.07-x86_64.iso/">From OSDN</a>
+                                <a target="_blank" class="dropdown-item">Checksum</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,7 +186,7 @@
         <header class="section-header">
             <h3>GNOME EDITIONS</h3>
         </header>
-        <div class="section wow fadeInUp" data-wow-delay="0.3s">
+        <div class="section wow fadeInUp">
             <div class="row download-col">
                 <div class="content col-md-4">
                     <h2 class="title">GNOME Edition</h2>
@@ -174,17 +206,25 @@
                 </div>
                 <div class="img col-md-4">
                     <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/img_1.png" class="frame d-block img-fluid" alt="">
+                        <!-- <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <img src="img/pc.png" alt="" class="img-fluid d-block">
                     <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-2021.05-x86_64.iso/download" target="_blank">Download Now</a>
+                        <div class="btn btn-secondary dropdown">
+                            <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download Now</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a target="_blank" class="dropdown-item" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-2021.07-x86_64.iso/download">From Sourceforge</a>
+                                <a target="_blank" class="dropdown-item" href="https://osdn.net/projects/arch-linux-gui/downloads/75463/archlinux-gui-gnome-2021.07-x86_64.iso/">From OSDN</a>
+                                <a target="_blank" class="dropdown-item">Checksum</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+        <div class="section wow fadeInUp">
             <div class="row download-col">
                 <div class="content col-md-4">
                     <h2 class="title">GNOME Pure Edition</h2>
@@ -196,11 +236,19 @@
                 </div>
                 <div class="img col-md-4">
                     <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/img_1.png" class="frame d-block img-fluid" alt="">
+                        <!-- <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <img src="img/pc.png" alt="" class="img-fluid d-block">
                     <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-pure-2021.05-x86_64.iso/download" target="_blank">Download Now</a>
+                        <div class="btn btn-secondary dropdown">
+                            <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download Now</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a target="_blank" class="dropdown-item" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-pure-2021.07-x86_64.iso/download">From Sourceforge</a>
+                                <a target="_blank" class="dropdown-item" href="https://osdn.net/projects/arch-linux-gui/downloads/75463/archlinux-gui-gnome-pure-2021.07-x86_64.iso/">From OSDN</a>
+                                <a target="_blank" class="dropdown-item">Checksum</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -215,7 +263,7 @@
         <header class="section-header">
             <h3>XFCE EDITIONS</h3>
         </header>
-        <div class="sec-3 section wow fadeInUp" data-wow-delay="0.4s">
+        <div class="sec-3 section wow fadeInUp">
             <div class="row download-col">
                 <div class="content col-md-4">
                     <h2 class="title">XFCE Edition</h2>
@@ -235,17 +283,25 @@
                 </div>
                 <div class="img col-md-4">
                     <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/img_1.png" class="frame d-block img-fluid" alt="">
+                        <!-- <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <img src="img/pc.png" alt="" class="img-fluid d-block">
                     <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                        <div class="btn btn-secondary dropdown">
+                            <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download Now</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a target="_blank" class="dropdown-item" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-2021.07-x86_64.iso/download">From Sourceforge</a>
+                                <a target="_blank" class="dropdown-item" href="https://osdn.net/projects/arch-linux-gui/downloads/75463/archlinux-gui-xfce-2021.07-x86_64.iso/">From OSDN</a>
+                                <a target="_blank" class="dropdown-item">Checksum</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+        <div class="section wow fadeInUp">
             <div class="row download-col">
                 <div class="content col-md-4">
                     <h2 class="title">XFCE Pure</h2>
@@ -257,11 +313,19 @@
                 </div>
                 <div class="img col-md-4">
                     <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/img_1.png" class="frame d-block img-fluid" alt="">
+                        <!-- <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <img src="img/pc.png" alt="" class="img-fluid d-block">
                     <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-pure-beta.iso/download">Download Now</a>
+                        <div class="btn btn-secondary dropdown">
+                            <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download Now</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a target="_blank" class="dropdown-item" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-pure-2021.07-x86_64.iso/download">From Sourceforge</a>
+                                <a target="_blank" class="dropdown-item" href="https://osdn.net/projects/arch-linux-gui/downloads/75463/archlinux-gui-xfce-pure-2021.07-x86_64.iso/">From OSDN</a>
+                                <a target="_blank" class="dropdown-item">Checksum</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -273,9 +337,9 @@
     <!-- Cin -->
     <section id="sec-4" >
         <header class="section-header">
-            <h3>Cin EDITIONS</h3>
+            <h3>Cinnamon EDITIONS</h3>
         </header>
-        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+        <div class="section wow fadeInUp">
             <div class="row download-col">
                 <div class="content col-md-4">
                     <h2 class="title">Cinnamon Themed Edition</h2>
@@ -295,17 +359,25 @@
                 </div>
                 <div class="img col-md-4">
                     <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/img_1.png" class="frame d-block img-fluid" alt="">
+                        <!-- <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <img src="img/pc.png" alt="" class="img-fluid d-block">
                     <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                        <div class="btn btn-secondary dropdown">
+                            <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download Now</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a target="_blank" class="dropdown-item" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-cinnamon-2021.07-x86_64.iso/download">From Sourceforge</a>
+                                <a target="_blank" class="dropdown-item" href="https://osdn.net/projects/arch-linux-gui/downloads/75463/archlinux-gui-cinnamon-2021.07-x86_64.iso/">From OSDN</a>
+                                <a target="_blank" class="dropdown-item">Checksum</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+        <div class="section wow fadeInUp">
             <div class="row download-col">
                 <div class="content col-md-4">
                     <h2 class="title">Cinnamon Pure Edition</h2>
@@ -316,11 +388,19 @@
                 </div>
                 <div class="img col-md-4">
                     <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/img_1.png" class="frame d-block img-fluid" alt="">
+                        <!-- <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <img src="img/pc.png" alt="" class="img-fluid d-block">
                     <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                        <div class="btn btn-secondary dropdown">
+                            <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download Now</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a target="_blank" class="dropdown-item" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-cinnamon-pure-2021.07-x86_64.iso/download">From Sourceforge</a>
+                                <a target="_blank" class="dropdown-item" href="https://osdn.net/projects/arch-linux-gui/downloads/75463/archlinux-gui-cinnamon-pure-2021.07-x86_64.iso/">From OSDN</a>
+                                <a target="_blank" class="dropdown-item">Checksum</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -334,7 +414,7 @@
         <header class="section-header">
             <h3>I3 EDITIONS</h3>
         </header>
-        <div class="section wow fadeInUp" data-wow-delay="0.4s">
+        <div class="section wow fadeInUp">
             <div class="row download-col">
                 <div class="content col-md-4">
                     <h2 class="title">I3 Edition</h2>
@@ -355,36 +435,24 @@
                 </div>
                 <div class="img col-md-4">
                     <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/img_1.png" class="frame d-block img-fluid" alt="">
+                        <!-- <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
+                    <img src="img/pc.png" alt="" class="img-fluid d-block">
                     <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
+                        <div class="btn btn-secondary dropdown">
+                            <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download Now</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a target="_blank" class="dropdown-item" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-i3-2021.07-x86_64.iso/download">From Sourceforge</a>
+                                <a target="_blank" class="dropdown-item" href="https://osdn.net/projects/arch-linux-gui/downloads/75463/archlinux-gui-i3-2021.07-x86_64.iso/">From OSDN</a>
+                                <a target="_blank" class="dropdown-item" >Checksum</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="section wow fadeInUp" data-wow-delay="0.4s">
-            <div class="row download-col">
-                <div class="content col-md-4">
-                    <h2 class="title">I3 Edition 2</h2>
-                    <p>
-                        Content?
-                        No content xD!!
-                    </p>
-                </div>
-                <div class="img col-md-4">
-                    <div class="frame-div">
-                        <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/F9ZgTCZnsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <img src="img/pc.png" alt="" class="img-fluid">
-                    <div class="buttons" align="center">
-                        <a class="btn btn-secondary" href="javascript:void(0)">Download Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
     <!--==========================
     Footer- Contact

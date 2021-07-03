@@ -215,17 +215,6 @@ h6 {
     margin-top: -100px;
 }
 
-#intro .carousel-content .btn {
-    background: #faad02;
-    border: 1px solid black;
-    width: 200px;
-    height: auto;
-}
-
-#intro .carousel-content .btn:hover {
-    background: black;
-    color: cyan;
-}
 
 #intro h2 {
     color: #fff;
@@ -644,6 +633,23 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
 }
 
+#download .section-header p {
+    padding: 0 0 20px 0;
+}
+
+#download-content .section-header .btn {
+    background: #faad02;
+    border: 1px solid black;
+    width: 200px;
+    height: auto;
+    margin: 0 0 25px 10px;
+}
+
+#download-content .section-header .btn:hover {
+    background: black;
+    color: cyan;
+}
+
 #testing {
     padding-bottom: 40px;
 }
@@ -692,6 +698,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-radius: 0 0 4px 4px;
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
+    
 }
 
 #download .download-col .img, #testing .download-col .img {
@@ -730,6 +737,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #download .btn:hover, #testing .btn:hover {
     background: black;
     color: cyan;
+    
 }
 
 #download .btn, #testing .btn {
@@ -986,7 +994,7 @@ p {
 
 #footer .footer-top .social-links a:hover {
     background: cyan;
-    color: #fff;
+    color: black;
 }
 
 #footer .footer-top h4 {
