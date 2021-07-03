@@ -488,6 +488,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: cyan;
 }
 
+
+.download-col .img img {
+    margin-top: -7px;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -664,12 +669,9 @@ body.mobile-nav-active #mobile-nav-toggle {
         flex: 0 0 50%;
         max-width: 50%;
     }
-
-    .download-col .img img {
-        margin-top: -14px;
-    }
+    
     .download-col .img{
-        padding: 0 70px 0 70px;
+        padding: 0 40px 0 40px;
     }
 
 }
@@ -687,6 +689,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     #intro .carousel-control-prev,
     #intro .carousel-control-next {
         width: 5%;
+    }
+
+    .download-col .img{
+        padding: 0 40px 0 40px;
     }
 }
 
@@ -710,9 +716,9 @@ body.mobile-nav-active #mobile-nav-toggle {
         display: inline;
     }
     .download-col .img img {
-        margin-top: -24px;
+        /* margin-top: -24px; */
     }
     .frame {
-        height: 230px;
+        /* height: 230px; */
     }
 }
