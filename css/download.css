@@ -547,6 +547,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: cyan;
 }
 
+.download-col .img .frame-div img {
+    background-color: black;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
