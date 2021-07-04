@@ -638,7 +638,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #download-content .section-header .btn {
-    background: #faad02;
+    background: cyan;
     border: 1px solid black;
     width: 200px;
     height: auto;
