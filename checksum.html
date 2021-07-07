@@ -1,46 +1,138 @@
-<html>
-<head><title>Verify your ALG Download</title></head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ALG - Checksum</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Libraries CSS Files -->
+
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+    <link href="css/download.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/bootstrap.main.css" rel="stylesheet">
+
+
+</head>
+
 <body>
-<h1>Arch Linux GUI Checksums</h1>
 
-<h2>How to Verify your download with these checksums?</h2>
+    <!--==========================
+    Header
+    ============================-->
+    <header id="header">
+        <div class="container-fluid">
+
+            <div id="logo" class="pull-left">
+                <h1><a class="scrollto">ALG - Checksum</a></h1>
+            </div>
+
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="https://archlinuxgui.in">Home</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                </ul>
+            </nav>
+            <!-- #nav-menu-container -->
+        </div>
+    </header>
+    
+    
+    <section class="section checksum" id="installation">
+        <header class="section-header">
+            <h3>How to Verify your download with these checksums?</h3>
+        </header>
+            <div class="row download-col">
+                <div class="content col-12">
+                    <h2 class="title">Steps</h2>
 <pre>
-Step1:
-    1] On Linux, open terminal in the Downloads folder or wherever the ISO is and type
-            sha256sum iso-name.iso
-
-    2] On Windows, open powershell in the Downloads folder or wherever the ISO is and type
-            certutil -hashfile iso-name.iso sha256
-
-    3] On MacOS, open terminal in the Downloads folder or wherever the ISO is and type
-            shasum -a 256 iso-name.iso
-
-Step2:
-    In all the above cases, if the returned value matches with the sha256sum given below, your download is authentic.
+    Step1:
+        1] On Linux, open terminal in the Downloads folder or wherever the ISO is and type sha256sum iso-name.iso
+    
+        2] On Windows, open powershell in the Downloads folder or wherever the ISO is and type certutil -hashfile iso-name.iso sha256
+    
+        3] On MacOS, open terminal in the Downloads folder or wherever the ISO is and type shasum -a 256 iso-name.iso
+    
+    Step2:
+        In all the above cases, if the returned value matches with the sha256sum given below, your download is authentic.
 </pre>
 <hr>
-<h2>SHA256SUMS Below:</h2>
+                    <h2 class="title">SHA256SUMS Below:</h2>
 <pre>
-  DOB                     		     sha256sum                                         iso-name
-DD/MM/YY
-23/06/21	04aae2e95c6c6f324504c18f377034869032fe049b98e5f361997853116bfd2f  archlinux-gui-zen-2021.06-x86_64.iso
-
-01/07/21	5db0b6ff6839452a94e36f982991505eb89ba37c8e3605ce56b24ed176bc127a  archlinux-gui-plasma-2021.07-x86_64.iso
-01/07/21	ff19b4747732d22efa574b9a105d22a1548b2a770b11a563bd61e8db42033642  archlinux-gui-gnome-2021.07-x86_64.iso
-01/07/21	5973805a9c85aabb7255304cc10c129205065f596a20c8b12d08b2ebf1e647a7  archlinux-gui-cinnamon-2021.07-x86_64.iso
-01/07/21	d97cccf066f0c38e03d114a424bc701ce2ee811b5f784c9db59cd154883559fd  archlinux-gui-xfce-2021.07-x86_64.iso
-01/07/21	d4971fdc2daa1b21d5fd8b9cd7a6d11fb5bdc1a2facbe786201caaf5462a662d  archlinux-gui-plasma-pure-2021.07-x86_64.iso
-01/07/21	2aedb12e754d86c73e5c531cca589fe61124d414aee2e73a149eea8b642ba98e  archlinux-gui-gnome-pure-2021.07-x86_64.iso
-01/07/21	8a83d41bf769312304ec03ca67fb698fb49109ce2e6ed3e7017bae5a1ec41732  archlinux-gui-cinnamon-pure-2021.07-x86_64.iso
-01/07/21	235ef90ee8065b2804791569d549a5c0cdc012574cfc6207c5bf8aae0464eb5e  archlinux-gui-xfce-pure-2021.07-x86_64.iso
-01/07/21	57dc10ac49793c025272cfc429acf23f6bb928b7fdd8deacef6f2f6cc053be61  archlinux-gui-i3-2021.07-x86_64.iso
-
-02/07/21        a4c34eedf3bb6c6e6201a59eb7bc3f7a966bfc2b799ca50eb8c547e50a51536e  archlinux-gui-mate-pure-2021.07-x86_64.iso (beta)
+       DOB                     		     sha256sum                                         iso-name
+    DD/MM/YY
+    23/06/21	04aae2e95c6c6f324504c18f377034869032fe049b98e5f361997853116bfd2f  archlinux-gui-zen-2021.06-x86_64.iso
+    
+    01/07/21	5db0b6ff6839452a94e36f982991505eb89ba37c8e3605ce56b24ed176bc127a  archlinux-gui-plasma-2021.07-x86_64.iso
+    01/07/21	ff19b4747732d22efa574b9a105d22a1548b2a770b11a563bd61e8db42033642  archlinux-gui-gnome-2021.07-x86_64.iso
+    01/07/21	5973805a9c85aabb7255304cc10c129205065f596a20c8b12d08b2ebf1e647a7  archlinux-gui-cinnamon-2021.07-x86_64.iso
+    01/07/21	d97cccf066f0c38e03d114a424bc701ce2ee811b5f784c9db59cd154883559fd  archlinux-gui-xfce-2021.07-x86_64.iso
+    01/07/21	d4971fdc2daa1b21d5fd8b9cd7a6d11fb5bdc1a2facbe786201caaf5462a662d  archlinux-gui-plasma-pure-2021.07-x86_64.iso
+    01/07/21	2aedb12e754d86c73e5c531cca589fe61124d414aee2e73a149eea8b642ba98e  archlinux-gui-gnome-pure-2021.07-x86_64.iso
+    01/07/21	8a83d41bf769312304ec03ca67fb698fb49109ce2e6ed3e7017bae5a1ec41732  archlinux-gui-cinnamon-pure-2021.07-x86_64.iso
+    01/07/21	235ef90ee8065b2804791569d549a5c0cdc012574cfc6207c5bf8aae0464eb5e  archlinux-gui-xfce-pure-2021.07-x86_64.iso
+    01/07/21	57dc10ac49793c025272cfc429acf23f6bb928b7fdd8deacef6f2f6cc053be61  archlinux-gui-i3-2021.07-x86_64.iso
+    
+    02/07/21        a4c34eedf3bb6c6e6201a59eb7bc3f7a966bfc2b799ca50eb8c547e50a51536e  archlinux-gui-mate-pure-2021.07-x86_64.iso (beta)
 </pre>
-<hr>
-<br><br>
-<p>
-Click <a href="download.html">here</a> to go back to downloads page.
-</p>
+                </div>
+            </div>
+    </section>
+    
+    <!--==========================
+    Footer- Contact
+  ============================-->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>ALG Team</strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Developed by <a href="https://linkedin.com/in/lovleshdagar" target="_blank" style="color: cyan;">Lovlesh Dagar</a>
+            </div>
+        </div>
+    </footer>
+    <!-- #footer -->
+
+    <!-- Back to top -->
+    <a href="javascript:void(0)" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <div id="preloader"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superfish/1.7.9/js/superfish.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js?v=1"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143375530-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143375530-1');
+    </script>
+
+
 </body>
-</html
+</html>
