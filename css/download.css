@@ -523,6 +523,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-radius: 8px 8px 8px 8px;
     width: 100%;
     height: 300px;
+    background-color: #000;
 }
 
 .frame-div {
@@ -713,6 +714,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*--------------------------------------------------------------
+# Tutorials
+--------------------------------------------------------------*/
+
+.tutorials-section {
+    padding-top: 60px;
+}
+
+
+
+/*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
 
@@ -727,15 +738,12 @@ body.mobile-nav-active #mobile-nav-toggle {
         border-right: 1px solid #ddd;
     }
 
-    .section .download-col .col-md-4 {
-        flex: 0 0 50%;
-        max-width: 50%;
+
+    .tutorials-section .tutorials-col .img {
+        padding: 0 50px 0 50px;
     }
 
-    .download-col .img img {
-        /* margin-top: -14px; */
-    }
-    .download-col .img{
+    .download-col .img {
         padding: 0 70px 0 70px;
     }
 
@@ -744,6 +752,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (min-width: 992px) {
     #testimonials .testimonial-item p {
         width: 80%;
+    }
+
+    .tutorials-section .tutorials-col .img {
+        padding: 0 50px 0 50px;
     }
 }
 
@@ -754,6 +766,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     #intro .carousel-control-prev,
     #intro .carousel-control-next {
         width: 5%;
+    }
+
+    .tutorials-section .tutorials-col .img {
+        padding: 0 50px 0 50px;
     }
 }
 
@@ -780,6 +796,14 @@ body.mobile-nav-active #mobile-nav-toggle {
         /* margin-top: -24px; */
     }
     .frame {
-        height: 230px;
+        height: 190px;
+        border: 5px solid black;
+        border-radius: 8px 8px 8px 8px;
+        width: 100%;
     }
+
+    .frame-div {
+        padding-right: 12px;
+        padding-left: 12px;
+    }    
 }

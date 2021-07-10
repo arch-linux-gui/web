@@ -463,7 +463,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border: 8px solid black;
     border-radius: 8px 8px 8px 8px;
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
 }
 
 .frame-div {
