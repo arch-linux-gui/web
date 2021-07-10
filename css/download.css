@@ -759,7 +759,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1377px) {
     #intro p {
         width: 60%;
     }
