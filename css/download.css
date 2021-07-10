@@ -792,9 +792,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     #mobile-nav-toggle {
         display: inline;
     }
-    .download-col .img img {
-        /* margin-top: -24px; */
-    }
+    /* .download-col .img img {
+        margin-top: -24px;
+    } */
     .frame {
         height: 190px;
         border: 5px solid black;
