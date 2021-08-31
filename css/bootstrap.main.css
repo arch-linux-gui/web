@@ -1085,7 +1085,7 @@ a.close.disabled { pointer-events: none; }
 .modal-header { display: flex; align-items: flex-start; justify-content: space-between; padding: 1rem; border-bottom: 1px solid rgb(233, 236, 239); border-top-left-radius: 0.3rem; border-top-right-radius: 0.3rem; }
 .modal-header .close { padding: 1rem; margin: -1rem -1rem -1rem auto; }
 .modal-title { margin-bottom: 0px; line-height: 1.5; }
-.modal-body { position: relative; flex: 1 1 auto; padding: 1rem; }
+.modal-body { position: relative; flex: 1 1 auto; padding: 1rem; padding-top: 0; }
 .modal-footer { display: flex; align-items: center; justify-content: flex-end; padding: 1rem; border-top: 1px solid rgb(233, 236, 239); border-bottom-right-radius: 0.3rem; border-bottom-left-radius: 0.3rem; }
 .modal-footer > :not(:first-child) { margin-left: 0.25rem; }
 .modal-footer > :not(:last-child) { margin-right: 0.25rem; }
