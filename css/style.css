@@ -634,10 +634,22 @@ body.mobile-nav-active #mobile-nav-toggle {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .modal-body {
     padding-top: 0;
+}
+
+.modal-unexpanded {
+    transition: none;
+    visibility: hidden;
+    position: absolute;
+}
+.modal-expanded {
+    transition: none;
+    visibility: visible;
+    position: relative;
 }
 
 /* download Us Section
