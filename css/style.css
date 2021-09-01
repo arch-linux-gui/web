@@ -652,6 +652,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
 }
 
+.expand-modal {
+    text-decoration: none; 
+    color: cyan;
+    cursor: pointer;
+    margin: 0;
+}
+
 /* download Us Section
 --------------------------------*/
 
