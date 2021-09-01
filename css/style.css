@@ -55,7 +55,7 @@ h6 {
 
 .back-to-top i {
     padding-top: 12px;
-    color: #fff;
+    color: black;
 }
 
 /* Prelaoder */
@@ -229,6 +229,20 @@ h6 {
     color: #fff;
 }
 
+#intro .carousel-content .btn {
+    background-color: #fa9f03;
+    color: black;
+    border: 2px solid black;
+    width: 150px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+#intro .carousel-content .btn:hover {
+    background-color: cyan;
+    color: black;
+}
+
 #intro .carousel-fade {
     overflow: hidden;
 }
@@ -275,19 +289,7 @@ h6 {
     cursor: pointer;
 }
 
-#intro .btn-get-started {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 32px;
-    border-radius: 50px;
-    transition: 0.5s;
-    margin: 10px;
-    color: #fff;
-    background: cyan;
-}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
