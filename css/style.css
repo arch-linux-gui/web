@@ -231,6 +231,7 @@ h6 {
 
 #intro .carousel-content .btn {
     background-color: #fa9f03;
+    background-image: linear-gradient(#fbca00, #f95f06);
     color: black;
     border: 2px solid black;
     width: 150px;
@@ -239,6 +240,8 @@ h6 {
 }
 
 #intro .carousel-content .btn:hover {
+    transition: 0.2s;
+    background-image: none;
     background-color: cyan;
     color: black;
 }
@@ -683,6 +686,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #download-content .section-header .btn:hover {
+    transition: 0.4s;
     background: black;
     color: cyan;
 }
@@ -772,6 +776,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #download .btn:hover, #testing .btn:hover {
+    transition: 0.4s;
     background: black;
     color: cyan;
     
