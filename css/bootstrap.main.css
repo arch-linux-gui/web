@@ -1070,7 +1070,7 @@ a.close.disabled { pointer-events: none; }
 .modal-open { overflow: hidden; }
 .modal-open .modal { overflow: hidden auto; }
 .modal { position: fixed; top: 0px; left: 0px; z-index: 1050; display: none; width: 100%; height: 100%; overflow: hidden; outline: 0px; }
-.modal-dialog { position: relative; width: auto; margin: 0.5rem; pointer-events: none; }
+.modal-dialog { position: relative; width: auto; margin: 1.5rem; pointer-events: none; }
 .modal.fade .modal-dialog { transition: transform 0.3s ease-out 0s, -webkit-transform 0.3s ease-out 0s; transform: translate(0px, -50px); }
 @media screen and (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog { transition: none 0s ease 0s; }

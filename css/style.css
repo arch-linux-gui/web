@@ -55,7 +55,7 @@ h6 {
 
 .back-to-top i {
     padding-top: 12px;
-    color: #fff;
+    color: black;
 }
 
 /* Prelaoder */
@@ -229,6 +229,23 @@ h6 {
     color: #fff;
 }
 
+#intro .carousel-content .btn {
+    background-color: #fa9f03;
+    background-image: linear-gradient(#fbca00, #f95f06);
+    color: black;
+    border: 2px solid black;
+    width: 150px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+#intro .carousel-content .btn:hover {
+    transition: 0.2s;
+    background-image: none;
+    background-color: cyan;
+    color: black;
+}
+
 #intro .carousel-fade {
     overflow: hidden;
 }
@@ -275,19 +292,7 @@ h6 {
     cursor: pointer;
 }
 
-#intro .btn-get-started {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 32px;
-    border-radius: 50px;
-    transition: 0.5s;
-    margin: 10px;
-    color: #fff;
-    background: cyan;
-}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -624,6 +629,41 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 0;
 }
 
+.modal-dialog .modal-content button {
+    background-color: cyan;
+    color: black;
+    position: absolute;
+    top: -22px;
+    left: 96%;
+    opacity: 1.0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.modal-body {
+    padding-top: 0;
+}
+
+.modal-unexpanded {
+    transition: none;
+    visibility: hidden;
+    position: absolute;
+}
+.modal-expanded {
+    transition: none;
+    visibility: visible;
+    position: relative;
+}
+
+.expand-modal {
+    text-decoration: none; 
+    color: cyan;
+    cursor: pointer;
+    margin: 0;
+}
+
 /* download Us Section
 --------------------------------*/
 
@@ -646,6 +686,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #download-content .section-header .btn:hover {
+    transition: 0.4s;
     background: black;
     color: cyan;
 }
@@ -735,6 +776,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #download .btn:hover, #testing .btn:hover {
+    transition: 0.4s;
     background: black;
     color: cyan;
     

@@ -220,4 +220,10 @@
 
     });
 
+    $('.expand-modal').click(function(){
+        $('.modal-body-2').addClass('modal-expanded')
+        $('.modal-body-2').removeClass('modal-unexpanded')
+        $('.expand-modal').addClass('modal-unexpanded')        
+    })
+
 })(jQuery);

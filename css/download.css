@@ -55,7 +55,7 @@ h6 {
 
 .back-to-top i {
     padding-top: 12px;
-    color: #fff;
+    color: black;
 }
 
 /* Prelaoder */
@@ -436,7 +436,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 .section-header{
-    margin-top: 50px;
+    margin-top: 56px;
 }
 
 .section-header h3 {
