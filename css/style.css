@@ -229,21 +229,19 @@ h6 {
     color: #fff;
 }
 
-#intro .carousel-content .btn {
-    background-color: #fa9f03;
-    background-image: linear-gradient(#fbca00, #f95f06);
-    color: black;
-    border: 2px solid black;
-    width: 150px;
-    font-weight: 500;
-    margin-bottom: 50px;
-}
-
-#intro .carousel-content .btn:hover {
-    transition: 0.2s;
-    background-image: none;
+.modal-body .btn {
     background-color: cyan;
     color: black;
+    border: 1px solid black;
+    width: 150px;
+    height: auto;
+    margin-left: 33%;
+}
+
+.modal-body .btn:hover{
+    transition: 0.2s;
+    background-color: black;
+    color: cyan;
 }
 
 #intro .carousel-fade {
