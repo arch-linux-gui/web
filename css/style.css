@@ -229,13 +229,14 @@ h6 {
     color: #fff;
 }
 
+
 .modal-body .download-btn {
     background-color: cyan;
     color: black;
     border: 1px solid black;
     width: 150px;
     height: auto;
-    margin-left: 33%;
+    /* margin-left: 33%; */
 }
 
 .modal-body .download-btn:hover{
