@@ -539,6 +539,35 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Sections Header
 --------------------------------*/
+.sec-header .social-links{
+    padding: 0 0 10px 20px;
+}
+
+.sec-header-scrolled {
+    display: none;
+    position: relative;
+}
+
+.sec-header .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #333;
+    color: #eee;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+.sec-header .social-links a:hover {
+    background: cyan;
+    color: black;
+}
+
 
 .section-header h3 {
     font-size: 32px;
