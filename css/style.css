@@ -540,8 +540,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Sections Header
 --------------------------------*/
-.sec-header .social-links-header{
-    padding: 0 0 10px 20px;
+.sec-header{
+    margin-bottom: 10px;
+    padding: 5px 0 5px 0;
 }
 
 .sec-header-scrolled {
@@ -553,7 +554,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 0 8px 10px 8px;
     text-decoration: none;
     display: inline-block;
-    color: #fff;
+    color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 13px;
@@ -562,7 +563,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .sec-header .social-links-header a:hover {
-    color: cyan;
+    /* color: cyan; */
 }
 
 
