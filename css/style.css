@@ -539,7 +539,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Sections Header
 --------------------------------*/
-.sec-header .social-links{
+.sec-header .social-links-header{
     padding: 0 0 10px 20px;
 }
 
@@ -548,10 +548,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
 }
 
-.sec-header .social-links a {
+.sec-header .social-links-header a {
     font-size: 18px;
-    display: inline-block;
-    background: #333;
+    /* display: inline-block; */
+    /* background: #333; */
     color: #eee;
     line-height: 1;
     padding: 8px 0;
