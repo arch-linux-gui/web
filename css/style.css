@@ -112,7 +112,7 @@ h6 {
 --------------------------------------------------------------*/
 
 #header {
-    padding: 30px 0;
+    padding: 5px 0;
     height: 92px;
     position: fixed;
     left: 0;
@@ -561,11 +561,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-transform: uppercase;
     outline: none;
 }
-
-.sec-header .social-links-header a:hover {
-    /* color: cyan; */
-}
-
 
 .sec-header .social-links a:hover {
     background: cyan;
