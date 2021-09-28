@@ -372,7 +372,7 @@ h6 {
     color: #fff;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 15px;
     text-transform: uppercase;
     outline: none;
 }
@@ -547,7 +547,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .sec-header-scrolled {
     display: none;
-    position: relative;
 }
 
 .sec-header .social-links-header a {
@@ -557,7 +556,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: white;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 10px;
     text-transform: uppercase;
     outline: none;
 }
