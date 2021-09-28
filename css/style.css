@@ -112,7 +112,6 @@ h6 {
 --------------------------------------------------------------*/
 
 #header {
-    padding: 5px 0;
     height: 92px;
     position: fixed;
     left: 0;
@@ -543,6 +542,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .sec-header{
     margin-bottom: 10px;
     padding: 5px 0 5px 0;
+    background-color: black;
+    height: 50px;
 }
 
 .sec-header-scrolled {
@@ -554,7 +555,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 0 8px 10px 8px;
     text-decoration: none;
     display: inline-block;
-    color: black;
+    color: white;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 13px;
@@ -562,9 +563,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     outline: none;
 }
 
-.sec-header .social-links a:hover {
-    background: cyan;
-    color: black;
+.sec-header .social-links-header a:hover {
+    color: cyan;
 }
 
 
