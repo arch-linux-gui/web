@@ -82,11 +82,12 @@
             $('#header').addClass('header-scrolled');
             $('#header .sec-header').addClass('sec-header-scrolled');
             $('#header .sec-header').removeClass('d-flex');
+            document.getElementById('mobile-nav-toggle').style.marginTop = "15px";
         } else {
             $('#header').removeClass('header-scrolled');
             $('#header .sec-header').removeClass('sec-header-scrolled');
             $('#header .sec-header').addClass('d-flex');
-
+            document.getElementById('mobile-nav-toggle').style.marginTop = "42px";
         }
     });
 
@@ -94,8 +95,7 @@
         $('#header').addClass('header-scrolled');
         $('#header .sec-header').addClass('sec-header-scrolled');
         $('#header .sec-header').removeClass('d-flex');
-
-
+        document.getElementById('mobile-nav-toggle').style.marginTop = "15px";
     }
 
     // Smooth scroll for the menu and links with .scrollto classes
