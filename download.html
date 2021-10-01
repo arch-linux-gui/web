@@ -100,13 +100,77 @@
                         </li>
                         <li>Watch tutorials on the <a href="tutorials.html">Tutorials</a> page for installation guide.</li>
                         <li>Dual/Multiboot: Watch <a href="tutorials.html#multi-boot">this</a> video</li>
-                        <li>Don't forget to <a href="checksum.html">verify your download</a></li>
+                        <li>Don't forget to <a style="cursor: pointer; color: rgb(0, 123, 255);" html="" sdata-html="true" data-toggle="modal" data-target="#checksum-modal">verify your download</a></li>
                         <li> View full <a style="cursor: pointer; color: rgb(0, 123, 255);" html="" sdata-html="true" data-toggle="modal" data-target="#changelog-modal">Changelog</a></li>
                     </ol>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="checksum-modal" role="dialog">
+        <div class="modal-dialog" role="alert">
+            <div class="modal-content">
+                <div>
+                    <button class="close mr-2 mt-2" type="button" data-dismiss="modal">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div style="color: black;" class="modal-body">
+                    <h5>How to Verify your download with these checksums?</h5>
+                    <h2 class="title">Steps</h2>
+<pre>
+    Step1:
+        1] On Linux, open terminal in the Downloads folder or wherever the ISO is and type sha256sum iso-name.iso
+    
+        2] On Windows, open powershell in the Downloads folder or wherever the ISO is and type certutil -hashfile iso-name.iso sha256
+    
+        3] On MacOS, open terminal in the Downloads folder or wherever the ISO is and type shasum -a 256 iso-name.iso
+    
+    Step2:
+        In all the above cases, if the returned value matches with the sha256sum given below, your download is authentic.
+        
+    Note:
+        Please refer to the convention below. sha256sum is the long alphanumeric string, on the left. 
+        iso-name refer to the name of the ISO. It should contain the .iso extension. 
+        DOB stands for date of build. It has nothing to do with the verification process. 
+        It's just there for reference.   
+</pre>
+<hr>
+                    <h2 class="title">SHA256SUMS Below:</h2>
+<pre>
+       DOB                     		     sha256sum                                         iso-name
+    DD/MM/YY
+
+    01/10/21	0fb46cdb159ece7b493d998203c578d4e604d35061ec1fc1f87060aaf3c2c4fa  archlinux-gui-plasma-2021.10-x86_64.iso
+    01/10/21	76bcc4a36d5404f89796da74b1c93cce487270509d215bf3b23ab131bc694345  archlinux-gui-gnome-2021.10-x86_64.iso
+    01/10/21	d76f44e2ceb8735c843e5d43951ac8b8dc3caa3ff19d4268098b98a999e33c44  archlinux-gui-mate-2021.10-x86_64.iso
+    01/10/21	88cf03cd72dc3da959e18b92a2581d96367f452aa4848ec40a14a94d1f2b0301  archlinux-gui-cinnamon-2021.10-x86_64.iso
+    01/10/21	1efde680065d097e317abc06f51093d83186a92d8c55f5066cd171ee646a48b4  archlinux-gui-xfce-2021.10-x86_64.iso
+    01/10/21	f1c178eee0f3d4fed2544efb4536003209d41988ab5cf237f158af3c4d9a51b2  archlinux-gui-plasma-pure-2021.10-x86_64.iso
+    01/10/21	14f514a7a047151b609e5bd14498ca60cf3889a33bab03dde9eacc5868fa79eb  archlinux-gui-gnome-pure-2021.10-x86_64.iso
+    01/10/21	51e4c68ea2a6bf4b2f5ccfecbf28d3d8cced75e3962a4c5d418c68ca202e1a85  archlinux-gui-mate-pure-2021.10-x86_64.iso
+    01/10/21	53a2923ad39a41b62ce3f5c1b464028c963337f79d485398027c3b898f6fc89d  archlinux-gui-cinnamon-pure-2021.10-x86_64.iso
+    01/10/21	4fc1e30c794011fdda3b95d233459c16a1fa3483fc93521f79d7f7faa9c500a6  archlinux-gui-xfce-pure-2021.10-x86_64.iso
+    01/10/21	1a823541066201877613725c96f10bc0d2ba8c59848577a4fd397481d9cefef7  archlinux-gui-i3-2021.10-x86_64.iso
+    01/10/21	dbd2a65ef72df3a2eba5db56b1509d96f1fd44449ff7d90ee1e4b5e76aae9f4b  archlinux-gui-bspwm-2021.10-x86_64.iso
+
+    01/09/21	56c4dbb1a935353bef90c3b9e8f77192a3f5fa5e6d34e7d286fad89997d51a3c  archlinux-gui-plasma-2021.09-x86_64.iso
+    01/09/21	403820ef3b7270d0c551b8d838e176e0fde000da3052b12b21025d522c7fadf2  archlinux-gui-gnome-2021.09-x86_64.iso
+    01/09/21	f6ff1a202ca762e25401254b5afc5872bccc1a1795d30e7da9aea9f1dc08a837  archlinux-gui-mate-2021.09-x86_64.iso
+    01/09/21	87abf2dc3ce1c46033f4615c22039458d3d5a8aabe667757df33659f10daee75  archlinux-gui-cinnamon-2021.09-x86_64.iso
+    01/09/21	248b89424a56eebcc3da8fd6e6f1ada842efd35f2f7f241dff8dd9543cf95174  archlinux-gui-xfce-2021.09-x86_64.iso
+    01/09/21	32164bdd8b940034b85ea6ff8e367ea611f90623704089ed39554677456e499d  archlinux-gui-plasma-pure-2021.09-x86_64.iso
+    01/09/21	77b3ace919e31b78faff9c03ca87c376eaed358e1fcef3f664150d4dee85a01b  archlinux-gui-mate-pure-2021.09-x86_64.iso
+    01/09/21	6a0ae37c44d21fd547ea8794a42246ad0ecac9741533a60a107bc1aa52cc5e22  archlinux-gui-cinnamon-pure-2021.09-x86_64.iso
+    01/09/21	f0cb5a75db05f2eef33d32e4e367ef36fb3b7e2235a8b59293bd87124ae6466b  archlinux-gui-xfce-pure-2021.09-x86_64.iso
+    01/09/21	fb4d41516f4dc0be583e7943c8f2e2446298b1745076bb36d1ae1722da517f90  archlinux-gui-i3-2021.09-x86_64.iso
+    01/09/21	fc7a3c9ab514816d2b861de39b456315447287a936bd00b0c423486501cfe01e  archlinux-gui-bspwm-2021.09-x86_64.iso
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="changelog-modal" role="dialog">
         <div class="modal-dialog" role="alert">
