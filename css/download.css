@@ -556,12 +556,29 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 60px 50px 0 50px;
 }
 
-.modal-dialog .modal-content button {
+#changelog-modal .modal-dialog .modal-content button {
     background-color: cyan;
     color: black;
     position: absolute;
     top: -22px;
     left: 96%;
+    opacity: 1.0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#checksum-modal .modal-dialog {
+    max-width: 90%;
+}
+
+#checksum-modal .modal-dialog .modal-content button {
+    background-color: cyan;
+    color: black;
+    position: absolute;
+    top: -22px;
+    left: 98.5%;
     opacity: 1.0;
     width: 30px;
     height: 30px;
