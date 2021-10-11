@@ -337,7 +337,7 @@
         <div class="section wow fadeInUp">
             <div class="row download-col">
                 <div class="content col-md-6">
-                    <h2 class="title">Flagship Edition</h2>
+                    <h2 class="title">KDE Plasma Theme Edition (Flagship)</h2>
                     <p>
                         The Plasma Themed Edition (also known as the Flagship) of Arch Linux GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop Environment. It is pre-configured and ready to use. It comes with all the neccessary software and settings to help users get started quickly. 
                     </p>  
@@ -351,6 +351,7 @@
                             <li>Bluetooth with Bluedevil</li>
                             <li>Media Player</li>
                             <li>Simple Desktop Display Manager</li>
+                            <li>paru, AUR helper</li>
                         </ul>
                     </p>
                 </div>
@@ -436,6 +437,8 @@
                             <li>Bluetooth with gnome-bluetooth</li>
                             <li>Office Suite with MS fonts</li>
                             <li>Customized Gnome Display Manager</li>
+                            <li>Gnome-tweak tool</li>
+                            <li>paru, AUR helper</li>
                         </ul>
                     </p>
                 </div>
@@ -514,6 +517,7 @@
                         Some of the features include:
                         <ul>
                             <li>NVIDIA GPU Support</li>
+                            <li>Whisker Menu</li>
                             <li>System Wide Dark Theme, including Web Browser</li>
                             <li>Media Player</li>
                             <li>Printing Services (CUPS)</li>
@@ -521,7 +525,8 @@
                             <li>Office Suite with MS fonts</li>
                             <li>Pavucontrol</li>
                             <li>Open Thunar as root</li>
-                            <li>Customised LightDM, with gtk-greeter</li>
+                            <li>Customized LightDM, with gtk-greeter</li>
+                            <li>paru, AUR helper</li>
                         </ul>
                     </p>
                 </div>
@@ -536,6 +541,7 @@
                             <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download Now</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a target="_blank" class="dropdown-item" href="https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-2021.10-b-x86_64.iso/download">From Sourceforge</a>
+                                https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-2021.10-b-x86_64.iso/download
                                 <a target="_blank" class="dropdown-item" href="https://osdn.net/projects/arch-linux-gui/downloads/76114/archlinux-gui-xfce-2021.10-b-x86_64.iso/">From OSDN</a>
                             </div>
                         </div>
@@ -600,11 +606,14 @@
                     <p>
                         Some of the features include:
                         <ul>
+                            <li>NVIDIA GPU Support</li>
                             <li>System Wide Dark Theme, including Web Browser</li>
                             <li>Media Player</li>
                             <li>Printing Services (CUPS)</li>
+                            <li>Bluetooth with Blueman (blueberry has been replaced)</li>
                             <li>Office Suite with MS fonts</li>
-                            <li>LightDM</li>
+                            <li>Customized LightDM with gtk-greeter</li>
+                            <li>paru, AUR helper</li>
                         </ul>
                     </p>
                 </div>
@@ -632,8 +641,10 @@
                 <div class="content col-md-6">
                     <h2 class="title">Cinnamon Pure Edition</h2>
                     <p>
-                        The Pure Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Stock Cinnamon Desktop Environment. 
-                        This is what users get after installing the Cinnamon Desktop Environment After a CLI installation.
+                        The Cinnamon Pure Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Stock Cinnamon Desktop Environment. This is what users get after installing the Cinnamon Desktop Environment after a CLI installation.
+                    </p>
+                    <p>
+                        This editon contains the <code>cinnamon</code> package & various other GNOME packages, such as <code>gnome-terminal</code> & <code>gedit</code>. See the full package list <a href="https://github.com/arch-linux-gui/alg-cinnamon-pure/blob/main/packages.x86_64#L105">here</a>.
                     </p>
                 </div>
                 <div class="img col-md-6">
@@ -668,16 +679,21 @@
                 <div class="content col-md-6">
                     <h2 class="title">MATE Themed Edition</h2>
                     <p>
-                        The MATE Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the MATE Desktop Environment. It is pre-configured and ready to use. It comes with all the neccessary software and settings to help users get started quickly.
+                        The MATE Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the MATE Desktop Environment. It is pre-configured and ready to use. It comes with all the neccessary software and settings to help users get started quickly, with MATE.
                     </p>
                     <p>
                         Some of the features include:
                         <ul>
+                            <li>NVIDIA GPU Support</li>
+                            <li>Brisk Menu</li>
                             <li>System Wide Dark Theme, including Web Browser</li>
                             <li>Media Player</li>
                             <li>Printing Services (CUPS)</li>
+                            <li>Bluetooth with Blueman</li>
                             <li>Office Suite with MS fonts</li>
-                            <li>LightDM</li>
+                            <li>Customized LightDM</li>
+                            <li>Mate-tweak tool</li>
+                            <li>paru, AUR helper</li>
                         </ul>
                     </p>
                 </div>
@@ -705,8 +721,17 @@
                 <div class="content col-md-6">
                     <h2 class="title">MATE Pure Edition</h2>
                     <p>
-                        The Pure Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Stock MATE Desktop Environment & MATE extra packages.
-                        This is what users get after installing the MATE Desktop Environment After a CLI installation.
+                        The Pure Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Stock MATE Desktop Environment. This edition contains all the packages in <a target="_blank" href="https://archlinux.org/groups/x86_64/mate/">MATE</a> & <a target="_blank" href="https://archlinux.org/groups/x86_64/mate-extra/">MATE-EXTRA</a> groups.
+                        This is what users get after installing the MATE Desktop Environment after a CLI installation.
+                    </p>
+                    <p>
+                        Essential Packages Include:
+                        <ul>
+                            <li>Pluma: Text Editor</li>
+                            <li>mate-terminal</li>
+                            <li>Caja: File Manager</li>
+                        </ul>
+                        See the package list <a target="_blank" href="https://github.com/arch-linux-gui/alg-mate-pure/blob/master/packages.x86_64#L105">here</a>.
                     </p>
                 </div>
                 <div class="img col-md-6">
@@ -742,18 +767,30 @@
                 <div class="content col-md-6">
                     <h2 class="title">I3 Edition</h2>
                     <p>
-                        The i3 Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the i3 Window Manager.   
+                        The i3 Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the i3 Window Manager. To install this edition, you need to launch the install from rofi. Launch rofi with <code>mod+d</code>, where mod is your windows key. Then you need to simply search for <i>Install Arch Linux</i> or <i>Arch Linux installer</i>. Once rofi displays the program, launch it by pressing <code>enter</code>. Due to the minimalist nature of this edition, there are very little programs installed in it, and you can easily spot the install after launch rofi. You can also use your arrow keys to navigate to it, and then press enter.
                     </p>
                     <p>
-                        This edition comes with 
+                        This edition comes with:
                         <ul>
                             <li>Gaps enabled by default</li>
+                            <li>Vim - text editor (nano is not installed)</li>
                             <li>Kitty - as the terminal emulator. It is transparent by default in this edition.</li>
-                            <li>Picom Compositor that enables kitty to have transparency</li>
+                            <li>Picom - Compositor that enables fading windows & kitty to have transparency</li>
                             <li>Rofi - Program Launcher</li>
-                            <li>Polybar: Status Bar</li>
+                            <li>Polybar - Status Bar</li>
                             <li>Feh - that handles the background.</li>
                             <li>Paru - An AUR Helper</li>
+                            <li>Betterlockscreen</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Basic Keybindings to help you get started: (<code> mod </code> = windows key)
+                        <ul>
+                            <li>Open Terminal Window (Kitty): <code> mod + enter</code></li>
+                            <li>Launch Program Launcher (rofi): <code> mod + d</code></li>
+                            <li>Close Any Window: <code> mod + shift + x</code></li>
+                            <li>Open/Edit Config file: <code>vim ~/.config/i3/config</code></li>
+                            <li>Configure Polybar: <code>vim ~/.config/polybar/config</code></li>
                         </ul>
                     </p>
                 </div>
@@ -788,18 +825,31 @@
                 <div class="content col-md-6">
                     <h2 class="title">BSPWM Edition</h2>
                     <p>
-                        The bswpm Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Bitmap Space Partitioning Window Manager.
+                        The bswpm Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Bitmap Space Partitioning Window Manager. To install this edition, you need to launch the install from rofi. Launch rofi with <code>mod+d</code>, where mod is your windows key. Then you need to simply search for <i>Install Arch Linux</i> or <i>Arch Linux installer</i>. Once rofi displays the program, launch it by pressing <code>enter</code>. Due to the minimalist nature of this edition, there are very little programs installed in it, and you can easily spot the install after launch rofi. You can also use your arrow keys to navigate to it, and then press enter.
                     </p>
                     <p>
-                        This edition comes with 
+                        This edition comes with:
                         <ul>
+                            <li>Gaps enabled by default</li>
+                            <li>Vim - text editor (nano is not installed)</li>
                             <li>Kitty - as the terminal emulator. It is transparent by default in this edition.</li>
-                            <li>Picom Compositor that enables kitty to have transparency</li>
+                            <li>Picom - Compositor that enables fading windows & kitty to have transparency</li>
                             <li>Rofi - Program Launcher</li>
-                            <li>Polybar: Status Bar</li>
+                            <li>Polybar - Status Bar</li>
                             <li>Feh - that handles the background.</li>
                             <li>Paru - An AUR Helper</li>
                             <li>Betterlockscreen</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Basic Keybindings to help you get started: (<code> mod </code> = windows key)
+                        <ul>
+                            <li>Open Terminal Window (Kitty): <code> mod + enter</code></li>
+                            <li>Launch Program Launcher (rofi): <code> mod + d</code></li>
+                            <li>Close Any Window: <code> mod + w</code></li>
+                            <li>Open/Edit Config file: <code> vim ~/.config/bspwm/bspwmrc</code></li>
+                            <li>Open/Edit Keybindings: <code> vim ~/.config/sxhkd/sxhkdrc</code></li>
+                            <li>Configure Polybar: <code>vim ~/.config/polybar/config</code></li>
                         </ul>
                     </p>
                 </div>
@@ -834,7 +884,19 @@
                 <div class="content col-md-6">
                     <h2 class="title">Zen Edition</h2>
                     <p>
-                        This edition is somewhat geared towards gamers. It comes with the zen-kernel, zsh shell, and BTRFS filesystem by default. Plans are to replace systemd with openRC and look for a stable filesystem.
+                        This is an experimental edition. Experimental editions are those which differ to Vanilla Arch Linux. The Zen Edition is one of those many planned experimental editions to actually be offered to users.
+                    </p>
+                    <p>
+                        This edition differs to Vanilla Arch Linux, due to the inclusion of the following components:
+                        <ul>
+                            <li>The Linux Zen Kernel</li>
+                            <li>BtrFS as default File System</li>
+                            <li>Zsh as default shell</li>
+                            <li>Z standard compression for ISO image</li>
+                            <li>Chaotic AUR Repository</li>
+                            <li>Pamac Software Center</li>
+                        </ul>
+                        Currently this edition offers the KDE Plasma Desktop without any theming (stock), with Firefox web browser (without any extensions). See the package list <a target="_blank" href="https://github.com/arch-linux-gui/arch-linux-gui-zen/blob/main/packages.x86_64">here</a>.
                     </p>
                 </div>
                 <div class="img col-md-6">
