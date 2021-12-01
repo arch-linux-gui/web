@@ -219,9 +219,9 @@
     $('.venobox').venobox();
   });
 
-  $(window).on('load',function() {
-      $('#changelog-modal').modal('show');
-  });
+//   $(window).on('load',function() {
+//       $('#changelog-modal').modal('show');
+//   });
 
 
   $('.dropdown').click(function(){
