@@ -220,7 +220,7 @@
   });
 
   $(window).on('load',function() {
-      $('#features-modal').modal('show');
+      $('#changelog-modal').modal('show');
   });
 
 
