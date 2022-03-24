@@ -731,7 +731,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #download .container .mockup-container {
-    margin-top: -250px;
+    margin-top: -300px;
     z-index: 2;
     margin-bottom: 20px;
 }
@@ -754,7 +754,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 768px) {
     #download .container .mockup-container{
-        margin-top: -150px;
+        margin-top: -200px;
     }
 }
 
