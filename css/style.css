@@ -113,6 +113,7 @@ h6 {
 
 #header {
     height: 92px;
+    padding: 15px 0;
     position: fixed;
     left: 0;
     top: 0;
@@ -540,13 +541,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Sections Header
 --------------------------------*/
 .sec-header {
-    margin-bottom: 10px;
-    padding: 5px 15px 5px 0;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     background-color: black;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 1000;
 }
 
 .sec-header-scrolled {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
 }
 
 .sec-header .social-links-header a {

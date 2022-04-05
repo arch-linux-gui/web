@@ -80,22 +80,121 @@
     $(window).scroll(function() {
         if ($(this).scrollTop() > 80) {
             $('#header').addClass('header-scrolled');
-            $('#header .sec-header').addClass('sec-header-scrolled');
-            $('#header .sec-header').removeClass('d-flex');
-            document.getElementById('mobile-nav-toggle').style.marginTop = "15px";
+
         } else {
             $('#header').removeClass('header-scrolled');
-            $('#header .sec-header').removeClass('sec-header-scrolled');
-            $('#header .sec-header').addClass('d-flex');
-            document.getElementById('mobile-nav-toggle').style.marginTop = "42px";
+
         }
     });
 
     if ($(window).scrollTop() > 80) {
         $('#header').addClass('header-scrolled');
-        $('#header .sec-header').addClass('sec-header-scrolled');
-        $('#header .sec-header').removeClass('d-flex');
-        document.getElementById('mobile-nav-toggle').style.marginTop = "15px";
+    }
+
+    console.log($(window).width())
+    if ($(window).width() > 1188 ) {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 1020) {
+          $('#header').removeClass('header-scrolled');
+          $('.container .sec-header').addClass('sec-header-scrolled');
+          document.getElementById('header').style.position = "absolute";
+          
+        } else {
+          document.getElementById('header').style.position = "fixed";
+          $('.container .sec-header').removeClass('sec-header-scrolled');
+        }
+      });
+    }
+
+    if ($(window).width() < 1189 ) {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 910) {
+          $('#header').removeClass('header-scrolled');
+          $('.container .sec-header').addClass('sec-header-scrolled');
+          document.getElementById('header').style.position = "absolute";
+        } else {
+          document.getElementById('header').style.position = "fixed";
+          $('.container .sec-header').removeClass('sec-header-scrolled');
+        }
+      });
+    }
+
+    if ($(window).width() < 1132 ) {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 780) {
+          $('#header').removeClass('header-scrolled');
+          $('.container .sec-header').addClass('sec-header-scrolled');
+          document.getElementById('header').style.position = "absolute";
+        } else {
+          document.getElementById('header').style.position = "fixed";
+          $('.container .sec-header').removeClass('sec-header-scrolled');
+        }
+      });
+    }
+
+    if ($(window).width() < 1018 ) {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 720) {
+          $('#header').removeClass('header-scrolled');
+          $('.container .sec-header').addClass('sec-header-scrolled');
+          document.getElementById('header').style.position = "absolute";
+        } else {
+          document.getElementById('header').style.position = "fixed";
+          $('.container .sec-header').removeClass('sec-header-scrolled');
+        }
+      });
+    }
+
+    if ($(window).width() < 989 ) {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 810) {
+          $('#header').removeClass('header-scrolled');
+          $('.container .sec-header').addClass('sec-header-scrolled');
+          document.getElementById('header').style.position = "absolute";
+        } else {
+          document.getElementById('header').style.position = "fixed";
+          $('.container .sec-header').removeClass('sec-header-scrolled');
+        }
+      });
+    }
+
+    if ($(window).width() < 965 ) {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 610) {
+          $('#header').removeClass('header-scrolled');
+          $('.container .sec-header').addClass('sec-header-scrolled');
+          document.getElementById('header').style.position = "absolute";
+        } else {
+          document.getElementById('header').style.position = "fixed";
+          $('.container .sec-header').removeClass('sec-header-scrolled');
+        }
+      });
+    }
+
+    if ($(window).width() < 904 ) {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 770) {
+          $('#header').removeClass('header-scrolled');
+          $('.container .sec-header').addClass('sec-header-scrolled');
+          document.getElementById('header').style.position = "absolute";
+        } else {
+          document.getElementById('header').style.position = "fixed";
+          $('.container .sec-header').removeClass('sec-header-scrolled');
+        }
+      });
+    }
+
+    if ($(window).width() < 812 ) {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 620) {
+          $('#header').removeClass('header-scrolled');
+          $('.container .sec-header').addClass('sec-header-scrolled');
+          document.getElementById('header').style.position = "absolute";
+        } else {
+          document.getElementById('header').style.position = "fixed";
+          $('.container .sec-header').removeClass('sec-header-scrolled');
+        }
+      });
     }
 
     // Smooth scroll for the menu and links with .scrollto classes
