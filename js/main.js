@@ -264,7 +264,7 @@
     autoplay: true,
     dots: true,
     loop: true,
-    autoplayTimeout:5000,
+    autoplayTimeout:10000,
     responsive: {
       0: {
         items: 1
