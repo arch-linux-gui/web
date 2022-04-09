@@ -844,18 +844,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*--------------------------------------------------------------
-# Features
+# testimonials
 --------------------------------------------------------------*/
 
-#features {
+#testimonials {
     padding: 60px 0 40px 0;
 }
 
-.features{
+.testimonials{
     background: #000;
 }
   
-.features .feature-item {
+.testimonials .testimonial-item {
     box-sizing: content-box;
     padding: 0 30px 5px 30px;
     margin: 30px 15px;
@@ -865,13 +865,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #000;
 }
 
-.features .feature-item .feature-img {
+.testimonials .testimonial-item .testimonial-img {
     width: 100%;
     border-radius: 5px;
     border: 2px solid #fff;
     }
 
-.features .feature-item h3 {
+.testimonials .testimonial-item h3 {
     font-size: 18px;
     font-weight: bold;
     margin: 10px 0 10px 0;
@@ -879,17 +879,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-.features .feature-item p {
+.testimonials .testimonial-item p {
     font-style: italic;
     margin: 15px auto 5px auto;
     color: white;
 }
 
-.features .owl-nav, .features .owl-dots {
+.testimonials .owl-nav, .testimonials .owl-dots {
     text-align: center;
 }
 
-.features .owl-dot {
+.testimonials .owl-dot {
     display: inline-block;
     margin: 0 5px;
     width: 12px;
@@ -898,19 +898,19 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-color: #ddd !important;
 }
 
-.features .owl-dot.active {
+.testimonials .owl-dot.active {
     background-color: #1977cc !important;
 }
 
 @media (max-width: 767px) {
-    .features .feature-wrap {
+    .testimonials .testimonial-wrap {
     padding-left: 0;
     }
-    .features .feature-item {
+    .testimonials .testimonial-item {
     padding: 30px;
     margin: 15px;
     }
-    .features .feature-item .feature-img {
+    .testimonials .testimonial-item .testimonial-img {
     position: static;
     left: auto;
     }
