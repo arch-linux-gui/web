@@ -1,29 +1,91 @@
 "use client";
-import React, { createContext } from "react";
-import { motion } from "framer-motion";
-export default function Donates() {
+import React, { useEffect, useState } from "react";
+import { getUserCountry } from "../lib/getUserCountry";
+import Razorpay from "razorpay";
+
+const DonationPage = () => {
+  const [country, setCountry] = useState("");
+  const [isIndia, setIsIndia] = useState(false);
+
+  useEffect(() => {
+    async function fetchCountry() {
+      const userCountry = await getUserCountry();
+      console.log("User Country:", userCountry);
+      setCountry(userCountry);
+      setIsIndia(userCountry === "IN");
+    }
+    fetchCountry();
+  }, []);
+
+  useEffect(() => {
+    console.log("Country:", country);
+    console.log("Is India:", isIndia);
+  }, [country, isIndia]);
+
+  const handleRazorpayPayment = () => {
+    const options = {
+      key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
+      amount: 50000, // Amount in paise
+      currency: "INR",
+      name: "Your Company",
+      description: "Donation",
+      handler: function (response) {
+        alert("Payment Successful!");
+      },
+      prefill: {
+        name: "Your Name",
+        email: "your.email@example.com",
+      },
+      notes: {
+        address: "Your Company Address",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+    const rzp = new Razorpay(options);
+    rzp.open();
+  };
+
   return (
-    <div className="min-h-screen bg-gray-300">
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 300 }}
-        transition={{ duration: 0.5 }}
-        className="container mx-auto flex flex-col items-center justify-center"
-      >
-        <h1 className="text-4xl font-bold text-center mt-16 mb-8">
-          Support Our Cause
-        </h1>
-        <p className="text-lg text-center mb-8">
-          Your donation helps us continue our mission.
-        </p>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#161a1e] text-white p-4">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
+        Donate to Support Us
+      </h1>
+      {isIndia ? (
+        <div className="flex flex-col items-center space-y-4">
+          <button
+            onClick={handleRazorpayPayment}
+            // className="flex items-center justify-center px-6 py-3 bg-[#6a45d1] text-white rounded-md w-full max-w-xs cursor-not-allowed" // Original CSS
+            className="flex items-center justify-center px-6 py-3 bg-[#6a45d1] text-white rounded-md w-full max-w-xs opacity-50 cursor-not-allowed" // For Testing purpose Disabled
+            disabled
+          >
+            <img src="/razorpay.png" alt="Razorpay" className="w-6 h-6 mr-2" />
+            Donate with Razorpay
+          </button>
+          <a
+            href="https://liberapay.com/your-username/donate"
+            className="flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 w-full max-w-xs text-center"
+          >
+            <img
+              src="/liberapay.png"
+              alt="Liberapay"
+              className="w-6 h-6 mr-2"
+            />
+            Donate with Liberapay
+          </a>
+        </div>
+      ) : (
+        <a
+          href="https://liberapay.com/your-username/donate"
+          className="flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 w-full max-w-xs text-center"
         >
-          Donate Now
-        </motion.button>
-      </motion.div>
+          <img src="/liberapay.png" alt="Liberapay" className="w-6 h-6 mr-2" />
+          Donate with Liberapay
+        </a>
+      )}
     </div>
   );
-}
+};
+
+export default DonationPage;
