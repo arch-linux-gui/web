@@ -1,0 +1,30 @@
+{
+  "name": "alg",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@nextui-org/switch": "^2.0.28",
+    "@splidejs/react-splide": "^0.7.12",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.10",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "simplex-noise": "^4.0.1",
+    "tailwind-merge": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.12",
+    "@types/react": "18.3.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
