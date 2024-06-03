@@ -15,11 +15,7 @@ export default function Navbar() {
       {navOpen && (
         <Modal onClose={burgerClick}>
           <div className="flex flex-col text-lg font-bold items-center justify-center gap-4">
-            <a
-              href="https://arch-linux-gui.github.io/web/tutorials/index.html"
-              className="hover:text-[#6a45d1]"
-              target="_blank"
-            >
+            <a href="/tutorials" className="hover:text-[#6a45d1]">
               Tutorials
             </a>
             <a

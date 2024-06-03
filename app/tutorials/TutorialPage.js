@@ -3,7 +3,7 @@ import React from "react";
 const TutorialPage = () => {
   return (
     <div className="flex flex-col items-center p-8 bg-[#161a1e] text-white">
-      <h1 className="text-6xl font-bold mb-10 mt-[10rem] text-center">
+      <h1 className="text-4xl font-bold mb-10 mt-[10rem] text-center">
         Installation Videos
       </h1>
 
@@ -34,7 +34,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/wtZjRXOny7Q"
             title="Verify Your Arch Linux GUI Downloads with Secure Hash Algorithm"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -64,7 +64,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/0gAjgxGGzjw"
             title="Easy Way to install Arch Linux in 2021"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -93,7 +93,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/smdZdPLHjWc"
             title="Install Arch Linux on Legacy BIOS with MBR"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -103,7 +103,7 @@ const TutorialPage = () => {
         </div>
       </div>
 
-      <h1 className="text-6xl font-bold mb-10 mt-[5rem] text-center">
+      <h1 className="text-4xl font-bold mb-10 mt-[5rem] text-center">
         Multi-Boot with other OS
       </h1>
 
@@ -125,7 +125,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/Ltiup47QIMU"
             title="Dual Boot Windows 10 &amp; Manjaro 20 - Legacy BIOS"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -158,7 +158,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/zGvGkuVEx0M"
             title="Dual Boot Windows 10 &amp; Arch Linux | UEFI/GPT | GUI Method | 2022"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -168,7 +168,7 @@ const TutorialPage = () => {
         </div>
       </div>
 
-      <h1 className="text-6xl font-bold mb-10 mt-[5rem] text-center">
+      <h1 className="text-4xl font-bold mb-10 mt-[5rem] text-center">
         Arch Linux Specific Videos
       </h1>
 
@@ -203,7 +203,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/BwvQUtv1eM0"
             title="How to Install Software from the Arch User Repository?"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -225,7 +225,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/f2lY3k5o84w"
             title="Install Google Chrome in Arch Linux or Manjaro 20 via AUR"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -248,7 +248,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/hR97lCdizmk"
             title="Install Zoom in Arch Linux or Manjaro"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -258,7 +258,7 @@ const TutorialPage = () => {
         </div>
       </div>
 
-      <h1 className="text-6xl font-bold mb-10 mt-[5rem] text-center">
+      <h1 className="text-4xl font-bold mb-10 mt-[5rem] text-center">
         Miscallaneous Topics
       </h1>
 
@@ -278,7 +278,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/7ND2fiaFfic"
             title="How to Make bootable Linux USB in Windows 11 | Rufus | Legacy/UEFI"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -305,7 +305,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/KQGedNCA1E4"
             title="Make Bootable Linux USB in any Linux Distro | dd command"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -349,7 +349,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/m6ZeH1L2734"
             title="How to USE VirtualBox to try Linux | Beginners Guide"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -374,7 +374,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/RJs70jQi7Wk"
             title="How to Install &amp; Setup VirtualBox in Arch Linux"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -402,7 +402,7 @@ const TutorialPage = () => {
         </div>
         <div className="md:w-1/2 p-4">
           <iframe
-            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-5"
+            className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
             src="https://www.youtube.com/embed/XsE34MdHTqI"
             title="Fix GRUB Rescue Error in Arch Linux"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
