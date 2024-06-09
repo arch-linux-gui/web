@@ -1,19 +1,17 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import Requirements from "./Requirements";
-import Flavours from "./Flavours";
+import Career from "./Career";
 
 export const metadata = {
-  title: "Downloads | ALG",
+  title: "Careers | ALG",
   description: "ALG",
 };
 
-export default function Downloads() {
+export default function Donate() {
   return (
     <section className="relative">
       <Navbar />
-      <Requirements />
-      <Flavours />
+      <Career />
       <Footer />
     </section>
   );

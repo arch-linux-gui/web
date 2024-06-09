@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 export default function Flavours() {
@@ -9,6 +9,23 @@ export default function Flavours() {
   const [dropdownVisibleKDE, setdropdownVisibleKDE] = useState(false);
   const [dropdownVisibleGNOME, setdropdownVisibleGNOME] = useState(false);
   const [dropdownVisibleXFCE, setdropdownVisibleXFCE] = useState(false);
+
+  const ref = useRef();
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setdropdownVisibleKDE(false);
+        setdropdownVisibleGNOME(false);
+        setdropdownVisibleXFCE(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
 
   const pureIso = {
     kde: {
@@ -103,7 +120,7 @@ export default function Flavours() {
             </button>
             <span className="font-bold text-white">Themed</span>
           </div>
-          <div className="flex justify-center mt-6 relative">
+          <div className="relative flex justify-center mt-6">
             <button
               onClick={toggleDropdownKDE}
               className="text-white py-3 px-12 bg-[#6a45d1] opacity-90 hover:opacity-100 rounded-full transition-all"
@@ -111,7 +128,10 @@ export default function Flavours() {
               Download
             </button>
             {dropdownVisibleKDE && (
-              <div className="absolute mt-2 top-full bg-white rounded shadow-lg">
+              <div
+                className="absolute mt-2 bg-white rounded shadow-lg top-full"
+                ref={ref}
+              >
                 <a
                   href={
                     isThemedKDE
@@ -199,7 +219,7 @@ export default function Flavours() {
             </button>
             <span className="font-bold text-white">Themed</span>
           </div>
-          <div className="flex justify-center mt-6 relative">
+          <div className="relative flex justify-center mt-6">
             <button
               onClick={toggleDropdownGNOME}
               className="text-white py-3 px-12 bg-[#6a45d1] opacity-90 hover:opacity-100 rounded-full transition-all"
@@ -207,7 +227,10 @@ export default function Flavours() {
               Download
             </button>
             {dropdownVisibleGNOME && (
-              <div className="absolute mt-2 top-full bg-white rounded shadow-lg">
+              <div
+                className="absolute mt-2 bg-white rounded shadow-lg top-full"
+                ref={ref}
+              >
                 <a
                   href={
                     isThemedGnome
@@ -281,22 +304,18 @@ export default function Flavours() {
             </button>
             <span className="font-bold text-white">Themed</span>
           </div>
-          <div className="flex justify-center mt-6 mb-5 relative">
+          <div className="relative flex justify-center mt-6 mb-5">
             <button
               onClick={toggleDropdownXFCE}
               className="flex text-white py-3 px-12 bg-[#6a45d1] opacity-90 hover:opacity-100 rounded-full transition-all"
             >
               Download
-              {/* <Image
-                src={dropdownVisibleXFCE ? "/up.png" : "/down.png"}
-                alt="dropdown icon"
-                width={24}
-                height={24}
-                className="ml-3"
-              /> */}
             </button>
             {dropdownVisibleXFCE && (
-              <div className="absolute mt-2 top-full bg-white rounded shadow-lg">
+              <div
+                className="absolute mt-2 bg-white rounded shadow-lg top-full"
+                ref={ref}
+              >
                 <a
                   href={
                     isThemedXfce

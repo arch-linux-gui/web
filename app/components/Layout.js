@@ -5,7 +5,10 @@ import { usePathname } from "next/navigation";
 
 const Layout = ({ children }) => {
   const pathname = usePathname();
-  const isDonatePage = pathname === "/donate";
+  const isDonatePage =
+    pathname.startsWith("/donate") ||
+    pathname.startsWith("/careers") ||
+    pathname.startsWith("/apply");
   return (
     <div className="min-h-screen flex flex-col relative">
       <main className="flex-grow">{children}</main>

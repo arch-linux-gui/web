@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import DonationPage from "./Donates";
 
 export const metadata = {
-  title: "ALG - Donate",
+  title: "Donate | ALG",
   description: "ALG",
 };
 

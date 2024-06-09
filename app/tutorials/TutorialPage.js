@@ -35,7 +35,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/wtZjRXOny7Q"
+            src="https://www.youtube-nocookie.com/embed/wtZjRXOny7Q?si=wnDXpHw9IYzeRIvB"
             title="Verify Your Arch Linux GUI Downloads with Secure Hash Algorithm"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -65,7 +65,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/0gAjgxGGzjw"
+            src="https://www.youtube-nocookie.com/embed/0gAjgxGGzjw?si=j7JxyIlT3llRzugU"
             title="Easy Way to install Arch Linux in 2021"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -94,7 +94,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/smdZdPLHjWc"
+            src="https://www.youtube-nocookie.com/embed/smdZdPLHjWc?si=Oj2h2AhYCU-Uc0M2"
             title="Install Arch Linux on Legacy BIOS with MBR"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -126,7 +126,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/Ltiup47QIMU"
+            src="https://www.youtube-nocookie.com/embed/Ltiup47QIMU?si=-AYWZI25kXCZqVM-"
             title="Dual Boot Windows 10 &amp; Manjaro 20 - Legacy BIOS"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -159,7 +159,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/zGvGkuVEx0M"
+            src="https://www.youtube-nocookie.com/embed/zGvGkuVEx0M?si=KVJoFwiRx_iw_o6q"
             title="Dual Boot Windows 10 &amp; Arch Linux | UEFI/GPT | GUI Method | 2022"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -204,7 +204,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/BwvQUtv1eM0"
+            src="https://www.youtube-nocookie.com/embed/BwvQUtv1eM0?si=haAqkAhQg4cTXLyh"
             title="How to Install Software from the Arch User Repository?"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -226,7 +226,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/f2lY3k5o84w"
+            src="https://www.youtube-nocookie.com/embed/f2lY3k5o84w?si=Nh6zwIq7igMJN622"
             title="Install Google Chrome in Arch Linux or Manjaro 20 via AUR"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -249,7 +249,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/hR97lCdizmk"
+            src="https://www.youtube-nocookie.com/embed/hR97lCdizmk?si=KJTh_A-rqVy0TBBS"
             title="Install Zoom in Arch Linux or Manjaro"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -279,7 +279,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/7ND2fiaFfic"
+            src="https://www.youtube-nocookie.com/embed/7ND2fiaFfic?si=tL3F1uR3APz83CJ8"
             title="How to Make bootable Linux USB in Windows 11 | Rufus | Legacy/UEFI"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -306,7 +306,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/KQGedNCA1E4"
+            src="https://www.youtube-nocookie.com/embed/KQGedNCA1E4?si=AN6v6lThBaJZAmn5"
             title="Make Bootable Linux USB in any Linux Distro | dd command"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -350,7 +350,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/m6ZeH1L2734"
+            src="https://www.youtube-nocookie.com/embed/m6ZeH1L2734?si=-9RMlKIVHUYhd4hM"
             title="How to USE VirtualBox to try Linux | Beginners Guide"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -375,7 +375,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/RJs70jQi7Wk"
+            src="https://www.youtube-nocookie.com/embed/RJs70jQi7Wk?si=QgY8b1ZgZoQCs465"
             title="How to Install &amp; Setup VirtualBox in Arch Linux"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -403,7 +403,7 @@ const TutorialPage = () => {
         <div className="md:w-1/2 p-4">
           <iframe
             className="w-full md:w-[800px] h-[225px] md:h-[450px] m-1"
-            src="https://www.youtube.com/embed/XsE34MdHTqI"
+            src="https://www.youtube-nocookie.com/embed/XsE34MdHTqI?si=vC8tAgFGx8EseZTV"
             title="Fix GRUB Rescue Error in Arch Linux"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"

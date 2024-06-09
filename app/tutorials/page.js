@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import TutorialPage from "./TutorialPage";
 
 export const metadata = {
-  title: "ALG - Tutorials",
+  title: "Tutorials | ALG",
   description: "ALG",
 };
 

@@ -6,9 +6,13 @@ import { ScrollProvider } from "./scrollContext";
 import { useEffect, useState } from "react";
 import Loader from "./loader";
 import Layout from "./components/Layout";
-import { usePathname } from "next/navigation";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(false);
