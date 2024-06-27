@@ -1,9 +1,13 @@
+import { createPreset } from "fumadocs-ui/tailwind-plugin";
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./content/**/*.{md,mdx}",
+    "./mdx-components.{ts,tsx}",
+    "./node_modules/fumadocs-ui/dist/**/*.js",
   ],
   theme: {
     extend: {
@@ -19,4 +23,5 @@ module.exports = {
     },
   },
   plugins: [],
+  presets: [createPreset()],
 };

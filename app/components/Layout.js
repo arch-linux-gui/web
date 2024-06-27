@@ -8,7 +8,8 @@ const Layout = ({ children }) => {
   const isDonatePage =
     pathname.startsWith("/donate") ||
     pathname.startsWith("/careers") ||
-    pathname.startsWith("/apply");
+    pathname.startsWith("/apply") ||
+    pathname.startsWith("/docs");
   return (
     <div className="min-h-screen flex flex-col relative">
       <main className="flex-grow">{children}</main>
