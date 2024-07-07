@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 const AboutPage = () => {
   const [teamMembers, setTeamMembers] = useState([
@@ -57,7 +57,7 @@ const AboutPage = () => {
   }, [teamMembers]);
 
   return (
-    <div className="min-h-screen bg-[#161a1e] text-white py-16 px-6">
+    <div className="min-h-screen bg-[#09090B] text-white py-16 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16 mt-[6rem]">
           <h1 className="text-6xl font-bold mb-6">About Us</h1>
@@ -126,7 +126,7 @@ const AboutPage = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="bg-gray-800 rounded-lg shadow-lg p-8 text-center hover:bg-gray-700 cursor-pointer transition-colors duration-300 h-full">
+              <div className="bg-[#131315] rounded-lg shadow-lg p-8 text-center hover:bg-[#232324] cursor-pointer transition-colors duration-300 h-full">
                 <div className="flex flex-col h-full justify-between">
                   <div>
                     <Image

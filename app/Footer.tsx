@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#161a1e] text-white py-8">
+    <footer className="bg-[#131315] text-white py-8">
       <div className="container px-4 mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between md:flex-row">
           <div className="flex flex-col items-center mb-4 space-y-4 md:flex-row md:space-y-0 md:space-x-8 md:mb-0">

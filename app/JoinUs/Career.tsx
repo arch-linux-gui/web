@@ -3,7 +3,7 @@ import { jobs } from "./[jobId]/JobData";
 
 export default function Career() {
   return (
-    <div className="min-h-screen bg-[#161a1e]">
+    <div className="min-h-screen bg-[#09090B]">
       <main className="py-[8rem]">
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8 ">
           <div className="px-4 py-6 sm:px-0">

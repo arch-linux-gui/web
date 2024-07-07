@@ -83,7 +83,7 @@ export default function Flavours() {
   };
 
   return (
-    <section className="bg-[#161a1e] pt-4 md:pt-0 px-4 sm:px-12 md:px-20 md:pb-12 lg:px-28">
+    <section className="bg-[#09090B] pt-4 md:pt-0 px-4 sm:px-12 md:px-20 md:pb-12 lg:px-28">
       <div className="grid grid-cols-1 gap-6 mb-12 md:grid-cols-40-60">
         <div className="flex flex-col justify-center p-3 rounded-lg md:p-6">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">
@@ -358,7 +358,7 @@ export default function Flavours() {
           />
         </div>
       </div>
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center pb-5 mt-12">
         <button className="py-2 px-8 text-white border-4 border-[#6a45d1] rounded-full transition-all hover:bg-[#6a45d1] hover:text-white">
           <a
             href="https://sourceforge.net/projects/arch-linux-gui/files/experimental-editions"

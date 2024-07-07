@@ -32,7 +32,7 @@ export default function Hero() {
         >
           Know more
         </button>
-        <div className="w-[100%] relative">
+        <div className="mockup-window bg-base-200 border border-black w-[100%] relative">
           <Image
             src="/arch-linux-gui.png"
             width={1920}

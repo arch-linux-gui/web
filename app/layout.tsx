@@ -9,6 +9,7 @@ import Loader from "./lib/loader";
 import Layout from "./components/Layout";
 import { RootProvider } from "fumadocs-ui/provider";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
+import { ViewTransitions } from "next-view-transitions";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -34,31 +35,33 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
-    <html lang="en">
-      <body className={poppins.className}>
-        <RootProvider
-          search={{
-            links: [
-              ["Testing", "/docs/testing/newtest"],
-              ["Components", "/docs/test"],
-            ],
-            hotKey: [
-              {
-                display: "Ctrl + k",
-                key: "k",
-              },
-            ],
-          }}
-        >
-          <TooltipProvider>
-            <ScrollProvider>
-              {loading && <Loader />}
-              <Layout>{children}</Layout>
-            </ScrollProvider>
-          </TooltipProvider>
-        </RootProvider>
-        <div id="modal-root"></div>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body className={poppins.className}>
+          <RootProvider
+            search={{
+              links: [
+                ["Testing", "/docs/testing/newtest"],
+                ["Components", "/docs/test"],
+              ],
+              hotKey: [
+                {
+                  display: "Ctrl + k",
+                  key: "k",
+                },
+              ],
+            }}
+          >
+            <TooltipProvider>
+              <ScrollProvider>
+                {loading && <Loader />}
+                <Layout>{children}</Layout>
+              </ScrollProvider>
+            </TooltipProvider>
+          </RootProvider>
+          <div id="modal-root"></div>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

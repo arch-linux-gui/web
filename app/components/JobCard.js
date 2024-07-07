@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 export default function JobCard({ id, title, location, skills }) {
   return (

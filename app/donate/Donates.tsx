@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { getUserCountry } from "../lib/getUserCountry";
-import Razorpay from "razorpay";
 import Image from "next/image";
+import { Link } from "next-view-transitions";
 
 const DonationPage = () => {
   const [country, setCountry] = useState("");
@@ -23,34 +23,8 @@ const DonationPage = () => {
     console.log("Is India:", isIndia);
   }, [country, isIndia]);
 
-  const handleRazorpayPayment = async () => {
-    const payment_capture = 1;
-    const amount = 1;
-    const currency = "INR";
-    const options = {
-      amount: (amount * 100).toString(),
-      currency,
-      // receipt: shortid.generate(),
-      payment_capture,
-    };
-    const rzp = new Razorpay({
-      key_id: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-      key_secret: process.env.NEXT_PUBLIC_RAZORPAY_KEY_SEC,
-    });
-    try {
-      // const response = await rzp.orders.create(options);
-      // response.status(200).json({
-      //   id: response.id,
-      //   currency: response.currency,
-      //   amount: response.amount,
-      // });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   return (
-    <div className="flex flex-col items-center  justify-center min-h-screen bg-[#161a1e] text-white p-6">
+    <div className="flex flex-col items-center  justify-center min-h-screen bg-[#09090B] text-white p-6">
       <h1 className="m-8 text-4xl font-extrabold text-center md:text-5xl">
         Support Our Cause
       </h1>
@@ -131,23 +105,19 @@ const DonationPage = () => {
       </div>
       {isIndia ? (
         <div className="flex flex-col items-center space-y-6">
-          <button
-            onClick={handleRazorpayPayment}
-            className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white bg-purple-600 rounded-md shadow-lg opacity-50 cursor-not-allowed"
-            disabled
+          <Link
+            href={"https://payments-test.cashfree.com/forms/alg-donate"}
+            className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white bg-purple-600 rounded-md shadow-lg hover:bg-purple-700"
           >
             <Image
-              src="/razorpay.png"
-              alt="Razorpay"
-              width={24}
-              height={24}
-              className="w-6 h-6 mr-2"
+              src="/cashfree.png"
+              alt="Cashfree"
+              width={30}
+              height={30}
+              className="w-8 h-6 mr-2"
             />
-            Donate with Razorpay
-          </button>
-          <span className="inline-block px-2 py-1 text-sm text-gray-800 bg-gray-200 rounded-md opacity-50">
-            Note: Razorpay is currently under construction.
-          </span>
+            Donate with Cashfree
+          </Link>
           <a
             href="https://liberapay.com/your-username/donate"
             className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white bg-green-600 rounded-md shadow-lg hover:bg-green-700"

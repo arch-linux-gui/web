@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { blogs } from "../source";
 import Image from "next/image";
 

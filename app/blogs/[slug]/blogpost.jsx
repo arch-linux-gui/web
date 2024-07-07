@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { InlineTOC } from "fumadocs-ui/components/inline-toc";
 import { buttonVariants } from "../../components/button";
 import { Control } from "./page.client";
