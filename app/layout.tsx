@@ -1,67 +1,32 @@
-"use client";
-import React from "react";
-import { Poppins } from "next/font/google";
-import "./globals.css";
-import "../public/alg-logo.png";
-import { ScrollProvider } from "./scrollContext";
-import { useEffect, useState } from "react";
-import Loader from "./lib/loader";
-import Layout from "./components/Layout";
+import { DocsLayout } from "fumadocs-ui/layout";
+import "./global.css";
 import { RootProvider } from "fumadocs-ui/provider";
-import { TooltipProvider } from "@radix-ui/react-tooltip";
-import { ViewTransitions } from "next-view-transitions";
+import { Inter } from "next/font/google";
+import type { ReactNode } from "react";
+import { baseOptions } from "./layout.config";
+import Logo from "./logoComp";
 
-const poppins = Poppins({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-  adjustFontFallback: false,
 });
 
-export default function RootLayout({ children }) {
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const handleStart = () => setLoading(true);
-    const handleComplete = () => setLoading(false);
-
-    window.addEventListener("beforeunload", handleStart);
-    window.addEventListener("load", handleComplete);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleStart);
-      window.removeEventListener("load", handleComplete);
-    };
-  }, []);
-
+export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <ViewTransitions>
-      <html lang="en">
-        <body className={poppins.className}>
-          <RootProvider
-            search={{
-              links: [
-                ["Testing", "/docs/testing/newtest"],
-                ["Components", "/docs/test"],
-              ],
-              hotKey: [
-                {
-                  display: "Ctrl + k",
-                  key: "k",
-                },
-              ],
-            }}
-          >
-            <TooltipProvider>
-              <ScrollProvider>
-                {loading && <Loader />}
-                <Layout>{children}</Layout>
-              </ScrollProvider>
-            </TooltipProvider>
-          </RootProvider>
-          <div id="modal-root"></div>
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en" className={inter.className} suppressHydrationWarning>
+      <body>
+        <RootProvider
+          search={{
+            links: [
+              ["Testing", "/testing/newtest"],
+              ["Components", "/test"],
+            ],
+          }}
+        >
+          <DocsLayout {...baseOptions} nav={{ title: <Logo /> }}>
+            {children}
+          </DocsLayout>
+        </RootProvider>
+      </body>
+    </html>
   );
 }
