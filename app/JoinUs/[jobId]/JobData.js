@@ -1,11 +1,11 @@
 export const jobs = [
   {
     id: 1,
-    title: "Frontend Developer",
+    title: "Software Engineer - Frontend",
     location: "Remote",
     skills: ["Next.js", "TailwindCSS", "JavaScript", "Git", "CSS"],
     description:
-      "We are seeking a talented Frontend Developer to join our team. As a Frontend Developer, you will work closely with our design team to implement stunning user interfaces. This role is ideal for students and individuals passionate about frontend development, as we prioritize skills and potential over work experience.",
+      "We are seeking a Frontend Engineer to join our team. As a Frontend Engineer, you will work closely with our design team to implement user interfaces. This role is ideal for students and individuals passionate about frontend development.",
     details:
       "You will be responsible for designing and building modern web applications. Requirements: 2+ years of experience with React and TailwindCSS.",
     responsibilities: [
@@ -26,7 +26,32 @@ export const jobs = [
     ],
   },
   {
-    id: 2,
+    id: 1,
+    title: "Software Engineer - Documentation",
+    location: "Remote",
+    skills: ["Markdown", "JavaScript", "Git"],
+    description:
+      "We are seeking a software engineer to join our documentation team. You will work closely with our core team to write technical documentation for ALG. This role is ideal for students and individuals passionate about frontend development, and technical writing",
+    details:
+      "Our documentation is written using NextJS Fuma Docs. You need to know the basic structure of the same.",
+    responsibilities: [
+      "Understand and write technical documentation with respect to ALG's core codebase, website and other tools",
+      "Explain complex concepts in simple and easy to understand language",
+      "Ability to look for solutions online, in forums and websites like stackoverflow. Must be able to leverage AI tools LLMs to ease their workflow",
+    ],
+    requirements: [
+      "Pursuing or recently completed a degree in Computer Science, Engineering, or related field",
+      "Demonstrated passion for writing technical documentation",
+      "Ability to learn new technologies quickly",
+    ],
+    niceToHave: [
+      "Experience with Markdown",
+      "Experience with version control systems such as Git",
+      "Understanding of Linux System Internals",
+    ],
+  },
+  {
+    id: 3,
     title: "Community Manager",
     location: "Remote",
     skills: [
@@ -36,9 +61,9 @@ export const jobs = [
       "Collaboration",
     ],
     description:
-      "We are seeking a talented Community Manager to nurture and grow our community of users, contributors, and enthusiasts. The ideal candidate is passionate about fostering engagement, building relationships, and driving community initiatives. This role requires a combination of strategic thinking, creative problem-solving, and excellent communication skills.",
+      "We are looking for a Community Manager to nurture and grow our community of users, contributors, and enthusiasts. The ideal candidate is passionate about fostering engagement, building relationships, and driving community initiatives. This role requires a combination of strategic thinking, creative problem-solving, and excellent communication skills.",
     details:
-      "You will develop and maintain server-side logic and databases. Requirements: 3+ years of experience with Node.js and Express.",
+      "Engage with the community on ALG's social media and communication channels such as Discord, Telegram, and Instagram",
     responsibilities: [
       "Develop and execute community engagement strategies to increase participation and satisfaction.",
       "Monitor and moderate community forums, social media channels, and other communication platforms.",
@@ -47,13 +72,13 @@ export const jobs = [
     ],
     requirements: [
       "Proven experience in community management or a related role.",
-      "Familiarity with online community platforms (e.g., Discord, Instagram, X (formerly twitter)).",
+      "Familiarity with online community platforms (e.g., Discord, Telegram, Instagram, X (formerly twitter)).",
       "Strong understanding of community dynamics and engagement strategies.",
     ],
     niceToHave: [
       "Experience with content creation (e.g., writing, graphic design, video production).",
-      "Passion for the subject matter or industry of the Arch Linux community.",
-      "Experience with content creation (e.g., writing, graphic design, video production).",
+      "Passion for the subject matter or the Arch Linux community.",
+      "Eager to learn technical concepts on the fly as you will be engaging with a technical community",
     ],
   },
 ];
