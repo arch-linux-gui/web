@@ -52,7 +52,7 @@ export const jobs = [
   },
   {
     id: 3,
-    title: "Software Engineer - Systems Engineering",
+    title: "Software Engineer - Systems",
     location: "Remote",
     skills: ["C++", "Go-Lang", "Git", "Python", "Linux",  "Shell Scripting"],
     description:
