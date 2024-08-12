@@ -26,7 +26,7 @@ export const jobs = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     title: "Software Engineer - Documentation",
     location: "Remote",
     skills: ["Markdown", "JavaScript", "Git"],
@@ -52,6 +52,31 @@ export const jobs = [
   },
   {
     id: 3,
+    title: "Software Engineer - Systems Engineering",
+    location: "Remote",
+    skills: ["C++", "Go-Lang", "Git", "Python", "Linux",  "Shell Scripting"],
+    description:
+      "We are seeking a software engineer to join our core team. You will be part of our core team to core features for ALG. This role is ideal for individuals having experience in systems programming, ideally in C++, Go-Lang or simillar languages & wanting to contribute to an open source project.",
+    details:
+      "Our codebase is a mix of Qt/C++, Go-lang, and QML. We do lots of shell scripting too!",
+    responsibilities: [
+      "Discuss possible features with core team and implement it in code",
+      "Engage with core team and suggest possible features & solutions",
+      "Ability to look for solutions online, in forums and websites like stackoverflow. Must be able to leverage AI tools LLMs to ease their workflow",
+    ],
+    requirements: [
+      "Pursuing or completed a degree in Computer Science, Computing, Engineering, or related field",
+      "Demonstrated passion for open source software development, Linux and Systems programming",
+      "Ability to learn new technologies quickly",
+    ],
+    niceToHave: [
+      "Experience with Python",
+      "Experience with version control systems such as Git",
+      "Understanding of Linux System Internals",
+    ],
+  },
+  {
+    id: 4,
     title: "Community Manager",
     location: "Remote",
     skills: [
