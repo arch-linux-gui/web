@@ -16,16 +16,16 @@ export default function Navbar() {
       {navOpen && (
         <Modal onClose={burgerClick}>
           <div className="flex flex-col items-center justify-center gap-4 font-bold">
-            <Link href="/docs" target="_blank" className="hover:text-[#6a45d1]">
+            {/* <Link href="/docs" target="_blank" className="hover:text-[#6a45d1]">
               Docs
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               href="/blogs"
               target="_blank"
               className="hover:text-[#6a45d1]"
             >
               Blogs
-            </Link>
+            </Link> */}
             <Link href="/tutorials" className="hover:text-[#6a45d1]">
               Tutorials
             </Link>
@@ -88,16 +88,16 @@ export default function Navbar() {
             <Image src="/hamburger.svg" height={30} width={30} alt="Nothing" />
           </button>
           <div className="items-center hidden gap-4 text-lg font-bold md:flex">
-            <Link href="/docs" target="_blank" className="hover:text-[#6a45d1]">
+            {/* <Link href="/docs" target="_blank" className="hover:text-[#6a45d1]">
               Docs
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               href="/blogs"
               target="_blank"
               className="hover:text-[#6a45d1]"
             >
               Blogs
-            </Link>
+            </Link> */}
             <Link href="/tutorials" className="hover:text-[#6a45d1]">
               Tutorials
             </Link>
