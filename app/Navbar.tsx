@@ -169,7 +169,7 @@ export default function CenteredDockToStickyNavbar() {
           className={`${
             isSticky
               ? "bg-white dark:bg-[#1f1f24e4] w-full"
-              : "bg-white/80 w-1/2 max-w-md dark:bg-[#1f1f24e4] backdrop-blur-md"
+              : "bg-white/80 w-3/4 max-w-md dark:bg-[#1f1f24e4] backdrop-blur-md"
           } ${isSticky ? "" : "rounded-2xl"} shadow-lg mx-auto`}
         >
           {Object.entries(navItems).map(([key, value]) => (
