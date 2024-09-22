@@ -42,10 +42,10 @@ export default function Testi() {
   }, []);
 
   return (
-    <section className="px-6 py-6 text-black bg-white md:py-10 sm:px-12 md:px-20 lg:px-28">
+    <section className="px-6 py-6 md:py-10 sm:px-12 md:px-20 lg:px-28">
       <div className="flex flex-col items-center justify-center">
         <p className="mb-4 text-3xl font-bold md:text-5xl">Testimonials</p>
-        <div className="bg-[#f6f5f5] px-4 py-8 md:p-12 rounded-2xl w-full">
+        <div className="px-4 py-8 md:p-12 rounded-2xl w-full">
           <Splide
             options={{
               type: "loop",

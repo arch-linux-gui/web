@@ -1,7 +1,7 @@
 import React from "react";
 export default function Requirements() {
   return (
-    <section className="bg-[#09090B] px-6 pt-36 sm:px-12 md:px-20 md:pb-12 lg:px-28">
+    <section className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] px-6 pt-36 sm:px-12 md:px-20 md:pb-12 lg:px-28">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="bg-[#FFFFFF] p-6 rounded-lg">
           <h2 className="mb-4 text-2xl font-bold text-black md:text-3xl">

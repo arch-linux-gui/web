@@ -7,11 +7,11 @@ const AboutPage = () => {
   const [teamMembers, setTeamMembers] = useState([
     {
       name: "",
-      role: "Creator",
+      role: "Founder and Core Team - Developer",
       image: "",
       github: "https://github.com/demonkillerr",
       description:
-        "Gaurang is the creator of Arka Linux GUI. With a deep passion for Linux and open-source software, he aims to make Arch Linux more accessible to users around the world.",
+        "DemonKiller is the original creator and lead developer of Arka Linux GUI. He started the project in late 2020 with goal to make Arch Linux more accessible to users around the world.",
     },
     {
       name: "",

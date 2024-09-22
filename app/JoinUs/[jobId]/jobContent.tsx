@@ -28,7 +28,7 @@ export default function JobContent({ jobId }) {
       <HeadCus params={job.title} />
       <header className="bg-[#090E0E] shadow w-full">
         <div className="px-4 py-6 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-          <h1 className="mt-[9rem] mb-3 text-6xl font-bold text-white">
+          <h1 className="mt-[9rem] mb-3 text-4xl font-bold text-white text-wrap lg:text-6xl">
             {job.title}
           </h1>
           <p className="text-xl text-gray-200">{job.location}</p>

@@ -1,77 +1,104 @@
 "use client";
-import React from "react";
-import { Link } from "next-view-transitions";
-import Image from "next/image";
-import { useState } from "react";
-import Modal from "./lib/Modal";
 
-export default function Navbar() {
-  const [navOpen, setNavOpen] = useState(false);
-  const burgerClick = () => {
-    setNavOpen(!navOpen);
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { Menu, Moon, Sun, X } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { Button } from "./components/button";
+
+const navItems = {
+  Tutorials: "tutorials",
+  Support: "https://discord.com/invite/NgAFEw9Tkf",
+  Sourceforge: "https://sourceforge.net/projects/arch-linux-gui/",
+  OSDN: "https://osdn.net/projects/arch-linux-gui/",
+  Downloads: "downloads",
+};
+
+export default function CenteredDockToStickyNavbar() {
+  const [isSticky, setIsSticky] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+      setIsDarkMode(true);
+      document.documentElement.classList.add("dark");
+    } else {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      if (e.key === "theme") {
+        setIsDarkMode(e.newValue === "dark");
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 50) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  });
+
+  const toggleDarkMode = () => {
+    const newTheme = !isDarkMode ? "dark" : "light";
+    setIsDarkMode(!isDarkMode);
+    localStorage.setItem("theme", newTheme);
+    if (newTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   };
 
   return (
-    <section className="absolute w-full mt-8 text-black text-lg">
-      {navOpen && (
-        <Modal onClose={burgerClick}>
-          <div className="flex flex-col items-center justify-center gap-4 font-bold">
-            <Link href="/docs" target="_blank" className="hover:text-[#6a45d1]">
-              Docs
-            </Link>
-            <Link
-              href="/blogs"
-              target="_blank"
-              className="hover:text-[#6a45d1]"
-            >
-              Blogs
-            </Link>
-            <Link href="/tutorials" className="hover:text-[#6a45d1]">
-              Tutorials
-            </Link>
+    <motion.div
+      className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${
+        isSticky ? "top-0" : "top-4"
+      }`}
+      initial={false}
+      animate={isSticky ? { width: "100%" } : { width: "100%" }}
+    >
+      <div className={`flex justify-center ${isSticky ? "w-full" : ""}`}>
+        <motion.nav
+          className={`${
+            isSticky
+              ? "w-full bg-white dark:bg-[#1f1f24e4] shadow-md"
+              : "bg-white/80 dark:bg-[#1f1f24e4] backdrop-blur-md rounded-full shadow-lg"
+          } transition-all duration-300 ease-in-out ${isSticky ? "" : "w-3/4"}`}
+          initial={false}
+          animate={
+            isSticky ? { borderRadius: "0px" } : { borderRadius: "9999px" }
+          }
+        >
+          <div
+            className={`flex items-center justify-between ${
+              isSticky
+                ? "px-4 md:px-6 py-2 max-w-7xl mx-auto"
+                : "px-4 md:px-6 py-3"
+            }`}
+          >
             <a
-              href="https://discord.com/invite/NgAFEw9Tkf"
-              className="hover:text-[#6a45d1]"
-              target="_blank"
+              href="/"
+              className="text-xl font-bold pr-5 text-gray-900 dark:text-white"
             >
-              Support
-            </a>
-            <a
-              href="https://sourceforge.net/projects/arch-linux-gui/"
-              className="hover:text-[#6a45d1]"
-              target="_blank"
-            >
-              Sourceforge
-            </a>
-            <a
-              href="https://osdn.net/projects/arch-linux-gui/"
-              className="hover:text-[#6a45d1]"
-              target="_blank"
-            >
-              OSDN
-            </a>
-            <Link
-              href="/downloads"
-              className="px-4 py-2 bg-[#161a1e] rounded-3xl text-white"
-            >
-              Downloads
-            </Link>
-          </div>
-        </Modal>
-      )}
-      <div className="flex justify-center">
-        <div className="flex justify-between items-center px-8 py-4 rounded-full w-[80%] bg-white">
-          <Link href="/">
-            <div className="items-center hidden gap-1 md:flex">
-              <Image
-                src="/alg-logo.png"
-                width={50}
-                height={50}
-                alt="ALG Logo"
-                className="bg-gray-900 rounded-full"
-              />
-            </div>
-            <div className="flex items-center gap-1 md:hidden">
               <Image
                 src="/alg-logo.png"
                 width={45}
@@ -79,58 +106,90 @@ export default function Navbar() {
                 alt="ALG Logo"
                 className="bg-gray-900 rounded-full"
               />
+            </a>
+            <div className="hidden md:flex space-x-1">
+              {Object.entries(navItems).map(([key, value]) => (
+                <motion.a
+                  key={key}
+                  href={value}
+                  target={
+                    key.includes("Support") ||
+                    key.includes("Sourceforge") ||
+                    key.includes("OSDN")
+                      ? "_blank"
+                      : ""
+                  }
+                  className={`text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-full text-sm font-medium transition-colors ${
+                    isSticky ? "hover:bg-gray-100 dark:hover:bg-gray-800" : ""
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {key}
+                </motion.a>
+              ))}
             </div>
-          </Link>
-          <button
-            onClick={burgerClick}
-            className={`md:hidden ${navOpen ? "rotate-180" : "rotate-0"}`}
-          >
-            <Image src="/hamburger.svg" height={30} width={30} alt="Nothing" />
-          </button>
-          <div className="items-center hidden gap-4 text-lg font-bold md:flex">
-            <Link href="/docs" target="_blank" className="hover:text-[#6a45d1]">
-              Docs
-            </Link>
-            <Link
-              href="/blogs"
-              target="_blank"
-              className="hover:text-[#6a45d1]"
-            >
-              Blogs
-            </Link>
-            <Link href="/tutorials" className="hover:text-[#6a45d1]">
-              Tutorials
-            </Link>
-            <a
-              href="https://discord.com/invite/NgAFEw9Tkf"
-              className="hover:text-[#6a45d1]"
-              target="_blank"
-            >
-              Support
-            </a>
-            <a
-              href="https://sourceforge.net/projects/arch-linux-gui/"
-              className="hover:text-[#6a45d1]"
-              target="_blank"
-            >
-              Sourceforge
-            </a>
-            <a
-              href="https://osdn.net/projects/arch-linux-gui/"
-              className="hover:text-[#6a45d1]"
-              target="_blank"
-            >
-              OSDN
-            </a>
-            <Link
-              href="/downloads"
-              className="px-4 py-2 bg-[#161a1e] rounded-3xl text-white"
-            >
-              Downloads
-            </Link>
+            <div className="flex items-center space-x-4">
+              <motion.button
+                onClick={toggleDarkMode}
+                className="p-2 rounded-full bg-gray-200 dark:bg-[#1f1f24e4] text-gray-900 dark:text-white"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+              </motion.button>
+              <div className="md:hidden">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                >
+                  {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </Button>
+              </div>
+            </div>
           </div>
-        </div>
+        </motion.nav>
       </div>
-    </section>
+      {/* Mobile menu */}
+      <motion.div
+        className={`md:hidden overflow-hidden ${
+          isSticky ? "w-full" : "flex justify-center"
+        }`}
+        initial={false}
+        animate={
+          isMobileMenuOpen
+            ? { height: "auto", opacity: 1 }
+            : { height: 0, opacity: 0 }
+        }
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <div
+          className={`${
+            isSticky
+              ? "bg-white dark:bg-[#1f1f24e4] w-full"
+              : "bg-white/80 w-1/2 max-w-md dark:bg-[#1f1f24e4] backdrop-blur-md"
+          } ${isSticky ? "" : "rounded-2xl"} shadow-lg mx-auto`}
+        >
+          {Object.entries(navItems).map(([key, value]) => (
+            <a
+              key={key}
+              href={value}
+              target={
+                key.includes("Support") ||
+                key.includes("Sourceforge") ||
+                key.includes("OSDN")
+                  ? "_blank"
+                  : ""
+              }
+              className="block text-gray-600 hover:rounded-full dark:text-gray-300 hover:bg-[#e2e2e7e4] dark:hover:text-white hover:bg-gray-100 dark:hover:bg-[#303037e4] px-4 py-2 text-sm font-medium"
+            >
+              {key}
+            </a>
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
   );
 }

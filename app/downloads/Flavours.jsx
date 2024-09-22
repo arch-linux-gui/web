@@ -83,13 +83,11 @@ export default function Flavours() {
   };
 
   return (
-    <section className="bg-[#09090B] pt-4 md:pt-0 px-4 sm:px-12 md:px-20 md:pb-12 lg:px-28">
+    <section className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] pt-4 md:pt-0 px-4 sm:px-12 md:px-20 md:pb-12 lg:px-28">
       <div className="grid grid-cols-1 gap-6 mb-12 md:grid-cols-40-60">
         <div className="flex flex-col justify-center p-3 rounded-lg md:p-6">
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">
-            KDE Plasma
-          </h2>
-          <p className="mb-4 leading-relaxed text-gray-400 md:text-lg">
+          <h2 className="mb-4 text-3xl font-bold md:text-5xl">KDE Plasma</h2>
+          <p className="mb-4 leading-relaxed md:text-lg">
             The Plasma Themed Edition (also known as the Flagship) of Arka Linux
             GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop
             Environment. It is pre-configured and ready to use. It comes with
@@ -106,7 +104,7 @@ export default function Flavours() {
             />
           </div>
           <div className="flex items-center justify-center mt-6 mb-4 space-x-2 md:">
-            <span className="font-bold text-white">Pure</span>
+            <span className="font-bold">Pure</span>
             <button
               onClick={() => setIsThemedKDE(!isThemedKDE)}
               className={`${
@@ -119,18 +117,18 @@ export default function Flavours() {
                 } inline-block w-6 mt-1 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300`}
               />
             </button>
-            <span className="font-bold text-white">Themed</span>
+            <span className="font-bold">Themed</span>
           </div>
           <div className="relative flex justify-center mt-6">
             <button
               onClick={toggleDropdownKDE}
-              className="text-white py-3 px-12 bg-[#6a45d1] opacity-90 hover:opacity-100 rounded-full transition-all"
+              className="py-3 px-12 bg-[#6a45d1] text-white opacity-90 hover:opacity-100 rounded-full transition-all"
             >
               Download
             </button>
             {dropdownVisibleKDE && (
               <div
-                className="absolute mt-2 bg-white rounded shadow-lg top-full"
+                className="absolute mt-2 rounded shadow-lg top-full"
                 ref={ref}
               >
                 <a
@@ -186,10 +184,8 @@ export default function Flavours() {
           />
         </div>
         <div className="flex flex-col justify-center p-3 rounded-lg md:p-6">
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">
-            GNOME
-          </h2>
-          <p className="mb-4 leading-relaxed text-gray-400 md:text-lg">
+          <h2 className="mb-4 text-3xl font-bold md:text-5xl">GNOME</h2>
+          <p className="mb-4 leading-relaxed md:text-lg">
             The GNOME Edition of Arka Linux GUI helps you install Vanilla Arch
             Linux with the GNOME Desktop Environment. It is pre-configured and
             ready to use. It comes with all the necessary software and settings
@@ -205,7 +201,7 @@ export default function Flavours() {
             />
           </div>
           <div className="flex items-center justify-center mt-6 mb-4 space-x-2 md:">
-            <span className="font-bold text-white">Pure</span>
+            <span className="font-bold">Pure</span>
             <button
               onClick={() => setIsThemedGnome(!isThemedGnome)}
               className={`${
@@ -218,18 +214,18 @@ export default function Flavours() {
                 } inline-block w-6 mt-1 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300`}
               />
             </button>
-            <span className="font-bold text-white">Themed</span>
+            <span className="font-bold">Themed</span>
           </div>
           <div className="relative flex justify-center mt-6">
             <button
               onClick={toggleDropdownGNOME}
-              className="text-white py-3 px-12 bg-[#6a45d1] opacity-90 hover:opacity-100 rounded-full transition-all"
+              className="py-3 px-12 bg-[#6a45d1] text-white opacity-90 hover:opacity-100 rounded-full transition-all"
             >
               Download
             </button>
             {dropdownVisibleGNOME && (
               <div
-                className="absolute mt-2 bg-white rounded shadow-lg top-full"
+                className="absolute mt-2 rounded shadow-lg top-full"
                 ref={ref}
               >
                 <a
@@ -271,10 +267,8 @@ export default function Flavours() {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-40-60">
         <div className="flex flex-col justify-center p-3 rounded-lg md:p-6">
-          <h2 className="mb-3 text-3xl font-bold text-white md:text-5xl">
-            XFCE
-          </h2>
-          <p className="mb-3 leading-relaxed text-gray-400 md:text-lg">
+          <h2 className="mb-3 text-3xl font-bold md:text-5xl">XFCE</h2>
+          <p className="mb-3 leading-relaxed md:text-lg">
             The XFCE Edition of Arka Linux GUI helps you install Vanilla Arch
             Linux with the XFCE Desktop Environment. It is pre-configured and
             ready to use. It comes with all the necessary software and settings
@@ -290,7 +284,7 @@ export default function Flavours() {
             />
           </div>
           <div className="flex items-center justify-center mt-6 space-x-2">
-            <span className="font-bold text-white">Pure</span>
+            <span className="font-bold ">Pure</span>
             <button
               onClick={() => setIsThemedXfce(!isThemedXfce)}
               className={`${
@@ -303,7 +297,7 @@ export default function Flavours() {
                 } inline-block w-6 mt-1 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300`}
               />
             </button>
-            <span className="font-bold text-white">Themed</span>
+            <span className="font-bold">Themed</span>
           </div>
           <div className="relative flex justify-center mt-6 mb-5">
             <button
@@ -358,8 +352,8 @@ export default function Flavours() {
           />
         </div>
       </div>
-      <div className="flex justify-center pb-5 mt-12">
-        <button className="py-2 px-8 text-white border-4 border-[#6a45d1] rounded-full transition-all hover:bg-[#6a45d1] hover:text-white">
+      {/* <div className="flex justify-center pb-5 mt-12">
+        <button className="py-2 px-8 border-4 border-[#6a45d1] rounded-full transition-all hover:bg-[#6a45d1] hover:text-white">
           <a
             href="https://sourceforge.net/projects/arch-linux-gui/files/experimental-editions"
             target="_blank"
@@ -367,7 +361,7 @@ export default function Flavours() {
             Experimental Editions
           </a>
         </button>
-      </div>
+      </div> */}
     </section>
   );
 }

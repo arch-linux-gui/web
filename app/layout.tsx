@@ -1,15 +1,17 @@
 "use client";
-import React from "react";
-import { Poppins } from "next/font/google";
-import "./globals.css";
-import "../public/alg-logo.png";
-import { ScrollProvider } from "./scrollContext";
-import { useEffect, useState } from "react";
-import Loader from "./lib/loader";
-import Layout from "./components/Layout";
-import { RootProvider } from "fumadocs-ui/provider";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
+import { RootProvider } from "fumadocs-ui/provider";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { ThemeProvider } from "next-themes";
 import { ViewTransitions } from "next-view-transitions";
+import { Poppins } from "next/font/google";
+import { useEffect, useState } from "react";
+import "../public/alg-logo.png";
+import Layout from "./components/Layout";
+import "./globals.css";
+import Loader from "./lib/loader";
+import { ScrollProvider } from "./scrollContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,6 +19,8 @@ const poppins = Poppins({
   display: "swap",
   adjustFontFallback: false,
 });
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(false);
@@ -27,6 +31,7 @@ export default function RootLayout({ children }) {
 
     window.addEventListener("beforeunload", handleStart);
     window.addEventListener("load", handleComplete);
+    gsap.registerPlugin(ScrollTrigger);
 
     return () => {
       window.removeEventListener("beforeunload", handleStart);
@@ -52,12 +57,14 @@ export default function RootLayout({ children }) {
               ],
             }}
           >
-            <TooltipProvider>
-              <ScrollProvider>
-                {loading && <Loader />}
-                <Layout>{children}</Layout>
-              </ScrollProvider>
-            </TooltipProvider>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <TooltipProvider>
+                <ScrollProvider>
+                  {loading && <Loader />}
+                  <Layout>{children}</Layout>
+                </ScrollProvider>
+              </TooltipProvider>
+            </ThemeProvider>
           </RootProvider>
           <div id="modal-root"></div>
         </body>
