@@ -100,7 +100,7 @@ const miscellaneous = [
 ];
 const TutorialPage = () => {
   return (
-    <div className="flex flex-col items-center px-4 sm:px-12 md:px-20 md:pb-12 lg:px-28 bg-[#09090B] text-white">
+    <div className="flex flex-col items-center px-4 sm:px-12 md:px-20 md:pb-12 lg:px-28 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B]">
       <h1 className="mb-4 text-3xl font-bold text-center mt-36 md:text-5xl md:mb-10">
         Installation Videos
       </h1>

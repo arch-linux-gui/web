@@ -11,7 +11,7 @@ export default function JobDetail() {
 
   return (
     <>
-      <div className="min-h-screen bg-[#0F0F12] flex flex-col items-center">
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] flex flex-col items-center">
         <Navbar />
         <Suspense
           fallback={<p className="text-lg text-gray-700">Loading...</p>}

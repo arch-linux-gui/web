@@ -57,14 +57,14 @@ const AboutPage = () => {
   }, [teamMembers]);
 
   return (
-    <div className="min-h-screen bg-[#09090B] text-white py-16 px-6">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] py-16 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16 mt-[6rem]">
           <h1 className="text-6xl font-bold mb-6">About Us</h1>
-          <p className="text-2xl font-bold text-gray-300 max-w-3xl mx-auto">
+          <p className="text-2xl font-bold  max-w-3xl mx-auto">
             Welcome to Arka Linux GUI, formerly known as Arch Linux GUI.
           </p>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg  max-w-3xl mx-auto">
             We provide a fast, offline Arch installer with a graphical user
             interface.
           </p>
@@ -82,7 +82,7 @@ const AboutPage = () => {
               />
             </div>
           </div>
-          <div className="flex-1 text-gray-300">
+          <div className="flex-1 ">
             <div className="mb-12">
               <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
               <p className="leading-relaxed">
@@ -126,7 +126,7 @@ const AboutPage = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="bg-[#131315] rounded-lg shadow-lg p-8 text-center hover:bg-[#232324] cursor-pointer transition-colors duration-300 h-full">
+              <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] rounded-lg shadow-lg p-8 text-center cursor-pointer transition-colors duration-300 h-full">
                 <div className="flex flex-col h-full justify-between">
                   <div>
                     <Image
@@ -139,9 +139,9 @@ const AboutPage = () => {
                     <h3 className="text-2xl font-semibold mb-2">
                       {member.name || "---------"}
                     </h3>
-                    <p className="text-gray-400">{member.role}</p>
+                    <p className="">{member.role}</p>
                   </div>
-                  <p className="text-gray-400 mt-2">{member.description}</p>
+                  <p className=" mt-2">{member.description}</p>
                 </div>
               </div>
             </Link>

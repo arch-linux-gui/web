@@ -26,12 +26,12 @@ export default function JobContent({ jobId }) {
   return (
     <>
       <HeadCus params={job.title} />
-      <header className="bg-[#090E0E] shadow w-full">
+      <header className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] shadow w-full">
         <div className="px-4 py-6 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-          <h1 className="mt-[9rem] mb-3 text-4xl font-bold text-white text-wrap lg:text-6xl">
+          <h1 className="mt-[9rem] mb-3 text-4xl font-bold  text-wrap lg:text-6xl">
             {job.title}
           </h1>
-          <p className="text-xl text-gray-200">{job.location}</p>
+          <p className="text-xl">{job.location}</p>
           <div className="flex flex-wrap justify-center mt-2">
             {job.skills.map((skill, index) => (
               <span
@@ -44,7 +44,7 @@ export default function JobContent({ jobId }) {
           </div>
           <button
             onClick={handleApplyClick}
-            className="inline-block mt-4 px-12 py-3 bg-[#6a45d1] font-bold rounded-full hover:bg-[#7554d1] transition duration-300 text-white"
+            className="inline-block mt-4 px-12 py-3 bg-[#6a45d1] font-bold text-white rounded-full hover:bg-[#7554d1] transition duration-300"
           >
             Apply
           </button>
@@ -52,52 +52,52 @@ export default function JobContent({ jobId }) {
       </header>
       <main className="flex-1 w-full py-10">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="bg-[#0F0F12] shadow-md rounded-lg p-6 mb-6 lg:pl-[5rem] lg:pr-[5rem]">
-            <p className="mb-4 text-lg text-white">{job.description}</p>
+          <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] shadow-md rounded-lg p-6 mb-6 lg:pl-[5rem] lg:pr-[5rem]">
+            <p className="mb-4 text-lg">{job.description}</p>
 
             <h2
-              className="mb-4 text-4xl font-bold text-white"
+              className="mb-4 text-4xl font-bold"
               style={{ marginTop: "30px" }}
             >
               What you'll do at ALG
             </h2>
-            <ul className="mb-4 text-lg text-white list-disc list-inside">
+            <ul className="mb-4 text-lg  list-disc list-inside">
               {job.responsibilities.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
 
             <h2
-              className="mb-4 text-4xl font-bold text-white"
+              className="mb-4 text-4xl font-bold"
               style={{ marginTop: "30px" }}
             >
               We'd love to hear from you if you have
             </h2>
-            <ul className="mb-4 text-lg text-white list-disc list-inside">
+            <ul className="mb-4 text-lg list-disc list-inside">
               {job.requirements.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
 
             <h2
-              className="mb-4 text-4xl font-bold text-white"
+              className="mb-4 text-4xl font-bold"
               style={{ marginTop: "30px" }}
             >
               Nice to have
             </h2>
-            <ul className="mb-4 text-lg text-white list-disc list-inside">
+            <ul className="mb-4 text-lg  list-disc list-inside">
               {job.niceToHave.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
             <h2
               ref={applySectionRef}
-              className="mb-4 text-4xl font-bold text-white"
+              className="mb-4 text-4xl font-bold"
               style={{ marginTop: "30px" }}
             >
               How to apply
             </h2>
-            <p className="text-lg text-white">
+            <p className="text-lg">
               Email us at{" "}
               <a
                 href={`mailto:workwithalgofficial@gmail.com?subject=Application%20For%20${job.title}%20Role`}
