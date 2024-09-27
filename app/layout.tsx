@@ -1,6 +1,5 @@
 "use client";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
-import { RootProvider } from "fumadocs-ui/provider";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { ThemeProvider } from "next-themes";
@@ -43,29 +42,14 @@ export default function RootLayout({ children }) {
     <ViewTransitions>
       <html lang="en">
         <body className={poppins.className}>
-          <RootProvider
-            search={{
-              links: [
-                ["Testing", "/docs/testing/newtest"],
-                ["Components", "/docs/test"],
-              ],
-              hotKey: [
-                {
-                  display: "Ctrl + k",
-                  key: "k",
-                },
-              ],
-            }}
-          >
-            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <TooltipProvider>
-                <ScrollProvider>
-                  {loading && <Loader />}
-                  <Layout>{children}</Layout>
-                </ScrollProvider>
-              </TooltipProvider>
-            </ThemeProvider>
-          </RootProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <TooltipProvider>
+              <ScrollProvider>
+                {loading && <Loader />}
+                <Layout>{children}</Layout>
+              </ScrollProvider>
+            </TooltipProvider>
+          </ThemeProvider>
           <div id="modal-root"></div>
         </body>
       </html>

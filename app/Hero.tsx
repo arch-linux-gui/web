@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
-import { TextEffect } from "./components/text-effect";
+import { TextEffect } from "./components/ui/text-effect";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -137,7 +137,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] mb-5"
+          className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] pb-5"
         >
           <div className="absolute inset-0 z-0">
             <svg

@@ -1,9 +1,9 @@
-import React from "react";
+import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
-import WhatsNew from "./WhatsNew";
 import Testi from "./Testi";
+import WhatsNew from "./WhatsNew";
+import { Gallery } from "./components/gallery";
 
 export const metadata = {
   title: "Arka Linux GUI",
@@ -16,6 +16,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <WhatsNew />
+      <Gallery />
       <Testi />
       <Footer />
     </main>

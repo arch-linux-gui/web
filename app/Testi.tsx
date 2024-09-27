@@ -10,11 +10,6 @@ import HandleYT from "./lib/HandleYT";
 import { Suspense } from "react";
 
 const videos = [
-  // "https://www.youtube-nocookie.com/embed/oPzSUczBT3I?si=VCmgDKNLLS9Br5r3",
-  // "https://www.youtube-nocookie.com/embed/cxj1SPJihpA?si=VquT1aSsUjDTyd66",
-  // "https://www.youtube-nocookie.com/embed/zQLknMv4sOs?si=TkFyqDex0nfHxOhH",
-  // "https://www.youtube-nocookie.com/embed/sBgbEVbAT2g?si=2ZayTt99MgeAWJFA",
-  // "https://www.youtube-nocookie.com/embed/e0U7VY5CkwQ?si=ChIHwo98dhcoOCk2",
   "oPzSUczBT3I",
   "cxj1SPJihpA",
   "zQLknMv4sOs",
