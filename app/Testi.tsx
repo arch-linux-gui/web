@@ -37,9 +37,11 @@ export default function Testi() {
   }, []);
 
   return (
-    <section className="px-6 py-6 md:py-10 sm:px-12 md:px-20 lg:px-28">
+    <section className="px-6 py-6 md:py-10 sm:px-12 md:px-20 lg:px-28 bg-orange-50 dark:bg-[#121215]">
       <div className="flex flex-col items-center justify-center">
-        <p className="mb-4 text-3xl font-bold md:text-5xl">Testimonials</p>
+        <p className="mb-4 text-3xl md:text-6xl font-bold text-center text-orange-600 dark:text-orange-400">
+          Testimonials
+        </p>
         <div className="px-4 py-8 md:p-12 rounded-2xl w-full">
           <Splide
             options={{

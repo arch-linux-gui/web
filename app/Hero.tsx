@@ -4,9 +4,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { TextEffect } from "./components/ui/text-effect";
-import Link from "next/link";
+import { useScroll } from "./scrollContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +21,13 @@ export default function HeroSection() {
   const buttonsRef = useRef(null);
   const imageRef = useRef(null);
   const [assetsLoaded, setAssetsLoaded] = useState(false);
+  const { whatsNewRef } = useScroll();
 
+  const handleKnowMoreClick = () => {
+    if (whatsNewRef.current) {
+      whatsNewRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   useEffect(() => {
     const preloadAsset = (src) => {
       return new Promise((resolve, reject) => {
@@ -183,7 +190,10 @@ export default function HeroSection() {
                   ref={buttonsRef}
                   className="flex flex-row justify-center space-y-0 space-x-4 mb-7"
                 >
-                  <button className="w-48 sm:mx-0 px-6 py-3 bg-orange-500 text-white rounded-full font-semibold text-lg shadow-lg hover:bg-orange-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 dark:bg-orange-600 dark:hover:bg-orange-500">
+                  <button
+                    className="w-48 sm:mx-0 px-6 py-3 bg-orange-500 text-white rounded-full font-semibold text-lg shadow-lg hover:bg-orange-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 dark:bg-orange-600 dark:hover:bg-orange-500"
+                    onClick={handleKnowMoreClick}
+                  >
                     Know More
                   </button>
                   <button className="w-48 mx-auto sm:mx-0 px-6 py-3 bg-white text-orange-500 rounded-full font-semibold text-lg shadow-lg hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:-translate-y-1 dark:bg-gray-800 dark:text-orange-400 dark:hover:bg-gray-700">

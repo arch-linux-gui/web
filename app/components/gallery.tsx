@@ -15,8 +15,10 @@ const secondRow = images.slice(images.length / 2);
 
 export function Gallery() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
-      <p className="mb-5 p-5 text-3xl font-bold md:text-5xl">Gallery</p>
+    <div className="relative mb-5 flex h-[500px] lg:h-[850px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+      <p className="mt-5 mb-5 p-5 text-3xl md:text-6xl font-bold text-center text-orange-600 dark:text-orange-400">
+        Gallery
+      </p>
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((item) => (
           <DialogBasicImage key={item.img} img={item.img} />

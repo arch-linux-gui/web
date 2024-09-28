@@ -1,7 +1,6 @@
 "use client";
 import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import HeadCus from "./head";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import JobContent from "./jobContent";
