@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import JobContent from "./jobContent";
+
 export default function JobDetail() {
   const searchParams = useSearchParams();
   const jobId = searchParams.get("jobId");

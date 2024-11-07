@@ -10,6 +10,8 @@ import HandleYT from "./lib/HandleYT";
 import { Suspense } from "react";
 
 const videos = [
+  "SN-rvjQxpgs",
+  "VEWI5EFbhtc",
   "oPzSUczBT3I",
   "cxj1SPJihpA",
   "zQLknMv4sOs",
