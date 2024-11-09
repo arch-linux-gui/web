@@ -4,7 +4,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Button } from "./components/button";
+import { Button } from "./ui/button";
 
 const navItems = {
   Tutorials: "/tutorials",
@@ -36,7 +36,7 @@ export default function CenteredDockToStickyNavbar() {
   }, []);
 
   useEffect(() => {
-    const handleStorageChange = (e) => {
+    const handleStorageChange = (e: any) => {
       if (e.key === "theme") {
         setIsDarkMode(e.newValue === "dark");
       }

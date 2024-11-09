@@ -1,27 +1,27 @@
 "use client";
 
-import { Check, Code, Copy, Cpu, Server } from "lucide-react";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { Button } from "../components/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../components/ui/card";
-import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
-import { Separator } from "../components/ui/separator";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../components/ui/tooltip";
-import { getUserCountry } from "../lib/getUserCountry";
+} from "@/components/ui/tooltip";
+import { getUserCountry } from "@/lib/getUserCountry";
+import { Check, Code, Copy, Cpu, Server } from "lucide-react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function EnhancedDonationPage() {
   const [isIndianUser, setIsIndianUser] = useState(false);
@@ -36,13 +36,13 @@ export default function EnhancedDonationPage() {
     checkUserCountry();
   }, []);
 
-  const cryptoAddresses = {
+  const cryptoAddresses: any = {
     Bitcoin: "bc1q4jmgkezdn7d4rqg83d9egch7adwzr2lp4lrdwj",
     Ethereum: "0x3CdB1dF5CeA437280BD8C33d05BCFd0CFCcBD970",
     Solana: "3ttWgLCPMNbxSyjCgtoPvUHkvSj5Vey1pYKzmzrkhzdz",
   };
 
-  const copyToClipboard = (crypto: string) => {
+  const copyToClipboard = (crypto: any) => {
     navigator.clipboard.writeText(cryptoAddresses[crypto]);
     setCopiedCrypto(crypto);
     setTimeout(() => setCopiedCrypto(null), 2000);
@@ -194,7 +194,11 @@ export default function EnhancedDonationPage() {
                 <div key={crypto} className="space-y-2">
                   <Label htmlFor={`${crypto}-address`}>{crypto}</Label>
                   <div className="flex space-x-2">
-                    <Input id={`${crypto}-address`} readOnly value={address} />
+                    <Input
+                      id={`${crypto}-address`}
+                      readOnly
+                      value={address as string}
+                    />
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <Button

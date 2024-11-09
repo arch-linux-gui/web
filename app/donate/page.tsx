@@ -1,6 +1,3 @@
-import React from "react";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
 import DonationPage from "./Donates";
 
 export const metadata = {
@@ -11,9 +8,7 @@ export const metadata = {
 export default function Donate() {
   return (
     <section className="relative">
-      <Navbar />
       <DonationPage />
-      <Footer />
     </section>
   );
 }

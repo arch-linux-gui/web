@@ -1,18 +1,29 @@
-import React from "react";
 import { Link } from "next-view-transitions";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { ReactNode } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const DonationBubble: React.FC<LayoutProps> = ({ children }) => {
   const pathname = usePathname();
   const isDonatePage =
     pathname.startsWith("/donate") ||
     pathname.startsWith("/careers") ||
     pathname.startsWith("/apply") ||
     pathname.startsWith("/docs");
+
   return (
     <div className="min-h-screen flex flex-col relative">
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow">
+        <Navbar />
+        {children}
+        <Footer />
+      </main>
       {!isDonatePage && (
         <Link
           href="/donate"
@@ -31,4 +42,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default DonationBubble;

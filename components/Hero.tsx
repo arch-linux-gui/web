@@ -1,13 +1,13 @@
 "use client";
 
+import { TextEffect } from "@/components/ui/text-effect";
+import { useScroll } from "@/context/scrollContext";
 import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { TextEffect } from "./components/ui/text-effect";
-import { useScroll } from "./scrollContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +29,7 @@ export default function HeroSection() {
     }
   };
   useEffect(() => {
-    const preloadAsset = (src) => {
+    const preloadAsset = (src: any) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
         img.src = src;

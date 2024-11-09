@@ -1,8 +1,8 @@
 "use client";
 
+import { useScroll } from "@/context/scrollContext";
 import { motion, useInView } from "framer-motion";
-import { HoverEffect } from "./components/ui/card-hover-effect";
-import { useScroll } from "./scrollContext";
+import { HoverEffect } from "./ui/card-hover-effect";
 
 export default function WhatIsALGSection() {
   const { whatsNewRef } = useScroll();

@@ -1,4 +1,4 @@
-import JobCard from "../components/JobCard";
+import JobCard from "./JobCard";
 import { jobs } from "./[jobId]/JobData";
 
 export default function Career() {

@@ -1,6 +1,6 @@
 "use client";
-import Loader from "../lib/loader";
-import HandleYT from "../lib/HandleYT";
+import Loader from "@/lib/loader";
+import HandleYT from "@/lib/HandleYT";
 import { Suspense } from "react";
 import React from "react";
 const install = [
