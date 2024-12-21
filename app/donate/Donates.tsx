@@ -134,7 +134,7 @@ export default function EnhancedDonationPage() {
                     className="w-full bg-[#F1581C] hover:bg-[#f1581cd4] text-white"
                     onClick={() =>
                       router.push(
-                        "https://payments-test.cashfree.com/forms/alg-donate"
+                        "https://payments-test.cashfree.com/forms/alg-donate",
                       )
                     }
                   >
