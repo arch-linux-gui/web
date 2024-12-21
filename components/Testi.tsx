@@ -48,7 +48,7 @@ export default function VideoCarousel() {
       resultArray[chunkIndex].push(item);
       return resultArray;
     },
-    []
+    [],
   );
 
   return (

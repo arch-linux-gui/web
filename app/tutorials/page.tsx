@@ -1,6 +1,5 @@
-import React from "react";
-import TutorialPage from "./TutorialPage";
 import Metadata from "@/components/metadata";
+import TutorialPage from "./TutorialPage";
 
 export const metadata = {
   title: "Tutorials | ALG",
@@ -10,7 +9,7 @@ export const metadata = {
 export default function Downloads() {
   return (
     <section className="relative">
-      <Metadata />
+      <Metadata params="Tutorials" />
       <TutorialPage />
     </section>
   );

@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+
 import { Link } from "next-view-transitions";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const AboutPage = () => {
   const [teamMembers, setTeamMembers] = useState([
@@ -37,34 +38,34 @@ const AboutPage = () => {
         teamMembers.map(async (member) => {
           try {
             const response = await fetch(
-              `https://api.github.com/users/${member.github.split("/").pop()}`
+              `https://api.github.com/users/${member.github.split("/").pop()}`,
             );
             const data = await response.json();
             return { ...member, image: data.avatar_url, name: data.login };
           } catch (error) {
             console.error(
               `Error fetching GitHub profile for ${member.name}:`,
-              error
+              error,
             );
             return member;
           }
-        })
+        }),
       );
       setTeamMembers(updatedMembers);
     };
 
     fetchGitHubProfiles();
-  }, [teamMembers]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] py-16 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16 mt-[6rem]">
           <h1 className="text-6xl font-bold mb-6">About Us</h1>
-          <p className="text-2xl font-bold  max-w-3xl mx-auto">
+          <p className="text-2xl font-bold max-w-3xl mx-auto">
             Welcome to Arka Linux GUI, formerly known as Arch Linux GUI.
           </p>
-          <p className="text-lg  max-w-3xl mx-auto">
+          <p className="text-lg max-w-3xl mx-auto">
             We provide a fast, offline Arch installer with a graphical user
             interface.
           </p>
@@ -82,7 +83,7 @@ const AboutPage = () => {
               />
             </div>
           </div>
-          <div className="flex-1 ">
+          <div className="flex-1">
             <div className="mb-12">
               <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
               <p className="leading-relaxed">
@@ -125,8 +126,9 @@ const AboutPage = () => {
               key={index}
               target="_blank"
               rel="noopener noreferrer"
+              className="block h-full"
             >
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] rounded-lg shadow-lg p-8 text-center cursor-pointer transition-colors duration-300 h-full">
+              <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] rounded-lg shadow-lg p-8 text-center cursor-pointer transition-all duration-300 h-full hover:shadow-xl hover:scale-105 hover:bg-gradient-to-br hover:from-orange-100 hover:to-orange-200 dark:hover:from-[#0f0f15] dark:hover:to-[#0d0d10]">
                 <div className="flex flex-col h-full justify-between">
                   <div>
                     <Image
@@ -134,14 +136,18 @@ const AboutPage = () => {
                       alt={member.name}
                       width={150}
                       height={150}
-                      className="rounded-full mx-auto mb-4"
+                      className="rounded-full mx-auto mb-4 transition-transform duration-300 hover:scale-110"
                     />
                     <h3 className="text-2xl font-semibold mb-2">
                       {member.name || "---------"}
                     </h3>
-                    <p className="">{member.role}</p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {member.role}
+                    </p>
                   </div>
-                  <p className=" mt-2">{member.description}</p>
+                  <p className="mt-4 text-gray-700 dark:text-gray-200">
+                    {member.description}
+                  </p>
                 </div>
               </div>
             </Link>

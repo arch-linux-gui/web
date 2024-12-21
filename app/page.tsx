@@ -1,6 +1,4 @@
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
 import Testi from "@/components/Testi";
 import WhatsNew from "@/components/WhatsNew";
 import { Gallery } from "@/components/gallery";
@@ -13,12 +11,10 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="relative">
-      {/* <Navbar /> */}
       <Hero />
       <WhatsNew />
       <Gallery />
       <Testi />
-      {/* <Footer /> */}
     </main>
   );
 }
