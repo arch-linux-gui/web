@@ -1,5 +1,5 @@
 import JobCard from "./JobCard";
-import { jobs } from "./[jobId]/JobData";
+import { jobs } from "../../lib/JobData";
 
 export default function Career() {
   return (

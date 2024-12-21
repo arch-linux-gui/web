@@ -1,31 +1,40 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { getJobById } from "./JobData";
-import HeadCus from "./head";
+import { useEffect, useRef, useState } from "react";
+import NotFound from "@/app/not-found";
+import Metadata from "@/components/metadata";
+import { getJobById } from "@/lib/JobData";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function JobContent({ jobId }) {
   const [job, setJob] = useState(null);
+  const [loading, setLoading] = useState(true);
   const applySectionRef = useRef(null);
 
   useEffect(() => {
     if (jobId) {
-      const foundJob = getJobById(jobId);
+      setLoading(true);
+      const foundJob = getJobById(jobId as number);
       setJob(foundJob);
+      setLoading(false);
     }
   }, [jobId]);
-
-  if (!job) {
-    return <p className="text-lg text-gray-700">Loading job details...</p>;
-  }
 
   const handleApplyClick = () => {
     applySectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  if (loading) {
+    return <JobSkeleton />;
+  }
+
+  if (job === undefined || job === null) {
+    return <NotFound />;
+  }
+
   return (
     <>
-      <HeadCus params={job.title} />
+      <Metadata params={job.title} />
       <header className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] shadow w-full">
         <div className="px-4 py-6 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <h1 className="mt-[9rem] mb-3 text-4xl font-bold  text-wrap lg:text-6xl">
@@ -116,5 +125,47 @@ export default function JobContent({ jobId }) {
         </div>
       </main>
     </>
+  );
+}
+
+function JobSkeleton() {
+  return (
+    <div className="w-full">
+      <header className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] shadow w-full">
+        <div className="px-4 py-6 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+          <Skeleton className="mt-[9rem] mb-3 h-16 w-3/4 mx-auto" />
+          <Skeleton className="h-6 w-1/4 mx-auto mb-4" />
+          <div className="flex flex-wrap justify-center mt-2">
+            {[1, 2, 3].map((_, index) => (
+              <Skeleton key={index} className="h-8 w-20 m-1 rounded-full" />
+            ))}
+          </div>
+          <Skeleton className="h-12 w-32 mx-auto mt-4 rounded-full" />
+        </div>
+      </header>
+      <main className="flex-1 w-full py-10">
+        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] shadow-md rounded-lg p-6 mb-6 lg:pl-[5rem] lg:pr-[5rem]">
+            <Skeleton className="h-4 w-full mb-4" />
+            <Skeleton className="h-4 w-5/6 mb-4" />
+            <Skeleton className="h-4 w-4/6 mb-4" />
+
+            {[
+              "What you'll do at ALG",
+              "We'd love to hear from you if you have",
+              "Nice to have",
+              "How to apply",
+            ].map((title, index) => (
+              <div key={index}>
+                <Skeleton className="h-10 w-3/4 mb-4 mt-8" />
+                {[1, 2, 3, 4].map((_, i) => (
+                  <Skeleton key={i} className="h-4 w-5/6 mb-2" />
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }

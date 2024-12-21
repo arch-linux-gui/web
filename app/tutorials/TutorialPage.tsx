@@ -1,11 +1,10 @@
 "use client";
-import Loader from "@/lib/loader";
 import HandleYT from "@/lib/HandleYT";
+import Loader from "@/lib/loader";
 import { Suspense } from "react";
-import React from "react";
 const install = [
   {
-    title: "Verify your Arch Linux GUI Download",
+    title: "Verify your Arka Linux GUI Download",
     description: `In this video, we take a look at how to verify that you have downloaded exactly what I uploaded using the Secure Hash Algorithm (SHA). The Secure Hash Algorithms are a family of cryptographic hash functions. A cryptographic hash is like a signature for a data set. If you would like to compare two sets of raw data (source of the file, text or similar) it is always better to hash it and compare SHA256 values. This is why I provide the SHA256 checksums in a file named sha256sum.txt. This makes it suitable for checking integrity of your download. 
     In this video, I will show you how to get a SHA256 checksum and compare with the strings I have provided, to ensure the legitimacy of the download. I will cover how you can do this on Windows and Linux. I have explained on Windows 11, however, the steps are applicable to Windows 10 and Windows 7. Simillarly, the steps show for Linux are done on Arch, but can be done on any Linux Distribution. You can find the checksums here as well.`,
     url: "wtZjRXOny7Q",
@@ -64,14 +63,14 @@ const archSpecific = [
 const miscellaneous = [
   {
     title: "Make Bootable USB in Windows (7, 8, 10, 11)",
-    description: `In this video, we take a look at how to make a bootable USB of a Linux distribution, on Windows. In this video, as an example, I will make the Arch Linux GUI Gnome Edition.
+    description: `In this video, we take a look at how to make a bootable USB of a Linux distribution, on Windows. In this video, as an example, I will make the Arka Linux GUI Gnome Edition.
     I am doing this on Windows 11, however, the steps can be performed on Windows 7, 8 or 10.`,
     url: "7ND2fiaFfic",
   },
   {
     title: "Make Bootable USB with dd on any Linux Distro",
     description: `In this video, we take a look at how to make a bootable USB of a Linux distribution, on another Linux distribution. In this video, as an example, I will make the Manjaro bootable USB on Ubuntu.
-    The method show here can be used to make Arch Linux GUI's bootable USB from any Linux distribution.`,
+    The method show here can be used to make Arka Linux GUI's bootable USB from any Linux distribution.`,
     url: "KQGedNCA1E4",
   },
   {
@@ -86,7 +85,7 @@ const miscellaneous = [
     url: "m6ZeH1L2734",
   },
   {
-    title: "How to use VirtualBox to try Arch Linux GUI or any Linux",
+    title: "How to use VirtualBox to try Arka Linux GUI or any Linux",
     description: `In this video, we take a look at how to use VirtualBox.
     I will show you how to setup a template which you can use to try out all Arch Linux, and all other Arch Linux based Distributions like Manjaro, ArcoLinux, etc.`,
     url: "RJs70jQi7Wk",

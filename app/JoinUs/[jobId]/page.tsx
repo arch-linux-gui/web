@@ -1,4 +1,4 @@
-import { getJobs } from "./JobData";
+import { getJobs } from "@/lib/JobData";
 import JobDetail from "./jobDetails";
 
 export async function generateStaticParams() {

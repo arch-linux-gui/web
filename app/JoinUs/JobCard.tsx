@@ -1,6 +1,13 @@
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 
-export default function JobCard({ id, title, location, skills }) {
+interface JobCardProps {
+  id: number;
+  title: string;
+  location: string;
+  skills: string[];
+}
+
+export default function JobCard({ id, title, location, skills }: JobCardProps) {
   return (
     <Link href={`/JoinUs/job?jobId=${id}`}>
       <div className="flex flex-col bg-[#e7e5e1] dark:bg-[#E5E4E2] text-black shadow-md rounded-3xl p-6 mb-6 cursor-pointer">
