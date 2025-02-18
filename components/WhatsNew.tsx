@@ -10,44 +10,42 @@ export default function WhatIsALGSection() {
 
   const features = [
     {
-      title: "User-Friendly Interface",
+      title: "Offline-Centric Installation",
       description:
-        "ALG provides an intuitive and visually appealing desktop environment, making Linux accessible to users of all skill levels.",
+        "Install your system entirely without an internet connection.",
       link: "#",
       image: "/gnome.jpg",
     },
     {
-      title: "Performance Optimized",
-      description:
-        "Experience lightning-fast performance with ALG's optimized codebase and efficient resource management.",
+      title: "Minimalist & Clean System",
+      description: "Experience a bare-minimum, efficient Linux environment.",
       link: "#",
       image: "/gnome.jpg",
     },
     {
-      title: "Customizable",
+      title: "Custom Themed Environments",
       description:
-        "Tailor your desktop experience with extensive customization options, themes, and plugins.",
+        "Enjoy a beautifully themed interface without unnecessary extras.",
       link: "#",
       image: "/gnome.jpg",
     },
     {
-      title: "Enhanced Security",
+      title: "Intuitive Welcome Application",
+      description: "Get started quickly with our user-friendly welcome app.",
+      link: "#",
+      image: "/welcome.png",
+    },
+    {
+      title: "GUI-Based Package Manager (Beta)",
       description:
-        "Benefit from built-in security features and regular updates to keep your system safe and protected.",
+        "Manage your software effortlessly with our beta GUI package manager.",
       link: "#",
       image: "/gnome.jpg",
     },
     {
-      title: "Seamless Updates",
+      title: "Community-Driven Development",
       description:
-        "Enjoy hassle-free system and application updates with ALG's streamlined update process.",
-      link: "#",
-      image: "/gnome.jpg",
-    },
-    {
-      title: "Wide Compatibility",
-      description:
-        "ALG is compatible with a vast array of hardware and software, ensuring a smooth experience across different setups.",
+        "Built and continuously improved by our passionate community.",
       link: "#",
       image: "/gnome.jpg",
     },
