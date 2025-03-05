@@ -38,7 +38,6 @@ export default function VideoCarousel() {
     };
   }, []);
 
-  // Group videos into pairs
   const videoGroups: string[][] = videos.reduce(
     (resultArray: string[][], item, index) => {
       const chunkIndex = Math.floor(index / perPage);
@@ -48,7 +47,7 @@ export default function VideoCarousel() {
       resultArray[chunkIndex].push(item);
       return resultArray;
     },
-    [],
+    []
   );
 
   return (
@@ -59,31 +58,35 @@ export default function VideoCarousel() {
         </h2>
         <div className="w-full max-w-7xl">
           <Carousel className="relative" carouselOptions={{ loop: true }}>
-            <CarouselMainContainer className="h-[300px] sm:h-[400px] md:h-[500px]">
-              {videoGroups.map((group, groupIndex) => (
-                <SliderMainItem key={groupIndex} className="bg-transparent">
-                  <div className="flex gap-4 h-full">
-                    {group.map((videoId, index) => (
-                      <div key={index} className="flex-1 h-full">
-                        <div className="w-full h-full rounded-xl overflow-hidden bg-background">
-                          <Suspense fallback={<Loader />}>
-                            <HandleYT videoId={videoId} />
-                          </Suspense>
+            <div className="flex flex-col items-center">
+              <CarouselMainContainer className="h-[300px] sm:h-[400px] md:h-[500px]">
+                {videoGroups.map((group, groupIndex) => (
+                  <SliderMainItem key={groupIndex} className="bg-transparent">
+                    <div className="flex gap-4 h-full">
+                      {group.map((videoId, index) => (
+                        <div key={index} className="flex-1 h-full">
+                          <div className="w-full h-full rounded-xl overflow-hidden bg-background">
+                            <Suspense fallback={<Loader />}>
+                              <HandleYT videoId={videoId} />
+                            </Suspense>
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                </SliderMainItem>
-              ))}
-            </CarouselMainContainer>
-            <CarouselPrevious className="absolute w-10 h-10 left-2 top-1/2 -translate-y-1/2" />
-            <CarouselNext className="absolute w-10 h-10 right-2 top-1/2 -translate-y-1/2" />
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-              <CarouselThumbsContainer className="gap-x-2">
-                {videoGroups.map((_, index) => (
-                  <CarouselIndicator key={index} index={index} />
+                      ))}
+                    </div>
+                  </SliderMainItem>
                 ))}
-              </CarouselThumbsContainer>
+              </CarouselMainContainer>
+              <div className="flex justify-between w-full mt-4">
+                <CarouselPrevious className="w-10 h-10 border border-gray-700 dark:border-gray-300 rounded-full flex items-center justify-center" />
+                <CarouselNext className="w-10 h-10 border border-gray-700 dark:border-gray-300 rounded-full flex items-center justify-center" />
+              </div>
+              <div className="mt-2">
+                <CarouselThumbsContainer className="gap-x-2">
+                  {videoGroups.map((_, index) => (
+                    <CarouselIndicator key={index} index={index} />
+                  ))}
+                </CarouselThumbsContainer>
+              </div>
             </div>
           </Carousel>
         </div>

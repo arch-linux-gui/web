@@ -1,7 +1,7 @@
+import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 export const HoverEffect = ({
   items,
@@ -21,7 +21,7 @@ export const HoverEffect = ({
     <div
       className={cn(
         "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
-        className,
+        className
       )}
     >
       {items.map((item, idx) => (
@@ -77,7 +77,7 @@ export const Card = ({
     <div
       className={cn(
         "rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
-        className,
+        className
       )}
     >
       <div className="relative z-50">

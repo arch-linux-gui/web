@@ -171,7 +171,7 @@ export default function HeroSection() {
                     variants={fancyVariants}
                     className="text-4xl lg:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-700 dark:from-orange-400 dark:to-orange-300"
                   >
-                    Experience the Future of Linux Arka Linux GUI
+                    Welcome to Arka Linux GUI
                   </TextEffect>
                 </div>
                 <div ref={descriptionRef}>
