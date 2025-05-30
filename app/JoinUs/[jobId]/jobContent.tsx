@@ -45,7 +45,7 @@ export default function JobContent({ jobId }) {
             {job.skills.map((skill, index) => (
               <span
                 key={index}
-                className="px-3 py-1 m-1 text-sm font-semibold text-blue-800 bg-blue-100 rounded-full"
+                className="px-3 py-1 m-1 text-sm font-semibold text-orange-800 bg-orange-100 rounded-full"
               >
                 {skill}
               </span>
@@ -53,7 +53,7 @@ export default function JobContent({ jobId }) {
           </div>
           <button
             onClick={handleApplyClick}
-            className="inline-block mt-4 px-12 py-3 bg-[#6a45d1] font-bold text-white rounded-full hover:bg-[#7554d1] transition duration-300"
+            className="inline-block mt-4 px-12 py-3 bg-[#F97316] font-bold text-white rounded-full hover:bg-[#ec9a60] transition duration-300"
           >
             Apply
           </button>
@@ -111,7 +111,7 @@ export default function JobContent({ jobId }) {
               <a
                 href={`mailto:workwithalgofficial@gmail.com?subject=Application%20For%20${job.title}%20Role`}
                 target="_blank"
-                className="text-[#6a45d1] underline hover:text-[#7554d1] transition duration-300"
+                className="text-[#F97316] underline hover:text-[#ec9a60] transition duration-300"
               >
                 workwithalgofficial@gmail.com
               </a>{" "}

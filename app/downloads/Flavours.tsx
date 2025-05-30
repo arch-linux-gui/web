@@ -96,7 +96,7 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
 
   const toggleDropdown = () => setDropdownVisible(!dropdownVisible);
 
-  const isoLinks = isThemed ? themedIso[name] : pureIso[name];
+  const isoLinks = !isThemed ? themedIso[name] : pureIso[name];
 
   const contentSection = (
     <div className="flex flex-col justify-center p-3 rounded-lg md:p-6">
@@ -116,7 +116,7 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
         <button
           onClick={() => setIsThemed(!isThemed)}
           className={`${
-            !isThemed ? "bg-[#6a45d1]" : "bg-gray-400"
+            !isThemed ? "bg-[#F97316]" : "bg-gray-400"
           } w-14 h-8 rounded-full relative`}
         >
           <span
@@ -130,7 +130,7 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
       <div className="relative flex justify-center mt-6">
         <button
           onClick={toggleDropdown}
-          className="py-3 px-12 bg-[#6a45d1] text-white opacity-90 hover:opacity-100 rounded-full transition-all"
+          className="py-3 px-12 bg-[#F97316] text-white opacity-90 hover:opacity-100 rounded-full transition-all"
         >
           Download
         </button>
@@ -188,28 +188,29 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
 export default function Flavours() {
   return (
     <section className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] pt-4 md:pt-0 px-4 sm:px-12 md:px-20 md:pb-12 lg:px-28">
+      {/* Don't know why now its working correctly but when pureImage & themedImage places are changed it works inversely, need to fix! */}
       <DesktopEnvironment
         name="kde"
         title="KDE Plasma"
         description="The Plasma Themed Edition (also known as the Flagship) of Arka Linux GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-        pureImage="/plasma-pure.png"
-        themedImage="/plasma.png"
+        pureImage="/plasma.png"
+        themedImage="/plasma-pure.png"
         isReversed={false}
       />
       <DesktopEnvironment
         name="gnome"
         title="GNOME"
         description="The GNOME Edition of Arka Linux GUI helps you install Vanilla Arch Linux with the GNOME Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-        pureImage="/gnome-pure.png"
-        themedImage="/gnome.jpg"
+        pureImage="/gnome.jpg"
+        themedImage="/gnome-pure.png"
         isReversed={true}
       />
       <DesktopEnvironment
         name="xfce"
         title="XFCE"
         description="The XFCE Edition of Arka Linux GUI helps you install Vanilla Arch Linux with the XFCE Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-        pureImage="/xfce-pure.png"
-        themedImage="/xfce.png"
+        pureImage="/xfce.png"
+        themedImage="/xfce-pure.png"
         isReversed={false}
       />
     </section>

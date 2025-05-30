@@ -14,20 +14,21 @@ export default function WhatIsALGSection() {
       description:
         "Install your system entirely without an internet connection.",
       link: "#",
-      image: "/gnome.jpg",
+      image:
+        "https://github.com/arch-linux-gui/artwork/blob/master/desktop-screenshots/ss-with-apps/theme/plasma/installer.png?raw=true",
     },
     {
       title: "Minimalist & Clean System",
       description: "Experience a bare-minimum, efficient Linux environment.",
       link: "#",
-      image: "/gnome.jpg",
+      image: "/plasma-pure.png",
     },
     {
       title: "Custom Themed Environments",
       description:
         "Enjoy a beautifully themed interface without unnecessary extras.",
       link: "#",
-      image: "/gnome.jpg",
+      image: "/xfce.png",
     },
     {
       title: "Intuitive Welcome Application",
