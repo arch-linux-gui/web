@@ -16,8 +16,7 @@ export default function WhatsNew() {
       <div className="flex flex-col items-center justify-center">
         <p className="mb-4 text-3xl font-bold md:text-5xl">What&#39;s New?</p>
         <p className="max-w-xl mb-10 text-center md:text-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-          fermentum orci eu tellus maximus, ac aliquet turpis mollis.
+          Check out our latest updates: a new Welcome App, the beta App Store, and an updated installer!
         </p>
         <div className="hidden gap-4 md:flex">
           <div className="flex flex-col items-center justify-center gap-6 rounded-2xl border-opacity-10 border-b-2 border-r-2 border-l-2 border-[#9ca3af]">
@@ -29,7 +28,7 @@ export default function WhatsNew() {
               alt="Nothing"
             />
             <p className="text-xl font-bold max-w-[400px] text-center p-4">
-              Welcome App for Users to navigate through Arka Linux.
+              Welcome App written in Go
             </p>
           </div>
           <div className="flex flex-col items-center justify-center gap-6 rounded-2xl border-opacity-10 border-b-2 border-r-2 border-l-2 border-[#9ca3af]">
@@ -41,7 +40,7 @@ export default function WhatsNew() {
               alt="Nothing"
             />
             <p className="text-xl font-bold max-w-[400px] text-center p-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              App store (beta) written in Go
             </p>
           </div>
           <div className="flex flex-col items-center justify-center gap-6 rounded-2xl border-opacity-10 border-b-2 border-r-2 border-l-2 border-[#9ca3af]">
@@ -53,7 +52,7 @@ export default function WhatsNew() {
               alt="Nothing"
             />
             <p className="text-xl font-bold max-w-[400px] text-center p-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              New updated Installer - version 3
             </p>
           </div>
         </div>
@@ -79,7 +78,7 @@ export default function WhatsNew() {
                   alt="Nothing"
                 />
                 <p className="text-xl font-bold max-w-[400px] text-center p-4">
-                  Welcome App for Users to navigate through Arka Linux.
+                  Welcome App written in Go
                 </p>
               </div>
             </SplideSlide>
@@ -93,7 +92,7 @@ export default function WhatsNew() {
                   alt="Nothing"
                 />
                 <p className="text-xl font-bold max-w-[400px] text-center p-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  App store (beta) written in Go
                 </p>
               </div>
             </SplideSlide>
@@ -107,7 +106,7 @@ export default function WhatsNew() {
                   alt="Nothing"
                 />
                 <p className="text-xl font-bold max-w-[400px] text-center p-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  New updated Installer - version 3
                 </p>
               </div>
             </SplideSlide>
