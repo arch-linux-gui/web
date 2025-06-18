@@ -193,24 +193,24 @@ export default function Flavours() {
         name="kde"
         title="KDE Plasma"
         description="The Plasma Themed Edition (also known as the Flagship) of Arka Linux GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-        pureImage="/plasma.png"
-        themedImage="/plasma-pure.png"
+        pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/plasma.png?raw=true"
+        themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/plasma-pure.png?raw=true"
         isReversed={false}
       />
       <DesktopEnvironment
         name="gnome"
         title="GNOME"
         description="The GNOME Edition of Arka Linux GUI helps you install Vanilla Arch Linux with the GNOME Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-        pureImage="/gnome.jpg"
-        themedImage="/gnome-pure.png"
+        pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/gnome.png?raw=true"
+        themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/gnome.png?raw=true"
         isReversed={true}
       />
       <DesktopEnvironment
         name="xfce"
         title="XFCE"
         description="The XFCE Edition of Arka Linux GUI helps you install Vanilla Arch Linux with the XFCE Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-        pureImage="/xfce.png"
-        themedImage="/xfce-pure.png"
+        pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/xfce-themed.png?raw=true"
+        themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/xfce-pure.png?raw=true"
         isReversed={false}
       />
     </section>

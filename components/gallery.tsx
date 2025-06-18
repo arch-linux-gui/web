@@ -2,12 +2,12 @@ import { DialogBasicImage } from "./ui/imageviewer";
 import Marquee from "./ui/marquee";
 
 const images = [
-  { img: "/gnome-pure.png" },
-  { img: "/gnome.jpg" },
-  { img: "/xfce.png" },
-  { img: "/xfce-pure.png" },
-  { img: "/plasma.png" },
-  { img: "/plasma-pure.png" },
+  { img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/gnome.png?raw=true" },
+  { img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/gnome.png?raw=true?raw=true" },
+  { img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/xfce-themed.png?raw=true" },
+  { img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/xfce-pure.png?raw=true" },
+  { img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/plasma.png?raw=true" },
+  { img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/plasma-pure.png?raw=true" },
 ];
 
 const firstRow = images.slice(0, images.length / 2);

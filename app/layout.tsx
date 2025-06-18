@@ -2,7 +2,6 @@
 import DonationBubble from "@/components/donationBubble";
 import { ScrollProvider } from "@/context/scrollContext";
 import Loader from "@/lib/loader";
-import "@/public/alg-logo.png";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";

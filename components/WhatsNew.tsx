@@ -14,41 +14,40 @@ export default function WhatIsALGSection() {
       description:
         "Install your system entirely without an internet connection.",
       link: "#",
-      image:
-        "https://github.com/arch-linux-gui/artwork/blob/master/desktop-screenshots/ss-with-apps/theme/plasma/installer.png?raw=true",
+      image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/ss-with-apps/theme/plasma/installer.png?raw=true",
     },
     {
       title: "Minimalist & Clean System",
       description: "Experience a bare-minimum, efficient Linux environment.",
       link: "#",
-      image: "/plasma-pure.png",
+      image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/plasma-pure.png?raw=true",
     },
     {
       title: "Custom Themed Environments",
       description:
         "Enjoy a beautifully themed interface without unnecessary extras.",
       link: "#",
-      image: "/xfce.png",
+      image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/xfce-themed.png?raw=true",
     },
     {
       title: "Intuitive Welcome Application",
       description: "Get started quickly with our user-friendly welcome app.",
       link: "#",
-      image: "/welcome.png",
+      image: "https://github.com/arch-linux-gui/artwork/blob/dev/other/welcome.png?raw=true",
     },
     {
       title: "GUI-Based Package Manager (Beta)",
       description:
         "Manage your software effortlessly with our beta GUI package manager.",
       link: "#",
-      image: "/gnome.jpg",
+      image: "https://github.com/arch-linux-gui/artwork/blob/dev/other/app-store.png?raw=true",
     },
     {
       title: "Community-Driven Development",
       description:
         "Built and continuously improved by our passionate community.",
       link: "#",
-      image: "/gnome.jpg",
+      image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/gnome.png?raw=true",
     },
   ];
 

@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const assetsToPreload = ["/arch-linux-gui.png"];
+const assetsToPreload = ["https://github.com/arch-linux-gui/web/blob/dev/public/arch-linux-gui.png?raw=true"];
 
 export default function HeroSection() {
   const { resolvedTheme } = useTheme();
@@ -207,7 +207,7 @@ export default function HeroSection() {
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-300/20 to-orange-500/20 dark:from-orange-400/10 dark:to-orange-600/10 rounded-lg shadow-2xl">
                     <div className="absolute inset-2 bg-white dark:bg-gray-800 rounded-lg overflow-hidden">
                       <img
-                        src="/arch-linux-gui.png"
+                        src="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/ss-with-apps/theme/plasma/terminal.png?raw=true"
                         alt="Arka Linux GUI Desktop"
                         className="w-full h-full object-cover"
                       />
