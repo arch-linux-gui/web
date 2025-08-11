@@ -108,6 +108,7 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
           alt={title}
           width={500}
           height={300}
+          priority={true}
           className="mx-auto rounded-lg"
         />
       </div>
@@ -163,6 +164,7 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
         alt={title}
         width={900}
         height={800}
+        priority={true}
         className="mx-auto rounded-lg"
       />
     </div>
@@ -189,30 +191,32 @@ export default function Flavours() {
   return (
     <section className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] pt-4 md:pt-0 px-4 sm:px-12 md:px-20 md:pb-12 lg:px-28">
       {/* Don't know why now its working correctly but when pureImage & themedImage places are changed it works inversely, need to fix! */}
-      <DesktopEnvironment
-        name="kde"
-        title="KDE Plasma"
-        description="The Plasma Themed Edition (also known as the Flagship) of Arka Linux GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-        pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/plasma.png?raw=true"
-        themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/plasma-pure.png?raw=true"
-        isReversed={false}
-      />
-      <DesktopEnvironment
-        name="gnome"
-        title="GNOME"
-        description="The GNOME Edition of Arka Linux GUI helps you install Vanilla Arch Linux with the GNOME Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-        pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/gnome.png?raw=true"
-        themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/gnome.png?raw=true"
-        isReversed={true}
-      />
-      <DesktopEnvironment
-        name="xfce"
-        title="XFCE"
-        description="The XFCE Edition of Arka Linux GUI helps you install Vanilla Arch Linux with the XFCE Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-        pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/xfce-themed.png?raw=true"
-        themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/xfce-pure.png?raw=true"
-        isReversed={false}
-      />
+      <div className="flex flex-col space-y-6">
+        <DesktopEnvironment
+          name="kde"
+          title="KDE Plasma"
+          description="The Plasma Themed Edition (also known as the Flagship) of Arka Linux GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
+          pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/plasma.png?raw=true"
+          themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/plasma-pure.png?raw=true"
+          isReversed={false}
+        />
+        <DesktopEnvironment
+          name="gnome"
+          title="GNOME"
+          description="The GNOME Edition of Arka Linux GUI helps you install Vanilla Arch Linux with the GNOME Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
+          pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/gnome.png?raw=true"
+          themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/gnome.png?raw=true"
+          isReversed={true}
+        />
+        <DesktopEnvironment
+          name="xfce"
+          title="XFCE"
+          description="The XFCE Edition of Arka Linux GUI helps you install Vanilla Arch Linux with the XFCE Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
+          pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/xfce-themed.png?raw=true"
+          themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/xfce-pure.png?raw=true"
+          isReversed={false}
+        />
+      </div>
     </section>
   );
 }

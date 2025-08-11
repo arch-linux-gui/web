@@ -1,5 +1,5 @@
 "use client";
-import HandleYT from "@/lib/HandleYT";
+import { LazyVideo } from "@/components/ui/lazy-video";
 import Loader from "@/lib/loader";
 import { Suspense, useEffect, useState } from "react";
 import {
@@ -67,7 +67,11 @@ export default function VideoCarousel() {
                         <div key={index} className="flex-1 h-full">
                           <div className="w-full h-full rounded-xl overflow-hidden bg-background">
                             <Suspense fallback={<Loader />}>
-                              <HandleYT videoId={videoId} />
+                              <LazyVideo
+                                videoId={videoId}
+                                width="100%"
+                                height="100%"
+                              />
                             </Suspense>
                           </div>
                         </div>
@@ -80,13 +84,15 @@ export default function VideoCarousel() {
                 <CarouselPrevious className="w-10 h-10 border border-gray-700 dark:border-gray-300 rounded-full flex items-center justify-center" />
                 <CarouselNext className="w-10 h-10 border border-gray-700 dark:border-gray-300 rounded-full flex items-center justify-center" />
               </div>
-              <div className="mt-2">
-                <CarouselThumbsContainer className="gap-x-2">
-                  {videoGroups.map((_, index) => (
-                    <CarouselIndicator key={index} index={index} />
-                  ))}
-                </CarouselThumbsContainer>
-              </div>
+              <CarouselThumbsContainer className="flex gap-2 mt-4">
+                {videoGroups.map((_, index) => (
+                  <CarouselIndicator
+                    key={index}
+                    index={index}
+                    className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 cursor-pointer"
+                  />
+                ))}
+              </CarouselThumbsContainer>
             </div>
           </Carousel>
         </div>

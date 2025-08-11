@@ -3,8 +3,6 @@ import DonationBubble from "@/components/donationBubble";
 import { ScrollProvider } from "@/context/scrollContext";
 import Loader from "@/lib/loader";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { ThemeProvider } from "next-themes";
 import { ViewTransitions } from "next-view-transitions";
 import { Poppins } from "next/font/google";
@@ -16,9 +14,8 @@ const poppins = Poppins({
   weight: ["400", "500", "600"],
   display: "swap",
   adjustFontFallback: false,
+  preload: true,
 });
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -34,9 +31,44 @@ export default function RootLayout({ children }: RootLayoutProps) {
     window.addEventListener("beforeunload", handleStart);
     window.addEventListener("load", handleComplete);
 
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      // Preload critical images
+      const criticalImages = [
+        "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/ss-with-apps/theme/plasma/terminal.png",
+      ];
+
+      criticalImages.forEach((src) => {
+        const link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "image";
+        link.href = src;
+        document.head.appendChild(link);
+      });
+    };
+
+    // Prefetch non-critical resources
+    const prefetchNonCriticalResources = () => {
+      const nonCriticalResources = ["/downloads", "/about", "/tutorials"];
+
+      nonCriticalResources.forEach((href) => {
+        const link = document.createElement("link");
+        link.rel = "prefetch";
+        link.href = href;
+        document.head.appendChild(link);
+      });
+    };
+
+    // Execute optimizations after a delay to not block initial render
+    const timer = setTimeout(() => {
+      preloadCriticalResources();
+      prefetchNonCriticalResources();
+    }, 1000);
+
     return () => {
       window.removeEventListener("beforeunload", handleStart);
       window.removeEventListener("load", handleComplete);
+      clearTimeout(timer);
     };
   }, []);
 
@@ -61,7 +93,24 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <meta name="twitter:description" content="Arka Linux GUI" />
           <meta
             name="twitter:image"
-            content="https://ogcdn.net/2c2c6737-47d4-4459-9969-e711eb48394c/v1/arkalinuxgui.org/Arka%20Linux%20GUI/Arka%20Linux%20GUI%20(formerly%20Arch%20Linux%20GUI)%2C%20is%20a%20fast%2C%20offline%2C%20graphical%20installer%20for%20Arch%20Linux./https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2F4ec37f9d-1c03-4b40-96fe-d6ccf8a14667.png%3Ftoken%3DTCHWDYus5O15KyLn5Om9XlrKzLZHWcHNp8zv2pS-9Jg%26height%3D552%26width%3D1200%26expires%3D33266952728/og.png"
+            content="https://ogcdn.net/2c2c6737-47d4-4459-9969-e711eb48394c/v1/arkalinuxgui.org/Arka%20Linux%20GUI/Arka%20Linux%20GUI%20(formerly%20Arch%20Linux%20GUI)%2C%20is%20a%20fast%2C%20offline%2C%20graphical%20installer%20for%20Arch%20Linux./https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%20installer%20for%20Arch%20Linux./https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2F4ec37f9d-1c03-4b40-96fe-d6ccf8a14667.png%3Ftoken%3DTCHWDYus5O15KyLn5Om9XlrKzLZHWcHNp8zv2pS-9Jg%26height%3D552%26width%3D1200%26expires%3D33266952728/og.png"
+          />
+
+          {/* Performance optimizations */}
+          <link rel="dns-prefetch" href="//github.com" />
+          <link rel="dns-prefetch" href="//raw.githubusercontent.com" />
+          <link rel="dns-prefetch" href="//www.youtube.com" />
+
+          {/* Preconnect to external domains */}
+          <link rel="preconnect" href="https://github.com" />
+          <link rel="preconnect" href="https://raw.githubusercontent.com" />
+          <link rel="preconnect" href="https://www.youtube.com" />
+
+          {/* Preload critical fonts */}
+          <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+            as="style"
           />
         </head>
         <body className={poppins.className}>

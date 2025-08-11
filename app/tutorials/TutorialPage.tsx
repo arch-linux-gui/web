@@ -1,5 +1,5 @@
 "use client";
-import HandleYT from "@/lib/HandleYT";
+import { LazyVideo } from "@/components/ui/lazy-video";
 import Loader from "@/lib/loader";
 import { Suspense } from "react";
 const install = [
@@ -123,7 +123,7 @@ const TutorialPage = () => {
           </div>
           <div className="md:w-1/2">
             <Suspense fallback={<Loader />}>
-              <HandleYT videoId={video.url} />
+              <LazyVideo videoId={video.url} width="100%" height="450px" />
             </Suspense>
           </div>
         </div>
@@ -152,11 +152,12 @@ const TutorialPage = () => {
           </div>
           <div className="md:w-1/2">
             <Suspense fallback={<Loader />}>
-              <HandleYT videoId={video.url} />
+              <LazyVideo videoId={video.url} width="100%" height="450px" />
             </Suspense>
           </div>
         </div>
       ))}
+
       <h1 className="mt-4 mb-4 text-3xl font-bold text-center md:text-5xl md:mb-10">
         Arch Linux Specific videos
       </h1>
@@ -179,11 +180,12 @@ const TutorialPage = () => {
           </div>
           <div className="md:w-1/2">
             <Suspense fallback={<Loader />}>
-              <HandleYT videoId={video.url} />
+              <LazyVideo videoId={video.url} width="100%" height="450px" />
             </Suspense>
           </div>
         </div>
       ))}
+
       <h1 className="mt-4 mb-4 text-3xl font-bold text-center md:text-5xl md:mb-10">
         Miscellaneous Topics
       </h1>
@@ -207,7 +209,7 @@ const TutorialPage = () => {
           </div>
           <div className="md:w-1/2">
             <Suspense fallback={<Loader />}>
-              <HandleYT videoId={video.url} />
+              <LazyVideo videoId={video.url} width="100%" height="450px" />
             </Suspense>
           </div>
         </div>
