@@ -100,7 +100,7 @@ export default function CenteredDockToStickyNavbar() {
               className="text-xl font-bold pr-5 text-gray-900 dark:text-white"
             >
               <Image
-                src="/alg-logo.png"
+                src="https://github.com/arch-linux-gui/artwork/blob/dev/logo.png?raw=true"
                 width={45}
                 height={45}
                 alt="ALG Logo"

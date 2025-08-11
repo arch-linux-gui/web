@@ -34,7 +34,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-orange-200 dark:bg-orange-900/[0.9] block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-orange-200 dark:bg-orange-900/[0.9] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -48,7 +48,7 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <Card>
+          <Card className="border-black">
             <Image
               src={item.image}
               alt={item.title}

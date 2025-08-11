@@ -17,7 +17,7 @@ export default function JobCard({ id, title, location, skills }: JobCardProps) {
           {skills.map((skill, index) => (
             <span
               key={index}
-              className="m-1 px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full"
+              className="m-1 px-3 py-1 bg-orange-200 text-orange-800 text-sm font-semibold rounded-full"
             >
               {skill}
             </span>

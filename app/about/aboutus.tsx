@@ -75,7 +75,7 @@ const AboutPage = () => {
           <div className="flex-1 mb-12 lg:mb-0">
             <div className="flex justify-center items-center h-full">
               <Image
-                src="/alg-logo.png"
+                src="https://github.com/arch-linux-gui/artwork/blob/dev/logo.png?raw=true"
                 alt="Arka Linux GUI Logo"
                 width={400}
                 height={400}
@@ -132,7 +132,7 @@ const AboutPage = () => {
                 <div className="flex flex-col h-full justify-between">
                   <div>
                     <Image
-                      src={member.image || "/alg-logo.png"}
+                      src={member.image || "https://github.com/arch-linux-gui/artwork/blob/dev/logo.png?raw=true"}
                       alt={member.name}
                       width={150}
                       height={150}

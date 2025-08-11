@@ -52,7 +52,7 @@ export default function EnhancedDonationPage() {
     <div className="container mx-auto px-4 py-32 max-w-4xl">
       <div className="flex items-center justify-center mb-8">
         <Image
-          src="/alg-logo.png"
+          src="https://github.com/arch-linux-gui/artwork/blob/dev/logo.png?raw=true"
           alt="Arka Linux GUI Logo"
           width={100}
           height={100}
