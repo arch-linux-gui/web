@@ -26,7 +26,7 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <div
-          key={item?.link || ""}
+          key={item?.link ?? String(idx)}
           className="relative group block p-2 h-full w-full min-h-[450px]"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -49,12 +49,13 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card className="border-black">
-            <div className="relative w-full h-64 mb-4 overflow-hidden rounded">
+            <div className="relative w-full h-52 sm:h-60 md:h-64 mb-4 overflow-hidden rounded">
               <Image
                 src={item.image}
                 alt={item.title}
                 fill
-                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-contain md:object-cover"
               />
             </div>
             <CardTitle className="text-xl md:text-2xl">{item.title}</CardTitle>
