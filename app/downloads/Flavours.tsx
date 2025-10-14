@@ -5,7 +5,6 @@ import React, { useEffect, useRef, useState } from "react";
 
 interface IsoLinks {
   sourceforge: string;
-  osdn: string;
   torrent: string;
 }
 
