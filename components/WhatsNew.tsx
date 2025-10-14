@@ -63,10 +63,10 @@ export default function WhatIsALGSection() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-6xl font-bold text-center text-orange-600 dark:text-orange-400"
         >
-          What is Arka Linux GUI?
+          What is Arka Linux GUI (ALG)?
         </motion.h2>
         <motion.p className="text-lg md:text-xl text-center text-orange-600 dark:text-orange-400 opacity-50">
-          Know more about ALG
+          ALG is a linux distribution based on Arch Linux. It started as a GUI installer for Arch Linux, but has since evolved into a full fledged linux distribution.
         </motion.p>
         <div>
           <HoverEffect items={features} />
