@@ -3,22 +3,22 @@ import Marquee from "./ui/marquee";
 
 const images = [
   {
-    img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/gnome.png?raw=true",
+    img: "https://github.com/arch-linux-gui/artwork/blob/master/desktop-screenshots/ss-with-apps/theme/plasma/terminal.png?raw=true",
   },
   {
-    img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/gnome.png?raw=true",
+    img: "https://github.com/arch-linux-gui/artwork/blob/master/desktop-screenshots/ss-with-apps/theme/gnome-41/app-menu.png?raw=true",
   },
   {
-    img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/xfce-themed.png?raw=true",
+    img: "https://github.com/arch-linux-gui/artwork/blob/master/desktop-screenshots/ss-with-apps/theme/plasma/plasma-bluetooth.png?raw=true",
   },
   {
-    img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/xfce-pure.png?raw=true",
+    img: "https://github.com/arch-linux-gui/artwork/blob/master/desktop-screenshots/ss-with-apps/theme/gnome-41/program-launcher.png?raw=true",
   },
   {
-    img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/plasma.png?raw=true",
+    img: "https://github.com/arch-linux-gui/artwork/blob/master/desktop-screenshots/ss-with-apps/theme/xfce/xfce4-apps.png?raw=true",
   },
   {
-    img: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/plasma-pure.png?raw=true",
+    img: "https://github.com/arch-linux-gui/artwork/blob/master/desktop-screenshots/ss-with-apps/theme/plasma/installer.png?raw=true",
   },
 ];
 

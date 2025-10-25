@@ -66,8 +66,10 @@ const AboutPage = () => {
             Welcome to Arka Linux GUI, formerly known as Arch Linux GUI.
           </p>
           <p className="text-lg max-w-3xl mx-auto">
-            We provide a fast, offline Arch installer with a graphical user
-            interface.
+            We provide a simple Arch Linux distribution with a focus towards simplicity.
+          </p>
+          <p>
+            The project has been known as ALG, it's abbreviation, since the project's inception.
           </p>
         </div>
 
@@ -87,22 +89,21 @@ const AboutPage = () => {
             <div className="mb-12">
               <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
               <p className="leading-relaxed">
-                At Arka Linux GUI, our mission is to simplify the installation
-                process of Arch Linux by providing a user-friendly graphical
-                interface. We aim to make Arch Linux accessible to everyone,
-                from beginners to advanced users.
+                Our mission is to simplify the installation
+                and use of Arch Linux. We want to provide users with an amazing
+                experience of using an Arch Based Distribution.
               </p>
             </div>
             <div className="mb-12">
               <h2 className="text-3xl font-semibold mb-4">Our History</h2>
               <p className="leading-relaxed">
-                Originally launched as Arch Linux GUI, we have rebranded to Arka
-                Linux GUI to better reflect our vision and goals. Over the
-                years, we have evolved to provide a robust, offline installer
-                that caters to the needs of our diverse user base.
+                While we originally started as a installer for Arch Linux, we
+                have deviated enough from that idea, to be considered a full
+                distribution. We are very proud to be based on Arch Linux, without which,
+                this project would not have existed.
               </p>
             </div>
-            <div>
+            {/* <div>
               <h2 className="text-3xl font-semibold mb-4">Our Team</h2>
               <p className="leading-relaxed">
                 We are a dedicated team of developers, designers, and
@@ -111,7 +112,7 @@ const AboutPage = () => {
                 users. Our commitment to quality and user satisfaction drives us
                 to continually improve and innovate.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 

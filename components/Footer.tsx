@@ -11,7 +11,7 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} ALG Team
             </div>
             <div className="flex flex-col items-center space-y-2 md:flex-row md:space-y-0 md:space-x-8">
-              <Link
+              {/* <Link
                 href="/JoinUs"
                 className="text-[12px] md:text-sm opacity-70 hover:opacity-100 transition-opacity duration-300"
               >
@@ -22,7 +22,7 @@ export default function Footer() {
                 className="text-[12px] md:text-sm opacity-70 hover:opacity-100 transition-opacity duration-300"
               >
                 About Us
-              </Link>
+              </Link> */}
             </div>
           </div>
 

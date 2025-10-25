@@ -5,7 +5,6 @@ import React, { useEffect, useRef, useState } from "react";
 
 interface IsoLinks {
   sourceforge: string;
-  osdn: string;
   torrent: string;
 }
 
@@ -15,44 +14,41 @@ interface IsoData {
   xfce: IsoLinks;
 }
 
-const pureIso: IsoData = {
-  kde: {
-    sourceforge:
-      "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-plasma-pure-2022.07-x86_64.iso/download",
-    osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-plasma-pure-2022.07-x86_64.iso",
-    torrent: "https://some-torrent-link/kde-pure.torrent",
-  },
-  gnome: {
-    sourceforge:
-      "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-pure-2022.07-x86_64.iso/download",
-    osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-gnome-pure-2022.07-x86_64.iso",
-    torrent: "https://some-torrent-link/gnome-pure.torrent",
-  },
-  xfce: {
-    sourceforge:
-      "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-pure-2022.07-x86_64.iso/download",
-    osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-xfce-pure-2022.07-x86_64.iso",
-    torrent: "https://some-torrent-link/xfce-pure.torrent",
-  },
-};
+// const pureIso: IsoData = {
+//   kde: {
+//     sourceforge:
+//       "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-plasma-pure-2022.07-x86_64.iso/download",
+//     osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-plasma-pure-2022.07-x86_64.iso",
+//     torrent: "https://some-torrent-link/kde-pure.torrent",
+//   },
+//   gnome: {
+//     sourceforge:
+//       "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-pure-2022.07-x86_64.iso/download",
+//     osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-gnome-pure-2022.07-x86_64.iso",
+//     torrent: "https://some-torrent-link/gnome-pure.torrent",
+//   },
+//   xfce: {
+//     sourceforge:
+//       "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-pure-2022.07-x86_64.iso/download",
+//     osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-xfce-pure-2022.07-x86_64.iso",
+//     torrent: "https://some-torrent-link/xfce-pure.torrent",
+//   },
+// };
 
 const themedIso: IsoData = {
   kde: {
     sourceforge:
       "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-plasma-2022.07-x86_64.iso/download",
-    osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-plasma-2022.07-x86_64.iso",
     torrent: "https://some-torrent-link/kde-themed.torrent",
   },
   gnome: {
     sourceforge:
       "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-2022.07-x86_64.iso/download",
-    osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-gnome-2022.07-x86_64.iso",
     torrent: "https://some-torrent-link/gnome-themed.torrent",
   },
   xfce: {
     sourceforge:
       "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-2022.07-x86_64.iso/download",
-    osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-xfce-2022.07-x86_64.iso",
     torrent: "https://some-torrent-link/xfce-themed.torrent",
   },
 };
@@ -70,11 +66,11 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
   name,
   title,
   description,
-  pureImage,
+
   themedImage,
   isReversed,
 }) => {
-  const [isThemed, setIsThemed] = useState(false);
+  // Default to Themed variant for visuals and downloads
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -96,7 +92,7 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
 
   const toggleDropdown = () => setDropdownVisible(!dropdownVisible);
 
-  const isoLinks = !isThemed ? themedIso[name] : pureIso[name];
+  const isoLinks = themedIso[name];
 
   const contentSection = (
     <div className="flex flex-col justify-center p-3 rounded-lg md:p-6">
@@ -104,29 +100,13 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
       <p className="mb-4 leading-relaxed md:text-lg">{description}</p>
       <div className="flex items-center text-center rounded-lg md:hidden">
         <Image
-          src={isThemed ? themedImage : pureImage}
+          src={themedImage}
           alt={title}
           width={500}
           height={300}
           priority={true}
           className="mx-auto rounded-lg"
         />
-      </div>
-      <div className="flex items-center justify-center mt-6 mb-4 space-x-2">
-        <span className="font-bold">Pure</span>
-        <button
-          onClick={() => setIsThemed(!isThemed)}
-          className={`${
-            !isThemed ? "bg-[#F97316]" : "bg-gray-400"
-          } w-14 h-8 rounded-full relative`}
-        >
-          <span
-            className={`${
-              !isThemed ? "translate-x-3" : "-translate-x-3"
-            } inline-block w-6 mt-1 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300`}
-          />
-        </button>
-        <span className="font-bold">Themed</span>
       </div>
       <div className="relative flex justify-center mt-6">
         <button
@@ -160,7 +140,7 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
   const imageSection = (
     <div className="items-center hidden p-6 text-center rounded-lg md:flex">
       <Image
-        src={isThemed ? themedImage : pureImage}
+        src={themedImage}
         alt={title}
         width={900}
         height={800}
@@ -194,26 +174,26 @@ export default function Flavours() {
       <div className="flex flex-col space-y-6">
         <DesktopEnvironment
           name="kde"
-          title="KDE Plasma"
-          description="The Plasma Themed Edition (also known as the Flagship) of Arka Linux GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-          pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/plasma.png?raw=true"
-          themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/plasma-pure.png?raw=true"
+          title="ALG Plasma"
+          description="ALG Plasma is the flagship edition of the ALG project. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly, including the welcome app and the app store. It is geared towards users who are familliar with the Windows 7/10/11 desktop user experience."
+          themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/plasma.png?raw=true"
+          pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/plasma-pure.png?raw=true"
           isReversed={false}
         />
         <DesktopEnvironment
           name="gnome"
-          title="GNOME"
-          description="The GNOME Edition of Arka Linux GUI helps you install Vanilla Arch Linux with the GNOME Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-          pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/gnome.png?raw=true"
-          themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/gnome.png?raw=true"
+          title="ALG GNOME"
+          description="The GNOME Edition of ALG gives you a more modern computing experience. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly, including the welcome app and the app store. It is geared towards users who are familliar with the MacOS desktop user experience, or would like to explore it."
+          themedImage="https://github.com/arch-linux-gui/artwork/blob/master/desktop-screenshots/desktop-ss/themed/gnome-41.png?raw=true"
+          pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/gnome.png?raw=true"
           isReversed={true}
         />
         <DesktopEnvironment
           name="xfce"
-          title="XFCE"
-          description="The XFCE Edition of Arka Linux GUI helps you install Vanilla Arch Linux with the XFCE Desktop Environment. It is pre-configured and ready to use. It comes with all the necessary software and settings to help users get started quickly."
-          pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/xfce-themed.png?raw=true"
-          themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/xfce-pure.png?raw=true"
+          title="ALG XFCE"
+          description="ALG XFCE is a lightweight edition of the ALG project, that promises a more traditional computing experience. It is geared towards users with older or minimal hardware. It aims to give life to your old laptor or PC, or as a full fledged experience for someone on a lower-end machine."
+          themedImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/xfce-themed.png?raw=true"
+          pureImage="https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/xfce-pure.png?raw=true"
           isReversed={false}
         />
       </div>
