@@ -10,25 +10,25 @@ export default function WhatIsALGSection() {
 
   const features = [
     {
-      title: "Offline-Centric Installation",
+      title: "Offline Installation",
       description:
-        "Install your system entirely without an internet connection.",
+        "Get your system installed within minutes without an internet connection.",
       link: "#",
       image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/ss-with-apps/theme/plasma/installer.png?raw=true",
     },
-    {
-      title: "Minimalist & Clean System",
-      description: "Experience a bare-minimum, efficient Linux environment.",
-      link: "#",
-      image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/plasma-pure.png?raw=true",
-    },
-    {
-      title: "Custom Themed Environments",
-      description:
-        "Enjoy a beautifully themed interface without unnecessary extras.",
-      link: "#",
-      image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/xfce-themed.png?raw=true",
-    },
+    // {
+    //   title: "Minimalist & Clean System",
+    //   description: "Experience a bare-minimum, efficient Linux environment.",
+    //   link: "#",
+    //   image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/pure/plasma-pure.png?raw=true",
+    // },
+    // {
+    //   title: "Custom Themed Environments",
+    //   description:
+    //     "Enjoy a beautifully themed interface without unnecessary extras.",
+    //   link: "#",
+    //   image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/xfce-themed.png?raw=true",
+    // },
     {
       title: "Intuitive Welcome Application",
       description: "Get started quickly with our user-friendly welcome app.",
@@ -36,19 +36,19 @@ export default function WhatIsALGSection() {
       image: "https://github.com/arch-linux-gui/artwork/blob/dev/other/welcome.png?raw=true",
     },
     {
-      title: "GUI-Based Package Manager (Beta)",
+      title: "New App Store (In Development)",
       description:
-        "Manage your software effortlessly with our beta GUI package manager.",
+        "Manage your software effortlessly with our new GUI package manager.",
       link: "#",
       image: "https://github.com/arch-linux-gui/artwork/blob/dev/other/app-store.png?raw=true",
     },
-    {
-      title: "Community-Driven Development",
-      description:
-        "Built and continuously improved by our passionate community.",
-      link: "#",
-      image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/gnome.png?raw=true",
-    },
+    // {
+    //   title: "Community-Driven Development",
+    //   description:
+    //     "Built and continuously improved by our passionate community.",
+    //   link: "#",
+    //   image: "https://github.com/arch-linux-gui/artwork/blob/dev/desktop-screenshots/desktop-ss/themed/gnome.png?raw=true",
+    // },
   ];
 
   return (
@@ -63,10 +63,10 @@ export default function WhatIsALGSection() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-6xl font-bold text-center text-orange-600 dark:text-orange-400"
         >
-          What is Arka Linux GUI?
+          What is Arka Linux GUI (ALG)?
         </motion.h2>
         <motion.p className="text-lg md:text-xl text-center text-orange-600 dark:text-orange-400 opacity-50">
-          Know more about ALG
+          ALG is a linux distribution based on Arch Linux. It started as a GUI installer for Arch Linux, but has since evolved into a full fledged linux distribution.
         </motion.p>
         <div>
           <HoverEffect items={features} />

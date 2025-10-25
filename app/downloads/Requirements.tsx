@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 export default function Requirements() {
   return (
     <section className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] px-6 pt-36 sm:px-12 md:px-20 md:pb-12 lg:px-28">
@@ -37,25 +38,43 @@ export default function Requirements() {
         </div>
         <div className="bg-[#9c89d1] p-6 rounded-lg">
           <h2 className="mb-4 text-2xl font-bold md:text-3xl">
-            General Instructions
+            Installation Instructions
           </h2>
-          <p className="mb-1 font-semibold text-white">Make Bootable USB:</p>
+          <h2 className="mb-1 font-semibold text-white">Make Bootable USB:</h2>
           <ul className="mb-4 text-white list-disc list-inside">
             <li>
-              Linux: Watch this video for Command Line DD method or watch the
-              video with Balena Etcher.
+              To create a bootable USB. You can follow the step-by-step guides on
+              the <Link href="/tutorials" className="underline underline-offset-2 font-semibold text-white">Tutorials page</Link>.
+            </li>
+          <h2 className="mb-1 font-semibold text-white">Getting Started with ALG installation:</h2>
+            <li>
+              Insert the USB into your computer and open the BIOS/Boot Menu. The
+              key to open it depends on your device.
+            </li>
+            <li> Common keys are F8, F11,
+              F12, or Esc plus a Function key. Press the key repeatedly right
+              after turning on your PC.</li>
+            <li>
+              Use the arrow keys to highlight your USB drive, then press Enter
+              to boot from it.
+            </li>
+            <h2 className="mb-1 font-semibold text-white">Selecting the correct graphics driver:</h2>
+            <li>
+              When the ALG boot options appear, choose the right option:
+              <ul className="list-disc list-inside ml-5">
+                <li>
+                  If you have an NVIDIA GPU (Kepler or newer), select Option 2
+                  (press the Down Arrow once, then Enter).
+                </li>
+                <li>
+                  For all other systems, select Option 1 (just press Enter).
+                </li>
+              </ul>
             </li>
             <li>
-              Windows: Watch either one of these videos: With Rufus or With
-              Balena Etcher
+              ALG will start based on your choice. For NVIDIA users, the
+              necessary drivers are enabled automatically.
             </li>
-            <li>MacOS: Watch this video.</li>
-            <li>
-              Watch tutorials on the Tutorials page for installation guide.
-            </li>
-            <li>Dual/Multi Boot: Watch these videos.</li>
-            <li>Don&#39;t forget to verify your download.</li>
-            <li>Optionally, view full changelog.</li>
           </ul>
         </div>
       </div>

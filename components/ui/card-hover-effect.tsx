@@ -26,8 +26,8 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <div
-          key={item?.link || ""}
-          className="relative group block p-2 h-full w-full"
+          key={item?.link ?? String(idx)}
+          className="relative group block p-2 h-full w-full min-h-[450px]"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -49,14 +49,15 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card className="border-black">
-            <Image
-              src={item.image}
-              alt={item.title}
-              layout="responsive"
-              width={500}
-              height={300}
-              className="rounded"
-            />
+            <div className="relative w-full h-52 sm:h-60 md:h-64 mb-4 overflow-hidden rounded">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-contain md:object-cover"
+              />
+            </div>
             <CardTitle className="text-xl md:text-2xl">{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
@@ -76,7 +77,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 flex flex-col",
         className
       )}
     >

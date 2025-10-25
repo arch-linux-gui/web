@@ -10,6 +10,18 @@ const install = [
     url: "wtZjRXOny7Q",
   },
   {
+    title: "Make Bootable USB in Windows (7, 8, 10, 11)",
+    description: `In this video, we take a look at how to make a bootable USB of a Linux distribution, on Windows. In this video, as an example, I will make the Arka Linux GUI Gnome Edition.
+    I am doing this on Windows 11, however, the steps can be performed on Windows 7, 8 or 10.`,
+    url: "7ND2fiaFfic",
+  },
+  {
+    title: "Make Bootable USB with dd on any Linux Distro",
+    description: `In this video, we take a look at how to make a bootable USB of a Linux distribution, on another Linux distribution. In this video, as an example, I will make the Manjaro bootable USB on Ubuntu.
+    The method show here can be used to make Arka Linux GUI's bootable USB from any Linux distribution.`,
+    url: "KQGedNCA1E4",
+  },
+  {
     title: "ALG Automatic Installation",
     description: `In this video, we take a look at how to install Arch Linux using a GUI installer (Calamares). In this video we install Arch Linux on UEFI/GPT setup with automatic partining. ALG developers do not encourage automatic partitoning. The primary reason is the creation of the boot and home partitions, within the root parition.
     In this video we use the ALG Minimal ISO. The automatic installation, can be performed with the help of all 10 ALG ISOs, for both the UEFI/GPT setup, as well as BIOS/MBR setup.`,
@@ -61,18 +73,6 @@ const archSpecific = [
 ];
 
 const miscellaneous = [
-  {
-    title: "Make Bootable USB in Windows (7, 8, 10, 11)",
-    description: `In this video, we take a look at how to make a bootable USB of a Linux distribution, on Windows. In this video, as an example, I will make the Arka Linux GUI Gnome Edition.
-    I am doing this on Windows 11, however, the steps can be performed on Windows 7, 8 or 10.`,
-    url: "7ND2fiaFfic",
-  },
-  {
-    title: "Make Bootable USB with dd on any Linux Distro",
-    description: `In this video, we take a look at how to make a bootable USB of a Linux distribution, on another Linux distribution. In this video, as an example, I will make the Manjaro bootable USB on Ubuntu.
-    The method show here can be used to make Arka Linux GUI's bootable USB from any Linux distribution.`,
-    url: "KQGedNCA1E4",
-  },
   {
     title: "Install and Setup VirtualBox in Arch Linux",
     description: `In this video, we take a look at how to install and setup VirtualBox in Arch Linux.

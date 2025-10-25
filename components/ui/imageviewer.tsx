@@ -17,11 +17,13 @@ export function DialogBasicImage({ img }: { img: string }) {
       }}
     >
       <DialogTrigger>
-        <DialogImage
-          src={img}
-          alt="Sony Style Store in the Sony Center complex - Berlin, Germany (2000)"
-          className="max-w-xs lg:max-w-xl rounded-[4px] hover:cursor-zoom-in"
-        />
+        <div className="relative w-[260px] sm:w-[320px] md:w-[420px] lg:w-[560px] aspect-[16/9]">
+          <DialogImage
+            src={img}
+            alt="Gallery image"
+            className="absolute inset-0 h-full w-full rounded-[4px] object-cover hover:cursor-zoom-in"
+          />
+        </div>
       </DialogTrigger>
       <DialogContainer>
         <DialogContent className="relative">

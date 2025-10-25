@@ -7,11 +7,11 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 
 const navItems = {
+  Downloads: "/downloads",
   Tutorials: "/tutorials",
   Support: "https://discord.com/invite/NgAFEw9Tkf",
   Sourceforge: "https://sourceforge.net/projects/arch-linux-gui/",
-  OSDN: "https://osdn.net/projects/arch-linux-gui/",
-  Downloads: "/downloads",
+  "About": "/about",
 };
 
 export default function CenteredDockToStickyNavbar() {
