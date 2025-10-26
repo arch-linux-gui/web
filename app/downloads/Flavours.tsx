@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 interface IsoLinks {
   sourceforge: string;
-  torrent: string;
+  // torrent: string;
 }
 
 interface IsoData {
@@ -38,18 +38,18 @@ interface IsoData {
 const themedIso: IsoData = {
   kde: {
     sourceforge:
-      "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-plasma-2022.07-x86_64.iso/download",
-    torrent: "https://some-torrent-link/kde-themed.torrent",
+      "https://sourceforge.net/projects/arch-linux-gui/files/alg-plasma-2025.10-x86_64.iso/download",
+    // torrent: "https://some-torrent-link/kde-themed.torrent",
   },
   gnome: {
     sourceforge:
-      "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-2022.07-x86_64.iso/download",
-    torrent: "https://some-torrent-link/gnome-themed.torrent",
+      "https://sourceforge.net/projects/arch-linux-gui/files/alg-gnome-2025.10-x86_64.iso/download",
+    // torrent: "https://some-torrent-link/gnome-themed.torrent",
   },
   xfce: {
     sourceforge:
-      "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-2022.07-x86_64.iso/download",
-    torrent: "https://some-torrent-link/xfce-themed.torrent",
+      "https://sourceforge.net/projects/arch-linux-gui/files/alg-xfce-2025.10-x86_64.iso/download",
+    // torrent: "https://some-torrent-link/xfce-themed.torrent",
   },
 };
 
