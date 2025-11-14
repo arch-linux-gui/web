@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
 interface IsoLinks {
   sourceforge: string;
@@ -71,27 +71,6 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
   isReversed,
 }) => {
   // Default to Themed variant for visuals and downloads
-  const [dropdownVisible, setDropdownVisible] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setDropdownVisible(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  const toggleDropdown = () => setDropdownVisible(!dropdownVisible);
-
   const isoLinks = themedIso[name];
 
   const contentSection = (
@@ -109,30 +88,14 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
         />
       </div>
       <div className="relative flex justify-center mt-6">
-        <button
-          onClick={toggleDropdown}
-          className="py-3 px-12 bg-[#F97316] text-white opacity-90 hover:opacity-100 rounded-full transition-all"
+        <a
+          href={isoLinks.sourceforge}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="py-3 px-12 bg-[#F97316] text-white opacity-90 hover:opacity-100 rounded-full transition-all inline-block"
         >
           Download
-        </button>
-        {dropdownVisible && (
-          <div
-            className="absolute mt-2 rounded shadow-lg top-full bg-white"
-            ref={dropdownRef}
-          >
-            {Object.entries(isoLinks).map(([key, value]) => (
-              <a
-                key={key}
-                href={value}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block px-4 py-2 text-black hover:bg-gray-200"
-              >
-                {key.charAt(0).toUpperCase() + key.slice(1)}
-              </a>
-            ))}
-          </div>
-        )}
+        </a>
       </div>
     </div>
   );
