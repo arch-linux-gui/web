@@ -88,7 +88,10 @@ export default function HeroSection() {
                 className="flex justify-center mb-4"
                 variants={fancyVariants.item}
               >
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/30 rounded-full border border-orange-200 dark:border-orange-800">
+                <Link
+                  href="/releases"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/30 rounded-full border border-orange-200 dark:border-orange-800 hover:bg-orange-200 dark:hover:bg-orange-900/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                >
                   <Sparkles className="w-4 h-4 text-orange-600 dark:text-orange-400" />
                   <span className="text-sm font-semibold text-orange-700 dark:text-orange-300">
                     Latest Release: v2025.10
@@ -97,7 +100,7 @@ export default function HeroSection() {
                     <Calendar className="w-3 h-3" />
                     October 2025
                   </span>
-                </div>
+                </Link>
               </motion.div>
 
               <TextEffect
