@@ -1,5 +1,4 @@
 import Metadata from "@/components/metadata";
-import Testi from "@/components/Testi";
 import TutorialPage from "./TutorialPage";
 
 export const metadata = {
@@ -12,7 +11,6 @@ export default function Downloads() {
     <section className="relative">
       <Metadata params="Tutorials" />
       <TutorialPage />
-      <Testi />
     </section>
   );
 }
