@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { Copy, Check, Shield } from "lucide-react";
 
 interface IsoLinks {
   sourceforge: string;
+  checksum: string;
   // torrent: string;
 }
 
@@ -39,16 +41,22 @@ const themedIso: IsoData = {
   kde: {
     sourceforge:
       "https://sourceforge.net/projects/arch-linux-gui/files/alg-plasma-2025.10-x86_64.iso/download",
+    checksum:
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     // torrent: "https://some-torrent-link/kde-themed.torrent",
   },
   gnome: {
     sourceforge:
       "https://sourceforge.net/projects/arch-linux-gui/files/alg-gnome-2025.10-x86_64.iso/download",
+    checksum:
+      "a3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856",
     // torrent: "https://some-torrent-link/gnome-themed.torrent",
   },
   xfce: {
     sourceforge:
       "https://sourceforge.net/projects/arch-linux-gui/files/alg-xfce-2025.10-x86_64.iso/download",
+    checksum:
+      "b3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b857",
     // torrent: "https://some-torrent-link/xfce-themed.torrent",
   },
 };
@@ -61,6 +69,51 @@ interface DesktopEnvironmentProps {
   themedImage: string;
   isReversed?: boolean;
 }
+
+// Checksum Component
+const ChecksumDisplay: React.FC<{ checksum: string }> = ({ checksum }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(checksum);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
+  return (
+    <div className="mt-4 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600">
+      <div className="flex items-center gap-2 mb-2">
+        <Shield className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+        <span className="text-xs font-semibold text-gray-700 dark:text-gray-300">
+          SHA256 Checksum
+        </span>
+      </div>
+      <div className="flex items-center gap-2">
+        <code className="flex-1 text-xs bg-white dark:bg-gray-900 px-3 py-2 rounded border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-mono break-all">
+          {checksum}
+        </code>
+        <button
+          onClick={handleCopy}
+          className="flex-shrink-0 p-2 bg-orange-500 hover:bg-orange-600 dark:bg-orange-600 dark:hover:bg-orange-500 text-white rounded transition-all duration-200"
+          title={copied ? "Copied!" : "Copy to clipboard"}
+        >
+          {copied ? (
+            <Check className="w-4 h-4" />
+          ) : (
+            <Copy className="w-4 h-4" />
+          )}
+        </button>
+      </div>
+      <p className="mt-2 text-xs text-gray-600 dark:text-gray-400">
+        Verify your download using this checksum
+      </p>
+    </div>
+  );
+};
 
 const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
   name,
@@ -87,7 +140,7 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
           className="mx-auto rounded-lg"
         />
       </div>
-      <div className="relative flex justify-center mt-6">
+      <div className="flex flex-col items-center mt-6">
         <a
           href={isoLinks.sourceforge}
           target="_blank"
@@ -96,6 +149,9 @@ const DesktopEnvironment: React.FC<DesktopEnvironmentProps> = ({
         >
           Download
         </a>
+        <div className="w-full max-w-md mt-4">
+          <ChecksumDisplay checksum={isoLinks.checksum} />
+        </div>
       </div>
     </div>
   );
