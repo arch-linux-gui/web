@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import Testi from "@/components/Testi";
 import WhatsNew from "@/components/WhatsNew";
 import { Gallery } from "@/components/gallery";
 
@@ -14,7 +13,6 @@ export default function Home() {
       <Hero />
       <WhatsNew />
       <Gallery />
-      <Testi />
     </main>
   );
 }

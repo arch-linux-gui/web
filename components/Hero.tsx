@@ -98,7 +98,7 @@ export default function HeroSection() {
                 className="mb-4"
               >
                 Seamless. Intuitive. Powerful. Discover a new era of Linux
-                desktop environments with Arka Linux GUI.
+                desktop computing with Arka Linux GUI.
               </TextEffect>
 
               <motion.div
