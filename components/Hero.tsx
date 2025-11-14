@@ -56,19 +56,20 @@ export default function HeroSection() {
         transition={{ duration: 0.3 }}
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] pb-5"
       >
+        {/* Dot Grid Pattern Background */}
         <div className="absolute inset-0 z-0">
-          <svg
-            className="absolute inset-0 w-full h-full"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0,0 L100,0 L100,100 L0,100 Z"
-              fill="none"
-              stroke={
-                isDarkTheme ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.05)"
-              }
-              strokeWidth="0.5"
-            />
+          <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="dotPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <circle
+                  cx="2"
+                  cy="2"
+                  r="1.5"
+                  fill={isDarkTheme ? "rgba(249,115,22,0.15)" : "rgba(249,115,22,0.2)"}
+                />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#dotPattern)" />
           </svg>
         </div>
 
