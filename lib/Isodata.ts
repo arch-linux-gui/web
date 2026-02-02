@@ -10,6 +10,16 @@ interface IsoData {
     xfce: IsoLinks;
 }
 
+interface ReleaseData {
+    releaseVer: string;
+    releaseDate: string
+}
+
+export const releaseData: ReleaseData = {
+    releaseVer: "v2025.10",
+    releaseDate: "October 2025"
+}
+
 export const themedIso: IsoData = {
     kde: {
         sourceforge:
