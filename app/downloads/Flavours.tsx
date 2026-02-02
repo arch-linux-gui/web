@@ -3,63 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Copy, Check, Shield } from "lucide-react";
-
-interface IsoLinks {
-  sourceforge: string;
-  checksum: string;
-  // torrent: string;
-}
-
-interface IsoData {
-  kde: IsoLinks;
-  gnome: IsoLinks;
-  xfce: IsoLinks;
-}
-
-// const pureIso: IsoData = {
-//   kde: {
-//     sourceforge:
-//       "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-plasma-pure-2022.07-x86_64.iso/download",
-//     osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-plasma-pure-2022.07-x86_64.iso",
-//     torrent: "https://some-torrent-link/kde-pure.torrent",
-//   },
-//   gnome: {
-//     sourceforge:
-//       "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-gnome-pure-2022.07-x86_64.iso/download",
-//     osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-gnome-pure-2022.07-x86_64.iso",
-//     torrent: "https://some-torrent-link/gnome-pure.torrent",
-//   },
-//   xfce: {
-//     sourceforge:
-//       "https://sourceforge.net/projects/arch-linux-gui/files/archlinux-gui-xfce-pure-2022.07-x86_64.iso/download",
-//     osdn: "https://osdn.net/dl/arch-linux-gui/archlinux-gui-xfce-pure-2022.07-x86_64.iso",
-//     torrent: "https://some-torrent-link/xfce-pure.torrent",
-//   },
-// };
-
-const themedIso: IsoData = {
-  kde: {
-    sourceforge:
-      "https://sourceforge.net/projects/arch-linux-gui/files/alg-plasma-2025.10-x86_64.iso/download",
-    checksum:
-      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    // torrent: "https://some-torrent-link/kde-themed.torrent",
-  },
-  gnome: {
-    sourceforge:
-      "https://sourceforge.net/projects/arch-linux-gui/files/alg-gnome-2025.10-x86_64.iso/download",
-    checksum:
-      "a3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856",
-    // torrent: "https://some-torrent-link/gnome-themed.torrent",
-  },
-  xfce: {
-    sourceforge:
-      "https://sourceforge.net/projects/arch-linux-gui/files/alg-xfce-2025.10-x86_64.iso/download",
-    checksum:
-      "b3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b857",
-    // torrent: "https://some-torrent-link/xfce-themed.torrent",
-  },
-};
+import { themedIso } from '@/lib/Isodata'
 
 interface DesktopEnvironmentProps {
   name: "kde" | "gnome" | "xfce";
