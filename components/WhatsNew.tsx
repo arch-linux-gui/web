@@ -250,8 +250,8 @@ export function FeaturesDeepDiveSection() {
       highlights: ["System update wizard", "Driver detection", "Essential apps installer", "Quick tips & tutorials"],
     },
     {
-      title: "App Store (Coming Soon)",
-      description: "Browse and install applications with ease using our upcoming graphical package manager. Search through thousands of packages from official repositories and AUR, read descriptions, view screenshots, and install with a single click.",
+      title: "App Store (Shipped as beta package)",
+      description: "Browse and install applications with ease using our graphical package manager. Search through thousands of packages from official repositories and AUR, read descriptions, view screenshots, and install with a single click.",
       image: "https://github.com/arch-linux-gui/artwork/blob/dev/other/app-store.png?raw=true",
       highlights: ["Visual package browsing", "AUR integration", "One-click installation", "Package ratings & reviews"],
     },
@@ -278,7 +278,7 @@ export function FeaturesDeepDiveSection() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-6xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-700 dark:from-orange-400 dark:to-orange-300"
         >
-          Powerful Features
+          Features that make your life easier
         </motion.h2>
 
         <div className="space-y-24 max-w-7xl mx-auto">
