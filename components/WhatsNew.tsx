@@ -307,13 +307,21 @@ export function FeaturesDeepDiveSection() {
                 </ul>
               </div>
               <div className="flex-1">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-gray-800 p-2">
+                <div className={`relative rounded-2xl overflow-hidden shadow-2xl ${
+                  feature.title === "Welcome Application"
+                    ? "bg-gradient-to-br from-orange-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4"
+                    : "bg-white dark:bg-gray-800 p-2"
+                }`}>
                   <div className="relative aspect-video">
                     <Image
                       src={feature.image}
                       alt={feature.title}
                       fill
-                      className="object-cover rounded-lg"
+                      className={`${
+                        feature.title === "Welcome Application"
+                          ? "object-contain"
+                          : "object-cover"
+                      } rounded-lg`}
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
