@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import { Zap, Shield, Package, Settings, Calendar, Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   const { resolvedTheme } = useTheme();
@@ -55,19 +56,20 @@ export default function HeroSection() {
         transition={{ duration: 0.3 }}
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] pb-5"
       >
+        {/* Dot Grid Pattern Background */}
         <div className="absolute inset-0 z-0">
-          <svg
-            className="absolute inset-0 w-full h-full"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0,0 L100,0 L100,100 L0,100 Z"
-              fill="none"
-              stroke={
-                isDarkTheme ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.05)"
-              }
-              strokeWidth="0.5"
-            />
+          <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="dotPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <circle
+                  cx="2"
+                  cy="2"
+                  r="1.5"
+                  fill={isDarkTheme ? "rgba(249,115,22,0.15)" : "rgba(249,115,22,0.2)"}
+                />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#dotPattern)" />
           </svg>
         </div>
 
@@ -82,6 +84,26 @@ export default function HeroSection() {
               className="w-full text-center mb-8 lg:mb-0 lg:w-3/4"
               variants={fancyVariants.item}
             >
+              {/* Version Badge */}
+              <motion.div
+                className="flex justify-center mb-4"
+                variants={fancyVariants.item}
+              >
+                <Link
+                  href="/releases"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/30 rounded-full border border-orange-200 dark:border-orange-800 hover:bg-orange-200 dark:hover:bg-orange-900/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                >
+                  <Sparkles className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+                  <span className="text-sm font-semibold text-orange-700 dark:text-orange-300">
+                    Latest Release: v2025.10
+                  </span>
+                  <span className="text-xs text-orange-600 dark:text-orange-400 flex items-center gap-1">
+                    <Calendar className="w-3 h-3" />
+                    October 2025
+                  </span>
+                </Link>
+              </motion.div>
+
               <TextEffect
                 per="word"
                 variants={fancyVariants}
@@ -95,14 +117,14 @@ export default function HeroSection() {
                 as="h3"
                 preset="blur"
                 delay={0.5}
-                className="mb-4"
+                className="mb-6 text-lg lg:text-xl"
               >
                 Seamless. Intuitive. Powerful. Discover a new era of Linux
-                desktop environments with Arka Linux GUI.
+                desktop computing with Arka Linux GUI.
               </TextEffect>
 
               <motion.div
-                className="flex flex-row justify-center space-y-0 space-x-4 mb-7"
+                className="flex flex-row justify-center space-y-0 space-x-4 mb-10"
                 variants={fancyVariants.item}
               >
                 <button
@@ -114,6 +136,60 @@ export default function HeroSection() {
                 <button className="w-48 mx-auto sm:mx-0 px-6 py-3 bg-white text-orange-500 rounded-full font-semibold text-lg shadow-lg hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:-translate-y-1 dark:bg-gray-800 dark:text-orange-400 dark:hover:bg-gray-700">
                   <Link href="/downloads">Download</Link>
                 </button>
+              </motion.div>
+
+              {/* Key Features Section */}
+              <motion.div
+                className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8"
+                variants={fancyVariants.item}
+              >
+                <div className="flex flex-col items-center p-4 rounded-lg bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-orange-200/50 dark:border-orange-800/50 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                  <div className="w-12 h-12 mb-3 rounded-full bg-orange-100 dark:bg-orange-900/50 flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                  </div>
+                  <h4 className="font-semibold text-sm mb-1 text-gray-800 dark:text-gray-200">
+                    Rolling Release
+                  </h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 text-center">
+                    Always up-to-date
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center p-4 rounded-lg bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-orange-200/50 dark:border-orange-800/50 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                  <div className="w-12 h-12 mb-3 rounded-full bg-orange-100 dark:bg-orange-900/50 flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                  </div>
+                  <h4 className="font-semibold text-sm mb-1 text-gray-800 dark:text-gray-200">
+                    Arch-Based
+                  </h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 text-center">
+                    Power of pacman
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center p-4 rounded-lg bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-orange-200/50 dark:border-orange-800/50 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                  <div className="w-12 h-12 mb-3 rounded-full bg-orange-100 dark:bg-orange-900/50 flex items-center justify-center">
+                    <Package className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                  </div>
+                  <h4 className="font-semibold text-sm mb-1 text-gray-800 dark:text-gray-200">
+                    Pre-Configured
+                  </h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 text-center">
+                    Ready out of box
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center p-4 rounded-lg bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-orange-200/50 dark:border-orange-800/50 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                  <div className="w-12 h-12 mb-3 rounded-full bg-orange-100 dark:bg-orange-900/50 flex items-center justify-center">
+                    <Settings className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                  </div>
+                  <h4 className="font-semibold text-sm mb-1 text-gray-800 dark:text-gray-200">
+                    User-Friendly
+                  </h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 text-center">
+                    GUI installer
+                  </p>
+                </div>
               </motion.div>
             </motion.div>
 

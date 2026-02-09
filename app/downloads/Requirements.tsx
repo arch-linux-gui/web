@@ -4,12 +4,12 @@ export default function Requirements() {
   return (
     <section className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-[#0b0b10] dark:to-[#09090B] px-6 pt-36 sm:px-12 md:px-20 md:pb-12 lg:px-28">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div className="bg-[#FFFFFF] p-6 rounded-lg">
-          <h2 className="mb-4 text-2xl font-bold text-black md:text-3xl">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-orange-200 dark:border-orange-800/50">
+          <h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-100 md:text-3xl">
             Requirements
           </h2>
-          <p className="mb-1 font-semibold text-gray-600">Minimum:</p>
-          <ul className="mb-4 text-gray-600 list-disc list-inside">
+          <p className="mb-1 font-semibold text-orange-700 dark:text-orange-400">Minimum:</p>
+          <ul className="mb-4 text-gray-700 dark:text-gray-300 list-disc list-inside">
             <li>
               64 bit x86_64 processor (Intel/AMD), with at least 2 CPU cores.
               (32-bit not supported)
@@ -22,10 +22,10 @@ export default function Requirements() {
               motherboard.
             </li>
           </ul>
-          <p className="mb-1 font-semibold text-gray-600">
+          <p className="mb-1 font-semibold text-orange-700 dark:text-orange-400">
             Recommended (Themed Edition):
           </p>
-          <ul className="text-gray-600 list-disc list-inside">
+          <ul className="text-gray-700 dark:text-gray-300 list-disc list-inside">
             <li>
               64 bit x86_64 processor (Intel/AMD), with at least 4 CPU cores.
               (32-bit not supported)
@@ -36,15 +36,15 @@ export default function Requirements() {
             <li>WiFi and Ethernet Card.</li>
           </ul>
         </div>
-        <div className="bg-[#9c89d1] p-6 rounded-lg">
-          <h2 className="mb-4 text-2xl font-bold md:text-3xl">
+        <div className="bg-gradient-to-br from-orange-500 to-orange-600 dark:from-orange-600 dark:to-orange-700 p-6 rounded-lg shadow-lg">
+          <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">
             Installation Instructions
           </h2>
           <h2 className="mb-1 font-semibold text-white">Make Bootable USB:</h2>
-          <ul className="mb-4 text-white list-disc list-inside">
+          <ul className="mb-4 text-white/95 list-disc list-inside">
             <li>
               To create a bootable USB. You can follow the step-by-step guides on
-              the <Link href="/tutorials" className="underline underline-offset-2 font-semibold text-white">Tutorials page</Link>.
+              the <Link href="/tutorials" className="underline underline-offset-2 font-bold text-white hover:text-orange-100">Tutorials page</Link>.
             </li>
           <h2 className="mb-1 font-semibold text-white">Getting Started with ALG installation:</h2>
             <li>
