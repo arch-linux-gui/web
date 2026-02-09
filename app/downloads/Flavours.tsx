@@ -33,7 +33,7 @@ const ChecksumDisplay: React.FC<{ checksum: string }> = ({ checksum }) => {
       <div className="flex items-center gap-2 mb-2">
         <Shield className="w-4 h-4 text-orange-600 dark:text-orange-400" />
         <span className="text-xs font-semibold text-gray-700 dark:text-gray-300">
-          SHA256 Checksum
+          SHA1 Checksum
         </span>
       </div>
       <div className="flex items-center gap-2">
