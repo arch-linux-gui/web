@@ -16,11 +16,11 @@ const AboutPage = () => {
     },
     {
       name: "",
-      role: "Core Team - Developer",
+      role: "Core Team - SysAdmin",
       image: "",
       github: "https://github.com/Akash6222",
       description:
-        "A dedicated developer focused on improving the user experience and functionality.",
+        "Core team member focused on scripting, system administration, package maintenance, testing and automation to improve the stability and user experience of Arka Linux GUI.",
     },
     {
       name: "",
