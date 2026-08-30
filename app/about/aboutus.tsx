@@ -28,7 +28,7 @@ const AboutPage = () => {
       image: "",
       github: "https://github.com/harshau007",
       description:
-        "A dedicated developer focused on improving the user experience and functionality.",
+        "A core team developer focused on feature development, application development and automation to improve the functionality and user experience of Arka Linux GUI.",
     },
   ]);
 
